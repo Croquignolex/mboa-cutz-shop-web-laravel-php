@@ -3,11 +3,15 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Home page Language Lines
+    | Page Language Lines
     |--------------------------------------------------------------------------
     |
     */
 
-    'name' => 'Home',
+    'home' => 'Home',
+    'blog' => 'Blog',
+    'contact' => 'Contact',
+    'products' => 'Products',
+    'services' => 'Services',
 
 ];

@@ -50,12 +50,12 @@ $(document).ready(function(){
     ==================================*/
     $(".active-banner-slider").owlCarousel({
         items:1,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout: 5000,
         loop:true,
-        nav:true,
-        navText:["<img src='img/banner/prev.png'>","<img src='img/banner/next.png'>"],
-        dots:false
+        nav:false,
+        // navText:["<img src='/img/banners/prev.png'>","<img src='/img/banners/next.png'>"],
+        dots:true
     });
 
     /*=================================

@@ -86,3 +86,15 @@ if(!function_exists('flag_img_asset'))
         return config('app.folder') . '/assets/img/flags/' . $flag . '.png';
     }
 }
+
+if(!function_exists('banner_img_asset'))
+{
+    /**
+     * @param $banner
+     * @return string
+     */
+    function banner_img_asset($banner)
+    {
+        return config('app.folder') . '/assets/img/banners/' . $banner . '.jpg';
+    }
+}

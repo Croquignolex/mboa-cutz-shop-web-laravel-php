@@ -1,14 +1,4 @@
-#loader {
-    position: fixed;
-    z-index: 9999;
-    opacity: 0.8;
-    background: url('../img/loader.svg') 50% 50% no-repeat #fff;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    cursor: progress;
-    /*color: #ec008c;*/
-    /*color: #111111;*/
+.text-theme {
+    color: #ec008c
 }
 
