@@ -3,38 +3,27 @@
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\App;
 
-if(!function_exists('languages'))
-{
-    /**
-     * @return array
-     */
-    function languages()
-    {
-        return config('app.locales');
-    }
-}
-
-if(!function_exists('current_language'))
+if(!function_exists('language_title'))
 {
     /**
      * @return string
      */
-    function current_language()
+    function language_title()
     {
-        return App::getLocale();
+        return App::getLocale() === 'fr' ? 'Anglais' : 'French';
     }
 }
 
-if(!function_exists('browser_url'))
+if(!function_exists('language_url'))
 {
     /**
-     * @param $language
      * @return string
      */
-    function browser_url($language)
+    function language_url()
     {
         $fullUrl = url()->full();
-        $languages = languages();
+        $language = App::getLocale() === 'fr' ? 'en' : 'fr';
+        $languages = config('app.locales');
 
         if(in_array($language, $languages))
         {
@@ -46,42 +35,5 @@ if(!function_exists('browser_url'))
 
         $url = config('app.url');
         return Str::replaceFirst($url, $url . '/' . $language, $fullUrl);
-    }
-}
-
-if(!function_exists('language_full_name'))
-{
-    /**
-     * @param $language
-     * @return string
-     */
-    function language_full_name($language)
-    {
-        if(in_array($language, languages())) return trans('language.' . $language);
-        else return 'language.unknown';
-    }
-}
-
-if(!function_exists('active_language'))
-{
-    /**
-     * @param $language
-     * @return string
-     */
-    function active_language($language)
-    {
-        return current_language() == $language;
-    }
-}
-
-if(!function_exists('active_language'))
-{
-    /**
-     * @param $language
-     * @return string
-     */
-    function active_language($language)
-    {
-        return current_language() == $language;
     }
 }

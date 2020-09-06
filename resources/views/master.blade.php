@@ -28,14 +28,13 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="{{ css_asset('master') }}" type="text/css">
         @stack('master.style')
+        <link rel="stylesheet" href="{{ css_asset('master') }}" type="text/css">
 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
     </head>
 
-    <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-        <div id="loader"></div>
+    <body>
         @yield('master.body')
         @stack('master.script')
         <script src="{{ js_asset('master') }}" type="application/javascript"></script>
