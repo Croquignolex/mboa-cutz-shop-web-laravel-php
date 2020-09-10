@@ -2,7 +2,7 @@
     <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light main_box">
             <div class="container">
-                <a class="navbar-brand logo_h" href="{{ locale_route('home') }}">
+                <a class="navbar-brand logo_h" href="{{ locale_route('home.index') }}">
                     <img src="{{ img_asset('logo', 'jpg') }}" alt="..." height="70">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -14,34 +14,34 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ locale_route('home') }}">
+                            <a class="nav-link" href="{{ locale_route('home.index') }}">
                                 {{ trans('page.home') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ locale_route('products.index') }}">
                                 {{ trans('page.products') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ locale_route('services.index') }}">
                                 {{ trans('page.services') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ locale_route('blog.index') }}">
                                 {{ trans('page.blog') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ locale_route('contact.index') }}">
                                 {{ trans('page.contact') }}
                             </a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item">
-                            <a href="#" class="cart">
+                            <a href="{{ locale_route('cart.index') }}" class="cart">
                                 <span class="ti-bag"></span>
                             </a>
                         </li>

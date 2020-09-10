@@ -30,8 +30,6 @@
 
         @stack('master.style')
         <link rel="stylesheet" href="{{ css_asset('master') }}" type="text/css">
-
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
     </head>
 
     <body>

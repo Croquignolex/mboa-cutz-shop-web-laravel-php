@@ -13,5 +13,6 @@ return [
     'contact' => 'Contact',
     'products' => 'Products',
     'services' => 'Services',
+    'cart' => 'Cart',
 
 ];

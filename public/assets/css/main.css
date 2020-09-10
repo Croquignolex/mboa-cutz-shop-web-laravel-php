@@ -1,6 +1,6 @@
 /*--------------------------- Color variations ----------------------*/
 /*--------------------------- Fonts ----------------------*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:500,700|Roboto:400,500");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 /* Medium Layout: 1280px */
 /* Tablet Layout: 768px */
 /* Mobile Layout: 320px */
@@ -11,7 +11,7 @@
   padding: 0; }
 
 .section_gap {
-  padding: 100px 0; }
+  padding: 50px 0; }
   @media (max-width: 991px) {
     .section_gap {
       padding: 80px 0; } }
@@ -118,9 +118,9 @@
 body {
   line-height: 24px;
   /*font-size: 14px;*/
-  font-family: "Roboto", sans-serif;
+  Poppins: "Poppins", sans-serif;
   font-weight: 400;
-  color: #777777;
+  /*color: #777777;*/
   background: #fff; }
 
 html,
@@ -2887,7 +2887,7 @@ label {
     text-align: center;
     padding-bottom: 40px; }
     .jewellery-single-product .desc h6 {
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: 400;
       margin-bottom: 8px; }
     .jewellery-single-product .desc h5 {
@@ -2895,7 +2895,7 @@ label {
       -moz-transition: all 0.3s ease 0s;
       -o-transition: all 0.3s ease 0s;
       transition: all 0.3s ease 0s;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: 700;
       margin-bottom: 8px; }
       .jewellery-single-product .desc h5 del {
@@ -3508,7 +3508,7 @@ label {
       margin-top: 26px;
       margin-left: 26px;
       color: #222222;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: 500;
       font-size: 30px; }
     .hot_p_item .product_text a {
@@ -3671,7 +3671,7 @@ label {
   margin-bottom: 13px; }
   .cat_widgets .list li a {
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #222222; }
   .cat_widgets .list li .list {
     margin-top: 10px;
@@ -3687,7 +3687,7 @@ label {
 .p_filter_widgets h4 {
   color: #222222;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
   margin-bottom: 22px;
   margin-top: 10px; }
@@ -3696,7 +3696,7 @@ label {
   .p_filter_widgets .list li a {
     padding-left: 30px;
     font-size: 14px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     color: #777777;
     position: relative; }
@@ -3752,7 +3752,7 @@ label {
   font-size: 14px;
   font-weight: normal;
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 15px; }
 .p_filter_widgets .range_item input {
   display: inline-block;
@@ -3760,25 +3760,25 @@ label {
   width: 100px;
   font-size: 14px;
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 9px;
   padding-left: 3px; }
   .p_filter_widgets .range_item input.placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .p_filter_widgets .range_item input:-moz-placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .p_filter_widgets .range_item input::-moz-placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .p_filter_widgets .range_item input::-webkit-input-placeholder {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
 
 .product_top_bar {
   background: #e8f0f2;
@@ -3795,14 +3795,14 @@ label {
     padding-left: 20px; }
     .product_top_bar .left_dorp .sorting span {
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #555555; }
     .product_top_bar .left_dorp .sorting .list {
       width: 100%;
       border-radius: 0px; }
       .product_top_bar .left_dorp .sorting .list li {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #555555; }
     .product_top_bar .left_dorp .sorting:after {
       content: "\f0d7";
@@ -3824,14 +3824,14 @@ label {
     margin-left: 10px; }
     .product_top_bar .left_dorp .show span {
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #555555; }
     .product_top_bar .left_dorp .show .list {
       width: 100%;
       border-radius: 0px; }
       .product_top_bar .left_dorp .show .list li {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #555555; }
     .product_top_bar .left_dorp .show:after {
       content: "\f0d7";
@@ -3858,7 +3858,7 @@ label {
     font-size: 14px;
     color: #222222;
     font-weight: normal;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Poppins", sans-serif; }
   .cat_page .pagination li.blank a {
     background: transparent;
     color: #cccccc;
@@ -3913,7 +3913,7 @@ label {
     margin-bottom: 5px; }
     .s_product_text .list li a {
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal;
       color: #555555; }
       .s_product_text .list li a span {
@@ -3975,7 +3975,7 @@ label {
   .product_count label {
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     padding-right: 10px; }
   .product_count input {
@@ -4066,7 +4066,7 @@ label {
       .product_description_area .tab-content .total_rate .rating_list h3 {
         font-size: 18px;
         color: #222222;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 500;
         margin-bottom: 10px; }
       .product_description_area .tab-content .total_rate .rating_list .list li a {
@@ -4085,7 +4085,7 @@ label {
         padding-bottom: 14px; }
         .product_description_area .tab-content .table tbody tr td h5 {
           font-size: 14px;
-          font-family: "Roboto", sans-serif;
+          font-family: "Poppins", sans-serif;
           font-weight: normal;
           color: #777777;
           margin-bottom: 0px;
@@ -4108,7 +4108,7 @@ label {
         margin-bottom: 0px;
         font-size: 14px;
         color: #222222;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         margin-bottom: 8px; }
       .review_item .media .media-body i {
         color: #fbd600; }
@@ -4123,7 +4123,7 @@ label {
         line-height: 32px;
         border-radius: 16px;
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #222222;
         position: absolute;
         right: 0px;
@@ -4177,7 +4177,7 @@ label {
   border-top: 0px;
   font-size: 14px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #777777;
   border-bottom: 0px !important; }
 .cart_inner .table tbody tr td {
@@ -4198,7 +4198,7 @@ label {
   .cart_inner .table tbody tr td h5 {
     font-size: 14px;
     color: #222222;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 0px; }
   .cart_inner .table tbody tr td .product_count {
     margin-bottom: 0px; }
@@ -4250,7 +4250,7 @@ label {
     height: 40px;
     font-size: 14px;
     color: #cccccc;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal;
     margin-right: -3px;
     outline: none;
@@ -4258,22 +4258,22 @@ label {
     .cart_inner .table tbody tr.bottom_button td .cupon_text input.placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .cart_inner .table tbody tr.bottom_button td .cupon_text input:-moz-placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .cart_inner .table tbody tr.bottom_button td .cupon_text input::-moz-placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .cart_inner .table tbody tr.bottom_button td .cupon_text input::-webkit-input-placeholder {
       font-size: 14px;
       color: #cccccc;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
   .cart_inner .table tbody tr.bottom_button td .cupon_text .primary-btn {
     height: 40px;
@@ -4327,7 +4327,7 @@ label {
     font-size: 14px;
     font-weight: normal;
     color: #222222;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-top: 20px;
     margin-bottom: 20px; }
     .cart_inner .table tbody tr.shipping_area .shipping_box h6 i {
@@ -4384,7 +4384,7 @@ label {
 .check_title h2 {
   font-size: 14px;
   font-weight: normal;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #e8f0f2;
   line-height: 40px !important;
   padding-left: 30px;
@@ -4407,27 +4407,27 @@ label {
       height: 40px;
       border-radius: 3px;
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #777777;
       font-weight: normal; }
       .returning_customer .contact_form .form-group input.placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
       .returning_customer .contact_form .form-group input:-moz-placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
       .returning_customer .contact_form .form-group input::-moz-placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
       .returning_customer .contact_form .form-group input::-webkit-input-placeholder {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #777777;
         font-weight: normal; }
     .returning_customer .contact_form .form-group .primary-btn {
@@ -4447,7 +4447,7 @@ label {
       display: block;
       margin-top: 20px;
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #777777;
       font-weight: normal; }
 
@@ -4501,7 +4501,7 @@ label {
   padding: 0px 40px;
   color: #222222;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   border-radius: 3px; }
   .tp_btn:hover {
@@ -4541,7 +4541,7 @@ label {
       border-radius: 0px; }
       .billing_details .contact_form .form-group .country_select .list li {
         font-size: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: normal; }
   .billing_details .contact_form .form-group .creat_account #f-option2 {
     margin-right: 5px; }
@@ -4666,7 +4666,7 @@ label {
     .order_d_inner .details_item .list li a {
       font-size: 14px;
       color: #222222;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Poppins", sans-serif; }
       .order_d_inner .details_item .list li a span {
         width: 145px;
         display: inline-block;
@@ -4688,7 +4688,7 @@ label {
     .order_details_table .table thead tr th {
       border-bottom: 1px solid #ddd;
       font-size: 14px;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .order_details_table .table tbody tr td p {
       margin-bottom: 0px; }
@@ -4789,7 +4789,7 @@ label {
 .login_form .form-group a {
   font-size: 14px;
   color: #777777;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 20px;
   display: block; }
 
@@ -4812,27 +4812,27 @@ label {
     border-radius: 0px;
     font-size: 14px;
     color: #777777;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input.placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input:-moz-placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input::-moz-placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
     .tracking_box_area .tracking_box_inner .tracking_form .form-group input::-webkit-input-placeholder {
       font-size: 14px;
       color: #777777;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
   .tracking_box_area .tracking_box_inner .tracking_form .form-group:last-child {
     margin-bottom: 0px; }
@@ -4864,7 +4864,7 @@ label {
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #222222;
   font-size: 13px;
@@ -4980,7 +4980,7 @@ label {
     padding: 30px 35px 40px 30px; }
     .causes_item .causes_text h4 {
       color: #222222;
-      font-family: "Roboto", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 15px;
@@ -5001,7 +5001,7 @@ label {
     line-height: 50px;
     background: #c5322d;
     color: #fff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 500; }
     .causes_item .causes_bottom a + a {
@@ -5103,14 +5103,14 @@ label {
   .blog_info .post_tag {
     padding-bottom: 20px; }
     .blog_info .post_tag a {
-      font: 300 14px/21px "Roboto", sans-serif;
+      font: 300 14px/21px "Poppins", sans-serif;
       color: #222222; }
       .blog_info .post_tag a:hover {
         color: #777777; }
       .blog_info .post_tag a.active {
         color: #ec008c; }
   .blog_info .blog_meta li a {
-    font: 300 14px/20px "Roboto", sans-serif;
+    font: 300 14px/20px "Poppins", sans-serif;
     color: #777777;
     vertical-align: middle;
     padding-bottom: 12px;
@@ -5584,7 +5584,7 @@ label {
   .contact_info .info_item h6 {
     font-size: 16px;
     line-height: 24px;
-    color: "Roboto", sans-serif;
+    color: "Poppins", sans-serif;
     font-weight: bold;
     margin-bottom: 0px;
     color: #222222; }
@@ -5602,7 +5602,7 @@ label {
     line-height: 26px;
     color: #999;
     border: 1px solid #eeeeee;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
     border-radius: 0px;
     padding-left: 20px; }
     .contact_form .form-group .form-control:focus {
@@ -5656,7 +5656,7 @@ label {
       text-align: center;
       color: #ec008c;
       padding-bottom: 10px;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Poppins", sans-serif; }
     .modal-message .modal-dialog .modal-content .modal-header p {
       display: block; }
 
