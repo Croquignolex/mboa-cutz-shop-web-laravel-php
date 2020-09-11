@@ -49,3 +49,23 @@
         </div>
     </div>
 </section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <h2 class="mb-4">Bienvenue sur <span>{{ config('app.name') }}</span> Votre salon esthétique pour homme ultra moderne</h2>
+                <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center ftco-animate">
+                <p>
+                    Nous somme MBOA CUTZ, un babershop CAMEROUNAIS ultra moderne spécialisé pour
+                    hommes Afro, Asiatique et Européen. Nous sommes un concept, une philosphie,
+                    une autre façon de voire la coupe de cheveux.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

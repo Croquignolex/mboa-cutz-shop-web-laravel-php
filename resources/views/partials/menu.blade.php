@@ -32,6 +32,11 @@
                         {{ trans('page.contact') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ language_url() }}" class="nav-link">
+                        <i class="icon-flag"></i> {{ language_title() }}
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

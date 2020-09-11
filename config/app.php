@@ -84,15 +84,28 @@ return [
     'locale' => 'fr',
 
     /*
-   |--------------------------------------------------------------------------
-   | Application Locales Configuration
-   |--------------------------------------------------------------------------
-   |
-   | The application locales determines the available locales that will be used
-   | in this app. You are free to set this value to any list of locales
-   | which will be supported by the application.
-   |
-   */
+    |--------------------------------------------------------------------------
+    | Application Locale Configuration
+    |--------------------------------------------------------------------------
+    |
+    | The application locale determines the default locale that will be used
+    | by the translation service provider. You are free to set this value
+    | to any of the locales which will be supported by the application.
+    |
+    */
+
+    'secondary_locale' => 'en',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Locales Configuration
+    |--------------------------------------------------------------------------
+    |
+    | The application locales determines the available locales that will be used
+    | in this app. You are free to set this value to any list of locales
+    | which will be supported by the application.
+    |
+    */
 
     'locales' => ['fr', 'en'],
 
