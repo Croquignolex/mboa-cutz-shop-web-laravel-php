@@ -1,47 +1,15 @@
-<section class="banner-area">
+<div class="hero-wrap js-fullheight" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
     <div class="container">
-        <div class="row fullscreen align-items-center justify-content-start">
-            <div class="col-lg-12">
-                <div class="active-banner-slider owl-carousel">
-                    <div class="row single-slide align-items-center d-flex">
-                        <div class="col-lg-5">
-                            <div class="banner-content">
-                                <h1 class="text-theme">Des offres <br> exclusives</h1>
-                                <p class="text-justify">
-                                    Nous vous assurons un service de qualité et
-                                    des produits validé par les experts. N'ésitez
-                                    surtout pas a consulter le catalogue de nos
-                                    différents produits et services.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="banner-img">
-{{--                                <img src="{{ banner_img_asset('banner-1') }}" alt="">--}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row single-slide align-items-center d-flex">
-                        <div class="col-lg-5">
-                            <div class="banner-content">
-                                <h1 class="text-theme">Un service <br> de qualité</h1>
-                                <p class="text-justify">
-                                    Nous somme MBOA CUTZ, un babershop CAMEROUNAIS
-                                    ultra moderne spécialisé pour hommes Afro,
-                                    Asiatique et Européen. Nous sommes un concept,
-                                    une philosphie, une autre façon de voire
-                                    la coupe de cheveux
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="banner-img">
-{{--                                <img src="{{ banner_img_asset('banner-2') }}" alt="">--}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+            <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
+                <span class="icon-play"></a>
+            </a>
+            <div class="col-md-6 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <p class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Created by <a href="#">Colorlib.com</a></p>
+                <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">We will make you stylish</h1>
+                <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://vimeo.com/45830194" class="btn btn-primary px-4 py-3">Book an Appointment</a></p>
             </div>
         </div>
     </div>
-</section>
+</div>
