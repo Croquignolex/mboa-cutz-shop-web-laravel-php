@@ -8426,7 +8426,9 @@ textarea.form-control {
 
 #section-counter {
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  background: url("../img/banners/shop.jpg");
+}
   #section-counter .overlay {
     position: absolute;
     top: 0;
