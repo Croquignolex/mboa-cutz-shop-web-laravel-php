@@ -7,11 +7,31 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="{{ locale_route('home.index') }}" class="nav-link">{{ trans('page.home') }}</a></li>
-                <li class="nav-item"><a href="{{ locale_route('products.index') }}" class="nav-link"> {{ trans('page.products') }}</a></li>
-                <li class="nav-item"><a href="{{ locale_route('services.index') }}" class="nav-link">{{ trans('page.services') }}</a></li>
-                <li class="nav-item"><a href="{{ locale_route('blog.index') }}" class="nav-link">{{ trans('page.blog') }}</a></li>
-                <li class="nav-item"><a href="{{ locale_route('contact.index') }}" class="nav-link">{{ trans('page.contact') }}</a></li>
+                <li class="nav-item {{ active_route_class('home.index')  }}">
+                    <a href="{{ locale_route('home.index') }}" class="nav-link">
+                        {{ trans('page.home') }}
+                    </a>
+                </li>
+                <li class="nav-item {{ active_route_class('products.index') }}">
+                    <a href="{{ locale_route('products.index') }}" class="nav-link">
+                        {{ trans('page.products') }}
+                    </a>
+                </li>
+                <li class="nav-item {{ active_route_class('services.index')  }}">
+                    <a href="{{ locale_route('services.index') }}" class="nav-link">
+                        {{ trans('page.services') }}
+                    </a>
+                </li>
+                <li class="nav-item {{ active_route_class('blog.index')  }}">
+                    <a href="{{ locale_route('blog.index') }}" class="nav-link">
+                        {{ trans('page.blog') }}
+                    </a>
+                </li>
+                <li class="nav-item {{ active_route_class('contact.index')  }}">
+                    <a href="{{ locale_route('contact.index') }}" class="nav-link">
+                        {{ trans('page.contact') }}
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

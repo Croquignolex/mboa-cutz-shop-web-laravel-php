@@ -13,6 +13,19 @@ if(!function_exists('page_title'))
     }
 }
 
+if(!function_exists('active_route_class'))
+{
+    /**lightSpeedOut
+     * @param $route
+     * @return string
+     */
+    function active_route_class($route)
+    {
+        if(Illuminate\Support\Facades\Route::is($route)) return 'active';
+        return '';
+    }
+}
+
 if(!function_exists('seo_keywords'))
 {
     /**

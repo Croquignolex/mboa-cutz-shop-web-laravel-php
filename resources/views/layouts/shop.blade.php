@@ -5,6 +5,13 @@
 @section('master.body')
     @include('partials.home.menu')
     @yield('shop.master.body')
+    @include('partials.home.footer')
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="50px" height="50px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#181818"/>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ec008c"/>
+        </svg>
+    </div>
 @endsection
 
 @push('master.style')
