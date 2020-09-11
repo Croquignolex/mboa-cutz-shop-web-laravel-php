@@ -16,10 +16,9 @@
     <link rel="stylesheet" href="{{ css_asset('owl.theme.default.min') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('magnific-popup') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('aos') }}" type="text/css">
-    <link rel="stylesheet" href="{{ css_asset('aos') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('ionicons.min') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('bootstrap-datepicker') }}" type="text/css">
-    <link rel="stylesheet" href="{{ css_asset('query.timepicker') }}" type="text/css">
+    <link rel="stylesheet" href="{{ css_asset('jquery.timepicker') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('flaticon') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('icomoon') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('style') }}" type="text/css">
@@ -36,10 +35,11 @@
     <script src="{{ js_asset('jquery.stellar.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('owl.carousel.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('jquery.magnific-popup.min') }}" type="application/javascript"></script>
+    <script src="{{ js_asset('aos') }}" type="application/javascript"></script>
     <script src="{{ js_asset('jquery.animateNumber.min') }}" type="application/javascript"></script>
-    <script src="{{ js_asset('bootstrap-datepicker.min') }}" type="application/javascript"></script>
+    <script src="{{ js_asset('bootstrap-datepicker') }}" type="application/javascript"></script>
     <script src="{{ js_asset('jquery.timepicker.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('scrollax.min') }}" type="application/javascript"></script>
-    <script src="{{ js_asset('main.min') }}" type="application/javascript"></script>
+    <script src="{{ js_asset('main') }}" type="application/javascript"></script>
     @stack('shop.master.script')
 @endpush

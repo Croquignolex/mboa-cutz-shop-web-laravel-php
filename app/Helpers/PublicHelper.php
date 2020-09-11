@@ -98,3 +98,16 @@ if(!function_exists('banner_img_asset'))
         return config('app.folder') . '/assets/img/banners/' . $banner . '.jpg';
     }
 }
+
+if(!function_exists('video_asset'))
+{
+    /**
+     * @param $video_file
+     * @param $extension
+     * @return string
+     */
+    function video_asset($video_file, $extension = 'mp4')
+    {
+        return config('app.folder') . '/assets/videos/' . $video_file . '.' . $extension;
+    }
+}
