@@ -7,9 +7,9 @@
                     <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <div class="text">
-                                <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                                <strong class="number" data-number="705">0</strong>
-                                <span></span>
+                                <div class="icon"><span class="flaticon-male-head-hair-and-beard"></span></div>
+                                <strong class="number" data-number="52">52</strong>
+                                <span>Clients satisfaits</span>
                             </div>
                         </div>
                     </div>
@@ -17,26 +17,26 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                                <strong class="number" data-number="1000">0</strong>
-                                <span>Number of Awards</span>
+                                <strong class="number" data-number="11">11</strong>
+                                <span>Coupes de cheveux</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <div class="text">
-                                <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                                <strong class="number" data-number="3000">0</strong>
-                                <span>Happy Clients</span>
+                                <div class="icon"><span class="flaticon-heads-hairs-and-scissors"></span></div>
+                                <strong class="number" data-number="25">25</strong>
+                                <span>Produits d'entretiens</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="block-18 text-center">
                             <div class="text">
-                                <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                                <strong class="number" data-number="900">0</strong>
-                                <span>Piercing Done</span>
+                                <div class="icon"><span class="flaticon-young-male-short-irregular-hair-on-head-and-a-small-beard"></span></div>
+                                <strong class="number" data-number="7">7</strong>
+                                <span>Expert</span>
                             </div>
                         </div>
                     </div>

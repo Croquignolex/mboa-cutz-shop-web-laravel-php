@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-                <h2 class="mb-4">Dernières articles du blog</h2>
+                <h2 class="mb-4">Articles en vedette</h2>
                 <p>Des astuces et des conseil pour tous. N'ésitez pas a y laisser des commentaires.</p>
             </div>
         </div>

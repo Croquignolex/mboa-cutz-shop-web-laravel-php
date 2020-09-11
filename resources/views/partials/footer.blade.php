@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-4">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Recent Blog</h2>
+                    <h2 class="ftco-heading-2">Récemment</h2>
                     <div class="block-21 mb-4 d-flex">
                         <a class="blog-img mr-4" href="{{ locale_route('blog.index') }}">
                             <img src="{{ img_asset('logo', 'jpg') }}" alt="...">

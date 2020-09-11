@@ -8147,7 +8147,7 @@ textarea.form-control {
   opacity: 0;
   visibility: hidden; }
 .ftco-footer .ftco-footer-widget ul li a span:hover {
-  color: #ec008c ;
+  color: #fff ;
 }
 
 .bg-primary {
@@ -8195,7 +8195,7 @@ textarea.form-control {
     text-transform: uppercase;
     letter-spacing: 1px; }
   .ftco-footer .ftco-footer-widget ul li a span {
-    color: #fff; }
+    color: #ec008c; }
   .ftco-footer .ftco-footer-widget .btn-primary {
     background: #fff !important;
     border: 2px solid #fff !important; }
@@ -8550,7 +8550,7 @@ textarea.form-control {
     width: 40px;
     font-size: 18px;
     padding-top: 2px;
-    color: white; }
+    color: #ec008c; }
 
 .block-6 {
   margin-bottom: 40px; }

@@ -4,6 +4,7 @@
 
 @section('shop.master.body')
     @include('partials.banner')
+    @include('partials.featured-products')
     @include('partials.home.stats')
-    @include('partials.latest-blog')
+    @include('partials.featured-articles')
 @endsection

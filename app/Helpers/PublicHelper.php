@@ -37,16 +37,16 @@ if(!function_exists('img_asset'))
     }
 }
 
-if(!function_exists('about_img_asset'))
+if(!function_exists('product_img_asset'))
 {
     /**
      * @param $img_file
      * @param $extension
      * @return string
      */
-    function about_img_asset($img_file, $extension = 'jpg')
+    function product_img_asset($img_file, $extension = 'jpg')
     {
-        return config('app.folder') . '/assets/img/about/' . $img_file . '.' . $extension;
+        return config('app.folder') . '/assets/img/products/' . $img_file . '.' . $extension;
     }
 }
 
@@ -90,12 +90,13 @@ if(!function_exists('flag_img_asset'))
 if(!function_exists('banner_img_asset'))
 {
     /**
-     * @param $banner
+     * @param $img_file
+     * @param string $extension
      * @return string
      */
-    function banner_img_asset($banner)
+    function banner_img_asset($img_file, $extension = 'jpg')
     {
-        return config('app.folder') . '/assets/img/banners/' . $banner . '.jpg';
+        return config('app.folder') . '/assets/img/banners/' . $img_file . '.' . $extension;
     }
 }
 
