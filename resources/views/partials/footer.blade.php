@@ -21,7 +21,9 @@
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Recent Blog</h2>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4"><img src="{{ img_asset('logo', 'jpg') }}" alt="..." width="80"></a>
+                        <a class="blog-img mr-4" href="{{ locale_route('blog.index') }}">
+                            <img src="{{ img_asset('logo', 'jpg') }}" alt="...">
+                        </a>
                         <div class="text">
                             <h3 class="heading">
                                 <a href="{{ locale_route('blog.index') }}">
@@ -36,7 +38,9 @@
                         </div>
                     </div>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4"><img src="{{ img_asset('logo', 'jpg') }}" alt="..." width="80"></a>
+                        <a class="blog-img mr-4" href="{{ locale_route('blog.index') }}">
+                            <img src="{{ img_asset('logo', 'jpg') }}" alt="...">
+                        </a>
                         <div class="text">
                             <h3 class="heading">
                                 <a href="{{ locale_route('blog.index') }}">

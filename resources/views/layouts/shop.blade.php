@@ -3,12 +3,12 @@
 @section('master.title')@yield('shop.master.title')@endsection
 
 @section('master.body')
-    @include('partials.home.menu')
+    @include('partials.menu')
     @yield('shop.master.body')
-    @include('partials.home.footer')
+    @include('partials.footer')
     <div id="ftco-loader" class="show fullscreen">
         <svg class="circular" width="50px" height="50px">
-            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#181818"/>
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ec008c"/>
         </svg>
     </div>

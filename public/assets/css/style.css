@@ -8169,7 +8169,7 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 3em 0 1em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
@@ -8389,7 +8389,7 @@ textarea.form-control {
 
 .hero-wrap,
 .img,
-.blog-img,
+.blog-img img,
 .user-img {
   background-size: cover;
   background-repeat: no-repeat;
@@ -8494,7 +8494,7 @@ textarea.form-control {
     text-transform: uppercase;
     letter-spacing: .1em; }
 
-.block-20 {
+.block-20 img {
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8625,7 +8625,7 @@ textarea.form-control {
   box-shadow: none !important;
   font-size: 15px; }
 
-.block-21 .blog-img {
+.block-21 .blog-img img {
   display: block;
   height: 80px;
   width: 80px; }
@@ -8845,7 +8845,7 @@ textarea.form-control {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  background-color: #000;
+  background-color: #181818;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none; }
