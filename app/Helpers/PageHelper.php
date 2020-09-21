@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Collection;
+
 if(!function_exists('page_title'))
 {
     /**
@@ -9,19 +11,40 @@ if(!function_exists('page_title'))
     function page_title($page)
     {
         $base_name = config('app.name');
-        return $page === '' ? $base_name : $page . ' - ' .  $base_name;
+        return $page === '' ? $base_name : "$page - $base_name";
     }
 }
 
-if(!function_exists('active_route_class'))
+if(!function_exists('active_page'))
 {
     /**lightSpeedOut
-     * @param $route
+     * @param Collection $routes
      * @return string
      */
-    function active_route_class($route)
+    function active_page(Collection $routes)
     {
-        if(Illuminate\Support\Facades\Route::is($route)) return 'active';
+        foreach ($routes as $route) {
+            if(Illuminate\Support\Facades\Route::is($route)) {
+                return 'active';
+            }
+        }
+        return '';
+    }
+}
+
+if(!function_exists('active_page_group'))
+{
+    /**lightSpeedOut
+     * @param Collection $routes
+     * @return string
+     */
+    function active_page_group(Collection $routes)
+    {
+        foreach ($routes as $route) {
+            if(Illuminate\Support\Facades\Route::is($route)) {
+                return 'show';
+            }
+        }
         return '';
     }
 }
@@ -45,5 +68,16 @@ if(!function_exists('seo_description'))
     function seo_description()
     {
         return 'Baber shop';
+    }
+}
+
+if(!function_exists('seo_authors'))
+{
+    /**
+     * @return string
+     */
+    function seo_authors()
+    {
+        return 'MBOACUTZ,Alex NGOMBOL';
     }
 }
