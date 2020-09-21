@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-md-3 d-flex ftco-animate">
                         <div class="icon"><span class="icon-clock-o"></span></div>
-                        <div class="text"><h3>Mardi - Samedi</h3><p>S9:00 - 19:30</p></div>
+                        <div class="text"><h3>Mardi - Samedi</h3><p>9:00 - 19:30</p></div>
                     </div>
                     <div class="col-md-3 d-flex ftco-animate">
                         <div class="icon"><span class="icon-clock-o"></span></div>
