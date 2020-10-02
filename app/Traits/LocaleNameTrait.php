@@ -9,7 +9,7 @@ trait LocaleNameTrait
     /**
      * @return mixed
      */
-    public function getFormatNameAttribute()
+    public function getNameAttribute()
     {
         if(App::getLocale() === config('app.locale')) if (isset($this->fr_name)) {
             return ucfirst($this->fr_name);

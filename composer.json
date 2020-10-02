@@ -41,6 +41,8 @@
         ],
         "files": [
             "app/Helpers/PageHelper.php",
+            "app/Helpers/ToastHelper.php",
+            "app/Helpers/RemoteHelper.php",
             "app/Helpers/PublicHelper.php",
             "app/Helpers/GeneralHelper.php",
             "app/Helpers/LanguageHelper.php"
