@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Enums\Constants;
 use App\Traits\DateTrait;
 use App\Traits\SlugRouteTrait;
 use App\Traits\LocaleDescriptionTrait;
