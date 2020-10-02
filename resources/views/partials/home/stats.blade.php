@@ -8,7 +8,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-male-head-hair-and-beard"></span></div>
-                                <strong class="number" data-number="52">52</strong>
+                                <strong class="number" data-number="{{ config('company.satisfied') }}">{{ config('company.satisfied') }}</strong>
                                 <span>Clients satisfaits</span>
                             </div>
                         </div>
@@ -17,7 +17,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                                <strong class="number" data-number="11">11</strong>
+                                <strong class="number" data-number="{{ config('company.haircuts') }}">{{ config('company.haircuts') }}</strong>
                                 <span>Coupes de cheveux</span>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-heads-hairs-and-scissors"></span></div>
-                                <strong class="number" data-number="25">25</strong>
+                                <strong class="number" data-number="{{ config('company.products') }}">{{ config('company.products') }}</strong>
                                 <span>Produits d'entretiens</span>
                             </div>
                         </div>
@@ -35,7 +35,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-young-male-short-irregular-hair-on-head-and-a-small-beard"></span></div>
-                                <strong class="number" data-number="7">7</strong>
+                                <strong class="number" data-number="{{ config('company.experts') }}">{{ config('company.experts') }}</strong>
                                 <span>Expert</span>
                             </div>
                         </div>

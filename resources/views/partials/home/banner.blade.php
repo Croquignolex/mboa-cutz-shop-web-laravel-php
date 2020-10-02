@@ -41,9 +41,9 @@
             </div>
             <div class="social pl-md-5 p-4">
                 <ul class="social-icon">
-                    <li class="ftco-animate"><a href="https://www.facebook.com/mboacutz/"><span class="icon-twitter"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.facebook.com/mboacutz/"><span class="icon-facebook"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.instagram.com/mboa_cutz/"><span class="icon-instagram"></span></a></li>
+                    <li class="ftco-animate"><a href="{{ config('company.twitter') }}"><span class="icon-twitter"></span></a></li>
+                    <li class="ftco-animate"><a href="{{ config('company.facebook') }}"><span class="icon-facebook"></span></a></li>
+                    <li class="ftco-animate"><a href="{{ config('company.instagram') }}"><span class="icon-instagram"></span></a></li>
                 </ul>
             </div>
         </div>
