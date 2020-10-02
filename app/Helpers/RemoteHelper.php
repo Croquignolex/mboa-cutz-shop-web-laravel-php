@@ -14,10 +14,8 @@ if(!function_exists('user_img_asset'))
      */
     function user_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        // TODO: write back this function for remote access
         $path = ImagePath::USER_DEFAULT_IMAGE_PATH;
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/img/$path/$img_file.$extension";
+        return "assets/img/$path/$img_file.$extension";
     }
 }
 
@@ -32,10 +30,24 @@ if(!function_exists('product_img_asset'))
      */
     function product_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        // TODO: write back this function for remote access
-        $public_folder = config('app.folder');
         $path = ImagePath::PRODUCT_DEFAULT_IMAGE_PATH;
-        return "$public_folder/assets/img/$path/$img_file.$extension";
+        return "assets/img/$path/$img_file.$extension";
+    }
+}
+
+if(!function_exists('testimonial_img_path'))
+{
+    /**
+     * Dynamic product image asset file path
+     *
+     * @param $img_file
+     * @param $extension
+     * @return string
+     */
+    function testimonial_img_path($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
+    {
+        $path = ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH;
+        return "assets/img/$path/$img_file.$extension";
     }
 }
 
@@ -50,9 +62,9 @@ if(!function_exists('testimonial_img_asset'))
      */
     function testimonial_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        // TODO: write back this function for remote access
-        $public_folder = config('app.folder');
+        $admin_url = config('company.admin');
+        $public_folder = config('app.folder') . "/";
         $path = ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH;
-        return "$public_folder/assets/img/$path/$img_file.$extension";
+        return "$admin_url{$public_folder}assets/img/$path/$img_file.$extension";
     }
 }

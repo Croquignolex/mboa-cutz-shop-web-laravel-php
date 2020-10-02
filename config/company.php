@@ -22,4 +22,6 @@ return [
     'haircuts' =>  env('COMPANY_HAIRCUTS', 18),
     'products' =>  env('COMPANY_PRODUCTS', 13),
     'satisfied' =>  env('COMPANY_SATISFIED', 22),
+
+    'admin' =>  env('ADMIN_URL', 'https://admin.mboacutz.com'),
 ];

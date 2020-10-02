@@ -15,7 +15,7 @@
                 <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
                     <div class="staff">
                         <div class="img mb-4 text-center">
-                            <img src="{{ img_asset('default') }}" alt="...">
+                            <img src="{{ $testimonial->image_src }}" alt="...">
                         </div>
                         <div class="info">
                             <h3 class="text-center">{{ $testimonial->name }}</h3>

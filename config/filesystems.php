@@ -65,6 +65,10 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+        'admin' => [
+            'driver' => 'local',
+            'root' => env('ADMIN_FOLDER_PATH', '/public_html/subdomains/admin/public'),
+        ],
     ],
 
     /*

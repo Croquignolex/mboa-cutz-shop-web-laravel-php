@@ -47,14 +47,8 @@ class Testimonial extends Model
      * @return string
      */
     public function getImageSrcAttribute() {
-        // Update une avatar with default if avatar file is not found
-        // TODO: find how to check on a remote access
-        if(!Storage::exists(testimonial_img_asset($this->image, $this->image_extension))) {
-            // TODO: return default image, do not insert into database
-            $this->update([
-                'image' => Constants::DEFAULT_IMAGE,
-                'image_extension' => Constants::DEFAULT_IMAGE_EXTENSION,
-            ]);
+        if(!Storage::disk('admin')->exists(testimonial_img_path($this->image, $this->image_extension))) {
+            return img_asset('default');
         }
 
         return testimonial_img_asset($this->image, $this->image_extension);
