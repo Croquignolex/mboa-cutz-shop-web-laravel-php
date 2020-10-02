@@ -1,7 +1,6 @@
 <?php
 
 use App\Enums\Constants;
-use App\Enums\ImagePath;
 
 if(!function_exists('favicon_file_asset'))
 {

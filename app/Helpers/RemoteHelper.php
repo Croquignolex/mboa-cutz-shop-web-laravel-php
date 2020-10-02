@@ -14,7 +14,7 @@ if(!function_exists('user_img_path'))
      */
     function user_img_path($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return img_path($img_file, $extension, ImagePath::USER_DEFAULT_IMAGE_PATH);
+        return file_path($img_file, $extension, ImagePath::USER_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -29,7 +29,7 @@ if(!function_exists('user_img_asset'))
      */
     function user_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return img_asset($img_file, $extension, ImagePath::USER_DEFAULT_IMAGE_PATH);
+        return file_asset($img_file, $extension, ImagePath::USER_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -44,7 +44,7 @@ if(!function_exists('product_img_path'))
      */
     function product_img_path($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return img_path($img_file, $extension, ImagePath::PRODUCT_DEFAULT_IMAGE_PATH);
+        return file_path($img_file, $extension, ImagePath::PRODUCT_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -59,7 +59,7 @@ if(!function_exists('product_img_asset'))
      */
     function product_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return img_asset($img_file, $extension, ImagePath::PRODUCT_DEFAULT_IMAGE_PATH);
+        return file_asset($img_file, $extension, ImagePath::PRODUCT_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -74,7 +74,7 @@ if(!function_exists('testimonial_img_path'))
      */
     function testimonial_img_path($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return img_path($img_file, $extension, ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH);
+        return file_path($img_file, $extension, ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -89,7 +89,7 @@ if(!function_exists('testimonial_img_asset'))
      */
     function testimonial_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return img_asset($img_file, $extension, ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH);
+        return file_asset($img_file, $extension, ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -105,7 +105,7 @@ if(!function_exists('img_path'))
      * @param $path
      * @return string
      */
-    function img_path($img_file, $extension, $path)
+    function file_path($img_file, $extension, $path)
     {
         return "assets/img/$path/$img_file.$extension";
     }
@@ -121,7 +121,7 @@ if(!function_exists('img_asset'))
      * @param $path
      * @return string
      */
-    function img_asset($img_file, $extension, $path)
+    function file_asset($img_file, $extension, $path)
     {
         $admin_url = config('company.admin');
         $public_folder = config('app.folder') . "/";
