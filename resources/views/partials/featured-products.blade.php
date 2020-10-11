@@ -15,7 +15,11 @@
                 <div class="col-md-3 ftco-animate">
                     <div class="product-entry text-center">
                         <a href="{{ locale_route('products.show', compact('product')) }}">
-                            <img src="{{ $product->image_src }}" class="img-fluid" alt="...">
+                            <img src="{{ $product->image_src }}"
+                                 class="img-fluid"
+                                 alt="..."
+                                 style="opacity: {{ $product->in_stock ? '1' : '.5' }}"
+                            >
                         </a>
                         <div class="text">
                             <p class="rate" style="white-space: nowrap;">
@@ -30,7 +34,11 @@
                                     {{ amount_format($product->price) }}
                                 @endif
                             </span>
-                            <p><a href="javascript:void(0)" class="btn btn-primary">Ajouter au panier</a></p>
+                            @if($product->in_stock)
+                                <p><a href="javascript:void(0)" class="btn btn-primary">Ajouter au panier</a></p>
+                            @else
+                                <p><span class="btn btn-danger">Epuisé</span></p>
+                            @endif
                         </div>
                     </div>
                 </div>

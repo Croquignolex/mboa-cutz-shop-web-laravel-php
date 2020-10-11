@@ -91,10 +91,9 @@ class Product extends Model
     /**
      * @return mixed
      */
-    public function getAvailabilityAttribute()
+    public function getInStockAttribute()
     {
-        if($this->stock <= 0) return ProductAvailability::OUT_OF_STOCK;
-        else return ProductAvailability::IN_STOCk;
+        return $this->stock > 0;
     }
 
     /**
