@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="row">
-            @foreach($products as $product)
+            @foreach($featured_products as $product)
                 <div class="col-md-3 ftco-animate">
                     <div class="product-entry text-center">
                         <a href="{{ locale_route('products.show', compact('product')) }}">

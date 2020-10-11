@@ -21,12 +21,12 @@
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Récemment</h2>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" href="{{ locale_route('blog.index') }}">
+                        <a class="blog-img mr-4" href="{{ locale_route('articles.index') }}">
                             <img src="{{ img_asset('logo', 'jpg') }}" alt="...">
                         </a>
                         <div class="text">
                             <h3 class="heading">
-                                <a href="{{ locale_route('blog.index') }}">
+                                <a href="{{ locale_route('articles.index') }}">
                                     Even the all-powerful Pointing has no control about
                                 </a>
                             </h3>
@@ -38,12 +38,12 @@
                         </div>
                     </div>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" href="{{ locale_route('blog.index') }}">
+                        <a class="blog-img mr-4" href="{{ locale_route('articles.index') }}">
                             <img src="{{ img_asset('logo', 'jpg') }}" alt="...">
                         </a>
                         <div class="text">
                             <h3 class="heading">
-                                <a href="{{ locale_route('blog.index') }}">
+                                <a href="{{ locale_route('articles.index') }}">
                                     Even the all-powerful Pointing has no control about
                                 </a>
                             </h3>

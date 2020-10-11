@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\DateTrait;
+use App\Traits\CreatorTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,7 +14,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class ServiceReview extends Model
 {
-    use SoftDeletes, DateTrait;
+    use SoftDeletes, DateTrait, CreatorTrait;
 
     /**
      * The attributes that should be cast.

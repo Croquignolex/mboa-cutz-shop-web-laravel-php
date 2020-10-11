@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Product;
 use Illuminate\View\View;
 use App\Models\Testimonial;
@@ -24,13 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $testimonials = Testimonial::all();
+        $latest_articles = Article::all()->take(2);
 
-        $products = Product::where('is_featured', true)->get()->take(4);
+        $testimonials = Testimonial::all()->take(4);
 
-        $articles = Product::where('is_featured', true)->get()->take(4);
+        $featured_products = Product::where('is_featured', true)->get()->take(4);
 
-        return view('home', compact('testimonials', 'products'));
+        $featured_articles = Article::where('is_featured', true)->get()->take(3);
+
+        return view('home', compact('testimonials', 'featured_articles', 'latest_articles', 'featured_products'));
     }
 
     /**

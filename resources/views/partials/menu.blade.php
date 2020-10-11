@@ -24,8 +24,8 @@
                         {{ trans('page.services') }}
                     </a>
                 </li>
-                <li class="nav-item {{ active_page('blog.index')  }}">
-                    <a href="{{ locale_route('blog.index') }}" class="nav-link">
+                <li class="nav-item {{ active_page('articles.index')  }}">
+                    <a href="{{ locale_route('articles.index') }}" class="nav-link">
                         {{ trans('page.blog') }}
                     </a>
                 </li>

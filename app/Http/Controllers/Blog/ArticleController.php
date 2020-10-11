@@ -6,7 +6,7 @@ use Illuminate\View\View;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\Factory;
 
-class BlogController extends Controller
+class ArticleController extends Controller
 {
     /**
      * @return Factory|View

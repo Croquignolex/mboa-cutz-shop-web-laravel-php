@@ -6,7 +6,7 @@ use App\Enums\ImagePath;
 if(!function_exists('user_img_asset'))
 {
     /**
-     * Dynamic user image asset file path
+     * Dynamic remote user image asset file path
      *
      * @param $img_file
      * @param $extension
@@ -21,7 +21,7 @@ if(!function_exists('user_img_asset'))
 if(!function_exists('product_img_asset'))
 {
     /**
-     * Dynamic remote product product image asset file path
+     * Dynamic remote product image asset file path
      *
      * @param $img_file
      * @param $extension
@@ -33,10 +33,25 @@ if(!function_exists('product_img_asset'))
     }
 }
 
+if(!function_exists('article_img_asset'))
+{
+    /**
+     * Dynamic remote article image asset file path
+     *
+     * @param $img_file
+     * @param $extension
+     * @return string
+     */
+    function article_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
+    {
+        return file_asset($img_file, $extension, ImagePath::ARTICLE_DEFAULT_IMAGE_PATH);
+    }
+}
+
 if(!function_exists('testimonial_img_asset'))
 {
     /**
-     * Dynamic remote testimonial product image asset file path
+     * Dynamic remote testimonial image asset file path
      *
      * @param $img_file
      * @param $extension

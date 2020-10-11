@@ -8505,10 +8505,13 @@ textarea.form-control {
   position: relative;
   display: block;
   width: 100%;
-  height: 270px; }
+  /*height: 270px; */
+}
 
 .blog-entry {
-  overflow: hidden; }
+  overflow: hidden;
+  border: 1px solid #ec008c;
+}
   @media (min-width: 768px) {
     .blog-entry {
       margin-bottom: 30px; } }

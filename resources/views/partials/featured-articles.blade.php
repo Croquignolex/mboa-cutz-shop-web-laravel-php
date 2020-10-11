@@ -7,75 +7,31 @@
             </div>
         </div>
         <div class="row d-flex">
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="{{ locale_route('blog.index') }}" class="block-20">
-                        <img src="{{ img_asset('logo', 'jpg') }}" alt="...">
-                    </a>
-                    <div class="text py-4 d-block">
-                        <div class="meta">
-                            <div><span class="icon-calendar"></span> Sept 10, 2018</div>
-                            <div><span class="icon-person"></span> Admin</div>
-                            <div><span class="icon-chat"></span> 3</div>
+            @foreach($featured_articles as $article)
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <a href="{{ locale_route('articles.show', compact('article')) }}" class="block-20">
+                            <img src="{{ $article->image_src }}" alt="...">
+                        </a>
+                        <div class="text p-4 d-block">
+                            <div class="meta">
+                                <div><span class="icon-calendar"></span> {{ $article-> }}</div>
+                                <div><span class="icon-person"></span> Admin</div>
+                                <div><span class="icon-chat"></span> 3</div>
+                            </div>
+                            <h3 class="heading mt-2">
+                                <a href="{{ locale_route('articles.show', compact('article')) }}">
+                                    Men's hairstyle for all face shapes
+                                </a>
+                            </h3>
+                            <p>
+                                A small river named Duden flows by their place and supplies it with
+                                the necessary regelialia.
+                            </p>
                         </div>
-                        <h3 class="heading mt-2">
-                            <a href="{{ locale_route('blog.index') }}">
-                                Men's hairstyle for all face shapes
-                            </a>
-                        </h3>
-                        <p>
-                            A small river named Duden flows by their place and supplies it with
-                            the necessary regelialia.
-                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="{{ locale_route('blog.index') }}" class="block-20">
-                        <img src="{{ img_asset('logo', 'jpg') }}" alt="...">
-                    </a>
-                    <div class="text py-4 d-block">
-                        <div class="meta">
-                            <div><span class="icon-calendar"></span> Sept 10, 2018</div>
-                            <div><span class="icon-person"></span> Admin</div>
-                            <div><span class="icon-chat"></span> 3</div>
-                        </div>
-                        <h3 class="heading mt-2">
-                            <a href="{{ locale_route('blog.index') }}">
-                                Men's hairstyle for all face shapes
-                            </a>
-                        </h3>
-                        <p>
-                            A small river named Duden flows by their place and supplies it with
-                            the necessary regelialia.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="{{ locale_route('blog.index') }}" class="block-20">
-                        <img src="{{ img_asset('logo', 'jpg') }}" alt="...">
-                    </a>
-                    <div class="text py-4 d-block">
-                        <div class="meta">
-                            <div><span class="icon-calendar"></span> Sept 10, 2018</div>
-                            <div><span class="icon-person"></span> Admin</div>
-                            <div><span class="icon-chat"></span> 3</div>
-                        </div>
-                        <h3 class="heading mt-2">
-                            <a href="{{ locale_route('blog.index') }}">
-                                Men's hairstyle for all face shapes
-                            </a>
-                        </h3>
-                        <p>
-                            A small river named Duden flows by their place and supplies it with
-                            the necessary regelialia.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

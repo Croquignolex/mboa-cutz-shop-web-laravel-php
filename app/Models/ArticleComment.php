@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property mixed id
  * @property mixed can_delete
  */
-class ProductReview extends Model
+class ArticleComment extends Model
 {
     use SoftDeletes, DateTrait, CreatorTrait;
 
@@ -21,20 +21,20 @@ class ProductReview extends Model
      *
      * @var array
      */
-    protected $guarded = ['id', 'creator_id', 'product_id'];
+    protected $guarded = ['id', 'creator_id', 'article_id'];
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['description', 'rate'];
+    protected $fillable = ['description'];
 
     /**
      * @return BelongsTo
      */
-    public function product()
+    public function article()
     {
-        return $this->belongsTo('App\Models\Product');
+        return $this->belongsTo('App\Models\Article');
     }
 }
