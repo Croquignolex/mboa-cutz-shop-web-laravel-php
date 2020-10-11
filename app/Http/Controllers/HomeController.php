@@ -25,13 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $latest_articles = Article::all()->take(2);
+        $latest_articles = Article::all()->sortByDesc('updated_at')->take(2);
 
-        $testimonials = Testimonial::all()->take(4);
+        $testimonials = Testimonial::all()->sortByDesc('updated_at')->take(4);
 
-        $featured_products = Product::where('is_featured', true)->get()->take(4);
+        $featured_products = Product::where('is_featured', true)->get()->sortByDesc('updated_at')->take(4);
 
-        $featured_articles = Article::where('is_featured', true)->get()->take(3);
+        $featured_articles = Article::where('is_featured', true)->get()->sortByDesc('updated_at')->take(3);
 
         return view('home', compact('testimonials', 'featured_articles', 'latest_articles', 'featured_products'));
     }
