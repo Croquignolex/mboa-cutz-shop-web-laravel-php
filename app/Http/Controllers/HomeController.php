@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\View\View;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -25,7 +26,11 @@ class HomeController extends Controller
     {
         $testimonials = Testimonial::all();
 
-        return view('home', compact('testimonials'));
+        $products = Product::where('is_featured', true)->get()->take(4);
+
+        $articles = Product::where('is_featured', true)->get()->take(4);
+
+        return view('home', compact('testimonials', 'products'));
     }
 
     /**

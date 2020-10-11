@@ -4,8 +4,7 @@
 
 @section('shop.master.body')
     @include('partials.home.banner')
-{{--TODO: undo products area comment while admin product managemnt is ready--}}
-{{--    @include('partials.featured-products')--}}
+    @include('partials.featured-products')
     @include('partials.home.testimonials')
     @include('partials.home.stats')
     @include('partials.featured-articles')

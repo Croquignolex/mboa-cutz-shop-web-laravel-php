@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\App;
 trait LocaleDescriptionTrait
 {
     /**
+     * Get description form the correct locale
+     *
      * @return mixed
      */
     public function getDescriptionAttribute()

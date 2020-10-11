@@ -46,10 +46,6 @@ class Testimonial extends Model
      * @return string
      */
     public function getImageSrcAttribute() {
-        if(!Storage::disk('admin')->exists(testimonial_img_path($this->image, $this->image_extension))) {
-            return img_asset('default');
-        }
-
         return testimonial_img_asset($this->image, $this->image_extension);
     }
 }

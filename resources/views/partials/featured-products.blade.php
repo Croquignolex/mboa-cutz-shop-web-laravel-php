@@ -11,82 +11,30 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 ftco-animate">
-                <div class="product-entry text-center">
-                    <a href="{{ locale_route('products.index') }}">
-                        <img src="{{ product_img_asset('product-1', 'png') }}" class="img-fluid" alt="...">
-                    </a>
-                    <div class="text">
-                        <p class="rate">
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star_half"></span>
-                        </p>
-                        <h3><a href="#">Produit 1</a></h3>
-                        <span class="price mb-4">150 XFA</span>
-                        <p><a href="javascript:void(0)" class="btn btn-primary">Ajouter au panier</a></p>
+            @foreach($products as $product)
+                <div class="col-md-3 ftco-animate">
+                    <div class="product-entry text-center">
+                        <a href="{{ locale_route('products.show', compact('product')) }}">
+                            <img src="{{ $product->image_src }}" class="img-fluid" alt="...">
+                        </a>
+                        <div class="text">
+                            <p class="rate" style="white-space: nowrap;">
+                                @include('partials.rating-star', ['rate' => $product->rate])
+                            </p>
+                            <h3><a href="{{ locale_route('products.show', compact('product')) }}">{{ $product->name }}</a></h3>
+                            <span class="price mb-4">
+                                @if($product->is_a_discount)
+                                    {{ amount_format($product->amount) }}
+                                    <small><s>{{ amount_format($product->price) }}</s></small>
+                                @else
+                                    {{ amount_format($product->price) }}
+                                @endif
+                            </span>
+                            <p><a href="javascript:void(0)" class="btn btn-primary">Ajouter au panier</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <div class="product-entry text-center">
-                    <a href="{{ locale_route('products.index') }}">
-                        <img src="{{ product_img_asset('product-2', 'png') }}" class="img-fluid" alt="...">
-                    </a>
-                    <div class="text">
-                        <p class="rate">
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star_half"></span>
-                        </p>
-                        <h3><a href="#">Produit 2</a></h3>
-                        <span class="price mb-4">150 XFA</span>
-                        <p><a href="javascript:void(0)" class="btn btn-primary">Ajouter au panier</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <div class="product-entry text-center">
-                    <a href="{{ locale_route('products.index') }}">
-                        <img src="{{ product_img_asset('product-3', 'png') }}" class="img-fluid" alt="...">
-                    </a>
-                    <div class="text">
-                        <p class="rate">
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star_half"></span>
-                        </p>
-                        <h3><a href="#">Produit 3</a></h3>
-                        <span class="price mb-4">150 XFA</span>
-                        <p><a href="javascript:void(0)" class="btn btn-primary">Ajouter au panier</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 ftco-animate">
-                <div class="product-entry text-center">
-                    <a href="{{ locale_route('products.index') }}">
-                        <img src="{{ product_img_asset('product-4', 'png') }}" class="img-fluid" alt="...">
-                    </a>
-                    <div class="text">
-                        <p class="rate">
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star2"></span>
-                            <span class="icon-star_half"></span>
-                        </p>
-                        <h3><a href="#">Produit 4</a></h3>
-                        <span class="price mb-4">150 XFA</span>
-                        <p><a href="javascript:void(0)" class="btn btn-primary">Ajouter au panier</a></p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

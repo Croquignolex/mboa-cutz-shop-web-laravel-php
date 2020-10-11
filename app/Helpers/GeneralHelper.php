@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\App;
 
 if(!function_exists('locale_route'))
 {
@@ -32,6 +33,20 @@ if(!function_exists('text_format'))
     {
         if(strlen($text) > $maxCharacters) return mb_substr($text, 0, $maxCharacters, 'utf-8') . '...';
         return $text;
+    }
+}
+
+if(!function_exists('amount_format'))
+{
+    /**
+     * @param $amount
+     * @return string
+     */
+    function amount_format($amount)
+    {
+        $amount = number_format($amount, 0, ',', '.');
+        if(App::getLocale() === config('app.secondary_locale')) return "XAF $amount";
+        return "$amount XAF";
     }
 }
 

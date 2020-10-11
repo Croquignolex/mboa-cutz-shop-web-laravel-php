@@ -30,13 +30,15 @@ Route::group(['namespace' => 'shop'], function() {
     Route::get('/cart', function () { return redirect(locale_route('cart.index')); });
     Route::get('/products', function () { return redirect(locale_route('products.index')); });
     Route::get('/services', function () { return redirect(locale_route('services.index')); });
+    Route::get('/products/{product}', function () { return redirect(locale_route('products.show', compact('product'))); });
     // End non localized routes
 
 
     // Start localized routes
     Route::get('/{language}/cart', 'CartController@index')->name('cart.index');
-    Route::get('/{language}/products', 'ProductsController@index')->name('products.index');
-    Route::get('/{language}/services', 'ServicesController@index')->name('services.index');
+    Route::get('/{language}/services', 'ServiceController@index')->name('services.index');
+    Route::get('/{language}/products', 'ProductController@index')->name('products.index');
+    Route::get('/{language}/products/{product}', 'ProductController@show')->name('products.show');
     // End localized routes
 });
 
