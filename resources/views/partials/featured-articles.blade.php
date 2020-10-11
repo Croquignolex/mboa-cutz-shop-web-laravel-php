@@ -15,19 +15,17 @@
                         </a>
                         <div class="text p-4 d-block">
                             <div class="meta">
-                                <div><span class="icon-calendar"></span> {{ $article-> }}</div>
-                                <div><span class="icon-person"></span> Admin</div>
-                                <div><span class="icon-chat"></span> 3</div>
+                                <div><span class="icon-calendar"></span> {{ $article->short_creation_date }}</div>
+                                <div><span class="icon-chat"></span> {{ $article->comments->count() }}</div>
+                            </div>
+                            <div class="meta">
+                                <div><span class="icon-person"></span> {{ $article->creator_name }}</div>
                             </div>
                             <h3 class="heading mt-2">
                                 <a href="{{ locale_route('articles.show', compact('article')) }}">
-                                    Men's hairstyle for all face shapes
+                                    {{ $article->name }}
                                 </a>
                             </h3>
-                            <p>
-                                A small river named Duden flows by their place and supplies it with
-                                the necessary regelialia.
-                            </p>
                         </div>
                     </div>
                 </div>

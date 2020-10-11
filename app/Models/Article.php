@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\DateTrait;
+use App\Traits\CreatorTrait;
 use App\Traits\SlugRouteTrait;
 use App\Traits\LocaleNameTrait;
 use App\Traits\LocaleDescriptionTrait;
@@ -28,7 +29,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  */
 class Article extends Model
 {
-    use SoftDeletes, SlugRouteTrait, DateTrait, LocaleNameTrait, LocaleDescriptionTrait;
+    use SoftDeletes, SlugRouteTrait, DateTrait, CreatorTrait, LocaleNameTrait, LocaleDescriptionTrait;
 
     /**
      * The attributes that should be cast.
