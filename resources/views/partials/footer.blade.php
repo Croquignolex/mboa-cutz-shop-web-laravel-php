@@ -1,3 +1,4 @@
+@inject('articleService', 'App\Services\ArticleService')
 <footer class="ftco-footer ftco-section img">
     <div class="overlay"></div>
     <div class="container">
@@ -20,7 +21,7 @@
             <div class="col-md-4">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Récemment</h2>
-                    @foreach($latest_articles as $article)
+                    @foreach($articleService->latestArticles() as $article)
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4" href="{{ locale_route('articles.show', compact('article')) }}">
                                 <img src="{{ $article->image_src }}" alt="...">
