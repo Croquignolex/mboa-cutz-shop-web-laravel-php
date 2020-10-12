@@ -9,7 +9,7 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                {{--<li class="nav-item {{ active_page('home.index')  }}">
+                <li class="nav-item {{ active_page('home.index')  }}">
                     <a href="{{ locale_route('home.index') }}" class="nav-link">
                         {{ trans('page.home') }}
                     </a>
@@ -31,37 +31,6 @@
                 </li>
                 <li class="nav-item {{ active_page('contact.index')  }}">
                     <a href="{{ locale_route('contact.index') }}" class="nav-link">
-                        {{ trans('page.contact') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ language_url() }}" class="nav-link">
-                        <i class="icon-flag"></i> {{ language_title() }}
-                    </a>
-                </li>--}}
-
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">
-                        {{ trans('page.home') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        {{ trans('page.products') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        {{ trans('page.services') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        {{ trans('page.blog') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
                         {{ trans('page.contact') }}
                     </a>
                 </li>

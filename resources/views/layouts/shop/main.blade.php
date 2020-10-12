@@ -1,10 +1,10 @@
 @extends('master')
 
-@section('master.title')@yield('shop.master.title')@endsection
+@section('master.title')@yield('shop.main.master.title')@endsection
 
 @section('master.body')
     @include('partials.menu')
-    @yield('shop.master.body')
+    @yield('shop.main.master.body')
     @include('partials.footer')
     <div id="ftco-loader" class="show fullscreen">
         <svg class="circular" width="50px" height="50px">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{{ css_asset('flaticon') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('icomoon') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('style') }}" type="text/css">
-    @stack('shop.master.style')
+    @stack('shop.main.master.style')
 @endpush
 
 @push('master.script')
@@ -48,5 +48,5 @@
     <script src="{{ js_asset('jquery.timepicker.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('scrollax.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('main') }}" type="application/javascript"></script>
-    @stack('shop.master.script')
+    @stack('shop.main.master.script')
 @endpush

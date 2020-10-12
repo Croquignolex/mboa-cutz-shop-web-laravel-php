@@ -20,6 +20,7 @@ Route::get('/contact', function () { return redirect(locale_route('contact.index
 // Start localized routes
 Route::get('/{language?}', 'HomeController@index')->name('home.index');
 Route::get('/{language}/contact', 'ContactController@index')->name('contact.index');
+Route::post('/{language}/contact', 'ContactController@sendMessage')->name('contact.send-message');
 
 Route::group(['namespace' => 'shop'], function() {
     // Start non localized routes

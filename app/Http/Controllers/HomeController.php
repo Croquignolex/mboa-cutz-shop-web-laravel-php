@@ -21,6 +21,8 @@ class HomeController extends Controller
     }
 
     /**
+     * Fetch & send home page necessary data
+     *
      * @return Factory|View
      */
     public function index()
@@ -35,6 +37,8 @@ class HomeController extends Controller
     }
 
     /**
+     * Capture user timezone
+     *
      * @param Request $request
      * @return JsonResponse
      */

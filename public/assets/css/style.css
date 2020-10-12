@@ -7484,6 +7484,9 @@ h1, h2, h3, h4, h5,
   z-index: 0;
   background-image: url("../img/banners/banner.jpg");
 }
+.mini-banner {
+  background-image: url("../img/banners/banner-mini.jpg");
+}
   @media (max-width: 1199.98px) {
     .hero-wrap {
       background-position: center center !important; } }
