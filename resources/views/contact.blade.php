@@ -30,26 +30,53 @@
                     <form action="{{ locale_route('contact.send-message') }}" class="contact-form" method="POST">
                         @csrf
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Email">
-                                </div>
+                            <div class="col">
+                                @include('partials.form.input', [
+                                     'name' => 'Nom & prénom',
+                                     'id' => 'name',
+                                     'type' => 'text',
+                                     'value' =>  old('name'),
+                                 ])
                             </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                @include('partials.form.input', [
+                                     'name' => 'Téléphone',
+                                     'id' => 'phone',
+                                     'type' => 'text',
+                                     'value' =>  old('phone'),
+                                 ])
+                            </div>
+                            <div class="col-sm-6">
+                                @include('partials.form.input', [
+                                     'name' => 'Email',
+                                     'id' => 'email',
+                                     'type' => 'email',
+                                     'value' =>  old('email'),
+                                 ])
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        <div class="row">
+                            <div class="col">
+                                @include('partials.form.input', [
+                                     'name' => 'Sujet',
+                                     'id' => 'subject',
+                                     'type' => 'text',
+                                     'value' =>  old('subject'),
+                                 ])
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        <div class="row">
+                            <div class="col">
+                                @include('partials.form.textarea', [
+                                   'id' => 'message',
+                                   'name' => 'Message',
+                                   'value' => old('message'),
+                                ])
+                            </div>
                         </div>
+                        @include('partials.form.submit', ['name' => "Envoyer"])
                     </form>
                 </div>
             </div>
