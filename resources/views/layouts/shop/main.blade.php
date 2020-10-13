@@ -33,7 +33,6 @@
 @endpush
 
 @push('master.script')
-    <script src="{{ js_asset('jquery.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('jquery-migrate-3.0.1.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('popper.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('bootstrap.min') }}" type="application/javascript"></script>

@@ -51,7 +51,7 @@
                                 @include('partials.form.input', [
                                      'name' => 'Email',
                                      'id' => 'email',
-                                     'type' => 'email',
+                                     'type' => 'text',
                                      'value' => old('email'),
                                  ])
                             </div>

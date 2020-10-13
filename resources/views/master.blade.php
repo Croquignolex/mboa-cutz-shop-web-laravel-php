@@ -47,13 +47,32 @@
         <meta property="og:image" content="{{ img_asset('logo', 'jpg') }}" />
         <meta property="twitter:image" content="{{ img_asset('logo', 'jpg') }}" />
 
+        <link rel="stylesheet" href="{{ css_asset('toastr.min') }}" type="text/css">
+
         @stack('master.style')
+
         <link rel="stylesheet" href="{{ css_asset('master') }}" type="text/css">
     </head>
 
     <body>
         @yield('master.body')
+
+        <script src="{{ js_asset('jquery.min') }}" type="application/javascript"></script>
+        <script src="{{ js_asset('toastr.min') }}" type="application/javascript"></script>
+
         @stack('master.script')
+
         <script src="{{ js_asset('master') }}" type="application/javascript"></script>
+
+        @if(session()->has('toast.alert'))
+            <script>
+                callToaster(
+                    "{{ session('toast.title') }}",
+                    "{{ session('toast.message') }}",
+                    "{{ session('toast.type') }}",
+                    "{{ session('toast.delay') }}"
+                );
+            </script>
+        @endif
     </body>
 </html>
