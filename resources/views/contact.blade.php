@@ -7,7 +7,7 @@
 @section('shop.mini.master.body')
     <section class="ftco-section contact-section">
         <div class="container mt-5">
-            <div class="row block-9">
+            <div class="row">
                 <div class="col-md-4 contact-info ftco-animate">
                     <div class="row">
                         <div class="col-md-12 mb-4">
@@ -24,8 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-6 ftco-animate">
+                <div class="col-md-8 ftco-animate">
                     <div class="mx-5">@include('partials.error-message')</div>
                     <form action="{{ locale_route('contact.send-message') }}" class="contact-form" method="POST">
                         @csrf
@@ -35,7 +34,7 @@
                                      'name' => 'Nom & prénom',
                                      'id' => 'name',
                                      'type' => 'text',
-                                     'value' =>  old('name'),
+                                     'value' => old('name'),
                                  ])
                             </div>
                         </div>
@@ -45,7 +44,7 @@
                                      'name' => 'Téléphone',
                                      'id' => 'phone',
                                      'type' => 'text',
-                                     'value' =>  old('phone'),
+                                     'value' => old('phone'),
                                  ])
                             </div>
                             <div class="col-sm-6">
@@ -53,7 +52,7 @@
                                      'name' => 'Email',
                                      'id' => 'email',
                                      'type' => 'email',
-                                     'value' =>  old('email'),
+                                     'value' => old('email'),
                                  ])
                             </div>
                         </div>
@@ -63,7 +62,7 @@
                                      'name' => 'Sujet',
                                      'id' => 'subject',
                                      'type' => 'text',
-                                     'value' =>  old('subject'),
+                                     'value' => old('subject'),
                                  ])
                             </div>
                         </div>
