@@ -1,7 +1,9 @@
-@extends('layouts.shop.shop')
+@extends('layouts.shop.mini')
 
-@section('shop.master.title', page_title(trans('page.services')))
+@section('shop.mini.master.title', page_title(trans('page.services')))
 
-@section('shop.master.body')
-    Services page
+@section('shop.mini.page', trans('page.services'))
+
+@section('shop.mini.master.body')
+
 @endsection
