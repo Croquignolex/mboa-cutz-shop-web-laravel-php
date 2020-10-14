@@ -14,7 +14,6 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-    'folder' =>  env('PUBLIC_FOLDER', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'asset_url' => env('ASSET_URL', null),
+    'asset_url' => env('ASSET_URL', env('APP_ENV') === 'local' ? null : env('APP_URL') . '/public'),
 
     /*
     |--------------------------------------------------------------------------

@@ -14,7 +14,7 @@ if(!function_exists('user_img_asset'))
      */
     function user_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return file_asset($img_file, $extension, ImagePath::USER_DEFAULT_IMAGE_PATH);
+        return remote_file_asset($img_file, $extension, ImagePath::USER_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -29,7 +29,7 @@ if(!function_exists('product_img_asset'))
      */
     function product_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return file_asset($img_file, $extension, ImagePath::PRODUCT_DEFAULT_IMAGE_PATH);
+        return remote_file_asset($img_file, $extension, ImagePath::PRODUCT_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -44,7 +44,7 @@ if(!function_exists('article_img_asset'))
      */
     function article_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return file_asset($img_file, $extension, ImagePath::ARTICLE_DEFAULT_IMAGE_PATH);
+        return remote_file_asset($img_file, $extension, ImagePath::ARTICLE_DEFAULT_IMAGE_PATH);
     }
 }
 
@@ -59,11 +59,11 @@ if(!function_exists('testimonial_img_asset'))
      */
     function testimonial_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        return file_asset($img_file, $extension, ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH);
+        return remote_file_asset($img_file, $extension, ImagePath::TESTIMONIAL_DEFAULT_IMAGE_PATH);
     }
 }
 
-if(!function_exists('file_asset'))
+if(!function_exists('remote_file_asset'))
 {
     /**
      * Dynamic remote image asset file path
@@ -73,10 +73,9 @@ if(!function_exists('file_asset'))
      * @param $path
      * @return string
      */
-    function file_asset($img_file, $extension, $path)
+    function remote_file_asset($img_file, $extension, $path)
     {
-        $admin_url = config('company.admin');
-        $public_folder = config('app.folder') . "/";
-        return "$admin_url{$public_folder}assets/img/$path/$img_file.$extension";
+        $admin_storage_url = config('company.admin');
+        return "$admin_storage_url/$path/$img_file.$extension";
     }
 }

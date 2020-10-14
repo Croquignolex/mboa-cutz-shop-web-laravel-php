@@ -2,20 +2,6 @@
 
 use App\Enums\Constants;
 
-if(!function_exists('favicon_file_asset'))
-{
-    /**
-     * @param $file
-     * @return string
-     */
-    function favicon_file_asset($file)
-    {
-        $extension = 'json';
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/img/favicons/$file.$extension";
-    }
-}
-
 if(!function_exists('css_asset'))
 {
     /**
@@ -26,9 +12,7 @@ if(!function_exists('css_asset'))
      */
     function css_asset($css_file)
     {
-        $extension = 'css';
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/$extension/$css_file.$extension";
+        return file_asset($css_file, 'css', 'css');
     }
 }
 
@@ -42,9 +26,7 @@ if(!function_exists('js_asset'))
      */
     function js_asset($js_file)
     {
-        $extension = 'js';
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/$extension/$js_file.$extension";
+        return file_asset($js_file, 'js', 'js');
     }
 }
 
@@ -59,8 +41,7 @@ if(!function_exists('img_asset'))
      */
     function img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/img/$img_file.$extension";
+        return asset("storage/$img_file.$extension");
     }
 }
 
@@ -75,8 +56,19 @@ if(!function_exists('favicon_img_asset'))
      */
     function favicon_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/img/favicons/$img_file.$extension";
+        return storage_asset($img_file, $extension, 'favicons');
+    }
+}
+
+if(!function_exists('favicon_file_asset'))
+{
+    /**
+     * @param $file
+     * @return string
+     */
+    function favicon_file_asset($file)
+    {
+        return storage_asset($file, 'json', 'favicons');
     }
 }
 
@@ -89,8 +81,7 @@ if(!function_exists('banner_img_asset'))
      */
     function banner_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
     {
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/img/banners/$img_file.$extension";
+        return storage_asset($img_file, $extension, 'banners');
     }
 }
 
@@ -103,7 +94,40 @@ if(!function_exists('video_asset'))
      */
     function video_asset($video_file, $extension = Constants::DEFAULT_VIDEO_EXTENSION)
     {
-        $public_folder = config('app.folder');
-        return "$public_folder/assets/videos/$video_file.$extension";
+        return storage_asset($video_file, $extension, 'videos');
+    }
+}
+
+// ***********************************************************************************
+
+if(!function_exists('file_asset'))
+{
+    /**
+     * Dynamic product image asset file path
+     *
+     * @param $file
+     * @param $extension
+     * @param $path
+     * @return string
+     */
+    function file_asset($file, $extension, $path)
+    {
+        return asset("$path/$file.$extension");
+    }
+}
+
+if(!function_exists('storage_asset'))
+{
+    /**
+     * Dynamic image asset file path
+     *
+     * @param $file
+     * @param $extension
+     * @param $path
+     * @return string
+     */
+    function storage_asset($file, $extension, $path)
+    {
+        return asset("storage/$path/$file.$extension");
     }
 }

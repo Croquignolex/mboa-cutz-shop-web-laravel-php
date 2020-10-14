@@ -23,5 +23,5 @@ return [
     'products' =>  env('COMPANY_PRODUCTS', 13),
     'satisfied' =>  env('COMPANY_SATISFIED', 22),
 
-    'admin' =>  env('ADMIN_URL', 'https://admin.mboacutz.com'),
+    'admin' =>  env('ADMIN_URL', 'https://localhost:8000/storage'),
 ];
