@@ -15,8 +15,6 @@
 @endsection
 
 @push('master.style')
-    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ css_asset('open-iconic-bootstrap.min') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('animate') }}" type="text/css">
     <link rel="stylesheet" href="{{ css_asset('owl.carousel.min') }}" type="text/css">

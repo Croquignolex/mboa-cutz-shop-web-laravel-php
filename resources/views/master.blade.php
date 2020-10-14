@@ -47,6 +47,9 @@
         <meta property="og:image" content="{{ img_asset('logo', 'jpg') }}" />
         <meta property="twitter:image" content="{{ img_asset('logo', 'jpg') }}" />
 
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
         <link rel="stylesheet" href="{{ css_asset('toastr.min') }}" type="text/css">
 
         @stack('master.style')

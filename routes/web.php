@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/test', function () {
+    return new \App\Mail\ContactFormMail(\App\Models\Contact::find(1));
+});
+
 // Start non localized routes
 Route::post('/timezone', 'HomeController@timezoneAjax');
 Route::get('/contact', function () { return redirect(locale_route('contact.index')); });

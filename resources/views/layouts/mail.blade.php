@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-
-<html lang="{{ App::getLocale() }}">
+<html lang="{{ Illuminate\Support\Facades\App::getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>@yield('title')</title>
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     </head>
 
-    <body style="margin:0px; background: #f8f8f8;">
-        <div style="padding: 0px 0px; font-family:arial; line-height:30px; height:100%; width: 100%;">
-            <div style="max-width: 700px; padding:50px 0; margin: 0px auto; font-size: 14px;">
+    <body style="margin:0; background: #f8f8f8;">
+        <div style="padding: 0 0; font-family:'Poppins', Arial, sans-serif; line-height:30px; height:100%; width: 100%;">
+            <div style="max-width: 700px; padding:50px 0; margin: 0 auto; font-size: 14px;">
                 <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
                     <tbody>
                     <tr>
-                        <td style="vertical-align: top; padding-bottom:30px;" align="center">
-                            <a href="{{ locale_route('home') }}" target="_blank">
-                                <img src="{{ img_asset('logo') }}" alt="..." style="border:none; height: 40px"><br/>
+                        <td style="vertical-align: top; padding-bottom:10px;" align="center">
+                            <a href="{{ locale_route('home.index') }}" target="_blank">
+                                <img src="{{ url('assets/img/logo-black.png') }}" alt="..." style="border:none; height: 100px"><br/>
                             </a>
                         </td>
                     </tr>
@@ -25,7 +25,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
                     <tbody>
                     <tr>
-                        <td style="background:#DA7612; padding:20px; color:#fff; text-align:center;">
+                        <td style="background:#e83e8c; padding:20px; color:#fff; text-align:center;">
                             <strong>
                                 @yield('head')
                             </strong>
