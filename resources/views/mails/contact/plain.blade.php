@@ -1,16 +1,18 @@
-{{ mb_strtoupper('Formulaire de contact') }}<br /><br /><br />
+{{ mb_strtoupper('Formulaire de contact') }}
+
 Ce méssage vous à été envoyé dépuis le formulaire de
-contact le {{ $contact->fr_created_date }} à {{ $contact->fr_created_time }}.
-Voici les détails de ce méssage:<br /><br />
-Nom: {{ $contact->format_name }}<br />
-Email: {{ $contact->email }}<br />
-Tel: {{ $contact->phone }}<br />
-Sujet: {{ $contact->subject }}<br /><br />
-{{ $contact->message }}<br /><br />
-<a href="#" target="_blank">Répondre au méssage</a><br /><br />
-Si ce bouton ne fonctionne pas, essayez de copier et coller
-cet URL dans votre navigateur web. Si le problème perssiste,
-s'il vous plais sentez vous libre de contacter l'équipe
-de developpement.<br /><br />
-@lang('general.admin_thanks', ['app' => config('app.name')])<br /><br /><br />
+contact le {{ $contact->short_creation_date }}.
+Voici les détails de ce méssage:
+
+Nom: {{ $contact->format_name }}
+Email: {{ $contact->email }}
+Tel: {{ $contact->phone }}
+Sujet: {{ $contact->subject }}
+
+{{ $contact->message }}
+
+Ce mail à été envoyé à {{ $sender }}.
+Si vous êtes pas le destinataire, vous pouvez ignorer ce mail
+ou nous contacter directement en utilisant ce lien ({{ locale_route('contact.index') }}).
+
 &copy; 2018 {{ config('app.name') }}, @lang('general.right').

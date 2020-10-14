@@ -35,7 +35,8 @@ class ContactController extends Controller
 
         success_toast_alert("Message envoyé avec succès");
 
-        Mail::to(config('company.email'))->send(new ContactFormMail($contact));
+        $sender = config('company.email');
+        Mail::to($sender)->send(new ContactFormMail($contact, $sender));
 
         return redirect(locale_route('contact.index'));
     }
