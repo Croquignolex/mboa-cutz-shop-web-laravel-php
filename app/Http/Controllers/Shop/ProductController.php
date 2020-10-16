@@ -29,10 +29,11 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param String $language
      * @param Product $product
      * @return Application|Factory|Response|View
      */
-    public function show(Product $product)
+    public function show(String $language, Product $product)
     {
         $reviews = $product
             ->reviews()

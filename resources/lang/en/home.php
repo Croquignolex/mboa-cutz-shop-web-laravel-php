@@ -1,14 +1,7 @@
 <?php
 
 return [
-    /*
-    |--------------------------------------------------------------------------
-    | Home Language Lines
-    |--------------------------------------------------------------------------
-    |
-    |
-    */
-
+    // ******************************* BANNER ******************************* //
     'banner_top_title' => "A unique way to take care of yourself",
     'banner_title' => "Exclusive offers",
 
@@ -24,5 +17,11 @@ return [
     'welcome_start' => "Welcome on",
     'welcome_end' => "your ultra modern men aesthetic babershop",
     'welcome_description' => "We are :name, an ultra modern CAMEROONIAN babershop specialized for Afro, Asian and European men. We are a concept, a philosophy, another way of seeing the haircut",
+
+    // ******************************* FEATURED PRODUCTS ******************************* //
+    'featured_products' => "Featured Products",
+    'featured_products_description' => "We assure you a high quality of services and products validated by experts. Do not hesitate to consult our various services and products catalog",
+
+    // ******************************* TESTIMONIALS ******************************* //
 
 ];

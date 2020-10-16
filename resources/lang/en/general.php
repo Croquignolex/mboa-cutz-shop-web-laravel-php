@@ -1,13 +1,8 @@
 <?php
 
 return [
-    /*
-    |--------------------------------------------------------------------------
-    | General Language Lines
-    |--------------------------------------------------------------------------
-    |
-    |
-    */
+    'sold_out' => 'Sold out',
+    'add_to_cart' => 'Add to cart',
 
     'right' => 'All rights reserved',
     'admin_thanks' => 'Thanks (:app team)',
