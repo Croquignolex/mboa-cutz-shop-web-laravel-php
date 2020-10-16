@@ -22,4 +22,7 @@ return [
     'featured_products_description' => "Nous vous assurons des services de haute qualité et des produits validés par les experts. N'ésitez surtout pas a consulter le catalogue de nos différents produits et services",
 
     // ******************************* TESTIMONIALS ******************************* //
+    'testimonials' => "Ce que le client pensent de nous",
+    'testimonials_description' => "Notre priorité est de garantir un service à la hauteur des attentes de nos clients, Il s'expriment en ces termes",
+
 ];
