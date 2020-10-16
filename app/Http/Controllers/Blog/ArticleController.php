@@ -25,4 +25,22 @@ class ArticleController extends Controller
 
         return view('blog.index', compact('articles'));
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param String $language
+     * @param Article $article
+     * @return Application|Factory|Response|View
+     */
+    public function show(String $language, Article $article)
+    {
+        $comments = $article
+            ->comments()
+            ->orderBy('created_at', 'desc')
+            ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS)
+            ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
+
+        return view('blog.show', compact('article', 'comments'));
+    }
 }
