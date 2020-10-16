@@ -10,7 +10,7 @@
             <div class="row d-flex">
                 @foreach ($articles as $article)
                     <div class="col-md-4 d-flex ftco-animate">
-                        @include('partials.article-card', compact('article'))
+                        @include('partials.articles.article-card', compact('article'))
                     </div>
                 @endforeach
             </div>
