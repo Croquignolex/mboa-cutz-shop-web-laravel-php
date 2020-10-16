@@ -32,5 +32,8 @@ return [
     'stats_products' => "Cleaning products",
     'stats_experts' => "Experts",
 
+    // ******************************* FEATURED ARTICLES ******************************* //
+    'featured_articles' => "Featured articles",
+    'featured_articles_description' => "Tips and advice for everyone. Do not hesitate to leave comments",
 
 ];

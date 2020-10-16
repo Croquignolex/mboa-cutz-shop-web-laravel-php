@@ -31,4 +31,8 @@ return [
     'stats_products' => "Produits d'entretiens",
     'stats_experts' => "Experts",
 
+    // ******************************* ARTICLES ******************************* //
+    'featured_articles' => "Articles en vedette",
+    'featured_articles_description' => "Des astuces et des conseils pour tous. N'hésitez pas a y laisser des commentaires",
+
 ];
