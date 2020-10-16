@@ -5,12 +5,8 @@
         <div class="row mb-3">
             <div class="col-md-4">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">A propos</h2>
-                    <p>
-                        Nous somme MBOA CUTZ, un babershop CAMEROUNAIS ultra
-                        moderne spécialisé pour hommes Afro, Asiatique et Européen.
-                        Nous sommes un concept, une philosphie, une autre façon de voire la coupe de cheveux
-                    </p>
+                    <h2 class="ftco-heading-2"></h2>
+                    <p>@lang('home.welcome_description', ['name' => config('app.name')])</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="{{ config('company.twitter') }}"><span class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="{{ config('company.facebook') }}"><span class="icon-facebook"></span></a></li>
@@ -20,7 +16,7 @@
             </div>
             <div class="col-md-4">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Récemment</h2>
+                    <h2 class="ftco-heading-2">@lang('general.recently')</h2>
                     @foreach($articleService->latestArticles() as $article)
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4" href="{{ locale_route('articles.show', compact('article')) }}">
@@ -44,7 +40,7 @@
             </div>
             <div class="col-md-4">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Comment nous cotacter</h2>
+                    <h2 class="ftco-heading-2">@lang('general.contact_us')</h2>
                     <div class="block-23 mb-3">
                         <ul>
                             <li><span class="icon icon-map-marker"></span><span class="text">{{ config('company.address') }}</span></li>

@@ -60,7 +60,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8 text-center ftco-animate">
-                <p>@lang('home.welcome_description', ['name' => config('app.name')]) </p>
+                <p>@lang('home.welcome_description', ['name' => config('app.name')])</p>
             </div>
         </div>
     </div>

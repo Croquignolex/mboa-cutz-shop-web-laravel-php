@@ -11,5 +11,8 @@ return [
     'privacy_policy' => "Privacy policy",
 
     // ******************************* FOOTER ******************************* //
+    'about' => "About",
+    'recently' => "Recently",
+    'contact_us' => "How to contact us",
 
 ];
