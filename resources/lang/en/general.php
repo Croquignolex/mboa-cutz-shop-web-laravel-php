@@ -15,4 +15,14 @@ return [
     'recently' => "Recently",
     'contact_us' => "How to contact us",
 
+    // ******************************* CONTACT ******************************* //
+    'info' => "Information",
+    'address' => "Address",
+    'phone' => "Phone",
+    'email' => "Email",
+    'names' => "First name & last name",
+    'subject' => "Subject",
+    'message' => "Message",
+    'send' => "Send",
+
 ];

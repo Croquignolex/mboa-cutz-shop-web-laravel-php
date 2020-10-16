@@ -11,16 +11,16 @@
                 <div class="col-md-4 contact-info ftco-animate">
                     <div class="row">
                         <div class="col-md-12 mb-4">
-                            <h2 class="h4">Infortmationn</h2>
+                            <h2 class="h4">@lang('general.info')</h2>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Address:</span> {{ config('company.address') }}</p>
+                            <p><span>@lang('general.address'):</span> {{ config('company.address') }}</p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Phone:</span> {{ config('company.phone') }}</p>
+                            <p><span>@lang('general.phone'):</span> {{ config('company.phone') }}</p>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <p><span>Email:</span> {{ config('company.email') }}</p>
+                            <p><span>@lang('general.email'):</span> {{ config('company.email') }}</p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col">
                                 @include('partials.form.input', [
-                                     'name' => 'Nom & prénom',
+                                     'name' => trans('general.names'),
                                      'id' => 'name',
                                      'type' => 'text',
                                      'value' => old('name'),
@@ -41,7 +41,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 @include('partials.form.input', [
-                                     'name' => 'Téléphone',
+                                     'name' => trans('general.phone'),
                                      'id' => 'phone',
                                      'type' => 'text',
                                      'value' => old('phone'),
@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-sm-6">
                                 @include('partials.form.input', [
-                                     'name' => 'Email',
+                                     'name' => trans('general.email'),
                                      'id' => 'email',
                                      'type' => 'text',
                                      'value' => old('email'),
@@ -59,7 +59,7 @@
                         <div class="row">
                             <div class="col">
                                 @include('partials.form.input', [
-                                     'name' => 'Sujet',
+                                     'name' => trans('general.subject'),
                                      'id' => 'subject',
                                      'type' => 'text',
                                      'value' => old('subject'),
@@ -70,7 +70,7 @@
                             <div class="col">
                                 @include('partials.form.textarea', [
                                    'id' => 'message',
-                                   'name' => 'Message',
+                                   'name' => trans('general.message'),
                                    'value' => old('message'),
                                 ])
                             </div>
