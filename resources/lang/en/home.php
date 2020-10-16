@@ -26,4 +26,11 @@ return [
     'testimonials' => "What the customer thinks of us",
     'testimonials_description' => "Our priority is to guarantee a service that meets the expectations of our customers, They express themselves in these terms",
 
+    // ******************************* STATISTICS ******************************* //
+    'stats_clients' => "Satisfied customers",
+    'stats_haircuts' => "Haircuts",
+    'stats_products' => "Cleaning products",
+    'stats_experts' => "Experts",
+
+
 ];

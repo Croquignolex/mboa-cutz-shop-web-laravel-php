@@ -9,7 +9,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-male-head-hair-and-beard"></span></div>
                                 <strong class="number" data-number="{{ config('company.satisfied') }}">{{ config('company.satisfied') }}</strong>
-                                <span>Clients satisfaits</span>
+                                <span>@lang('home.stats_clients')</span>
                             </div>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
                                 <strong class="number" data-number="{{ config('company.haircuts') }}">{{ config('company.haircuts') }}</strong>
-                                <span>Coupes de cheveux</span>
+                                <span>@lang('home.stats_haircuts')</span>
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-heads-hairs-and-scissors"></span></div>
                                 <strong class="number" data-number="{{ config('company.products') }}">{{ config('company.products') }}</strong>
-                                <span>Produits d'entretiens</span>
+                                <span>@lang('home.stats_products')</span>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             <div class="text">
                                 <div class="icon"><span class="flaticon-young-male-short-irregular-hair-on-head-and-a-small-beard"></span></div>
                                 <strong class="number" data-number="{{ config('company.experts') }}">{{ config('company.experts') }}</strong>
-                                <span>Expert</span>
+                                <span>@lang('home.stats_experts')</span>
                             </div>
                         </div>
                     </div>

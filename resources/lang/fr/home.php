@@ -25,4 +25,10 @@ return [
     'testimonials' => "Ce que le client pensent de nous",
     'testimonials_description' => "Notre priorité est de garantir un service à la hauteur des attentes de nos clients, Il s'expriment en ces termes",
 
+    // ******************************* STATISTICS ******************************* //
+    'stats_clients' => "Clients satisfaits",
+    'stats_haircuts' => "Coupes de cheveux",
+    'stats_products' => "Produits d'entretiens",
+    'stats_experts' => "Experts",
+
 ];
