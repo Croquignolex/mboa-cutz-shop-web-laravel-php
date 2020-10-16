@@ -2,17 +2,27 @@
 
 namespace App\Http\Controllers\Blog;
 
+use App\Models\Article;
+use App\Enums\Constants;
 use Illuminate\View\View;
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\Foundation\Application;
 
 class ArticleController extends Controller
 {
     /**
-     * @return Factory|View
+     * Display a listing of the resource.
+     *
+     * @return Application|Factory|Response|View
      */
     public function index()
     {
-        return view('blog.index');
+        $articles = Article::orderBy('created_at', 'desc')
+            ->paginate(6)
+            ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
+
+        return view('blog.index', compact('articles'));
     }
 }

@@ -8513,7 +8513,7 @@ textarea.form-control {
 
 .blog-entry {
   overflow: hidden;
-  border: 1px solid #ec008c;
+  /*border: 1px solid #ec008c;*/
 }
   @media (min-width: 768px) {
     .blog-entry {

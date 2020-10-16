@@ -29,7 +29,7 @@
                             <div class="text">
                                 <h3 class="heading">
                                     <a href="{{ locale_route('articles.show', compact('article')) }}">
-                                        {{ $article->name }}
+                                        {{ text_format($article->name, 20) }}
                                     </a>
                                 </h3>
                                 <div class="meta">
