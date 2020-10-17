@@ -25,4 +25,7 @@ return [
     'message' => "Message",
     'send' => "Send",
 
+    // ******************************* ERROR MESSAGES ******************************* //
+    'generic_error' => "Some values are incorrect"
+
 ];
