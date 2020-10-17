@@ -1,8 +1,8 @@
 @extends('layouts.shop.mini')
 
-@section('shop.mini.master.title', page_title(trans('page.contact')))
+@section('shop.mini.master.title', page_title(__('page.contact')))
 
-@section('shop.mini.page', trans('page.contact'))
+@section('shop.mini.page', __('page.contact'))
 
 @section('shop.mini.master.body')
     <section class="ftco-section contact-section">
@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col">
                                 @include('partials.form.input', [
-                                     'name' => trans('general.names'),
+                                     'name' => __('general.names'),
                                      'id' => 'name',
                                      'type' => 'text',
                                      'value' => old('name'),
@@ -41,7 +41,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 @include('partials.form.input', [
-                                     'name' => trans('general.phone'),
+                                     'name' => __('general.phone'),
                                      'id' => 'phone',
                                      'type' => 'text',
                                      'value' => old('phone'),
@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-sm-6">
                                 @include('partials.form.input', [
-                                     'name' => trans('general.email'),
+                                     'name' => __('general.email'),
                                      'id' => 'email',
                                      'type' => 'text',
                                      'value' => old('email'),
@@ -59,7 +59,7 @@
                         <div class="row">
                             <div class="col">
                                 @include('partials.form.input', [
-                                     'name' => trans('general.subject'),
+                                     'name' => __('general.subject'),
                                      'id' => 'subject',
                                      'type' => 'text',
                                      'value' => old('subject'),
@@ -70,7 +70,7 @@
                             <div class="col">
                                 @include('partials.form.textarea', [
                                    'id' => 'message',
-                                   'name' => trans('general.message'),
+                                   'name' => __('general.message'),
                                    'value' => old('message'),
                                 ])
                             </div>

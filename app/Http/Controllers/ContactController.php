@@ -33,7 +33,7 @@ class ContactController extends Controller
     public function sendMessage(ContactRequest $request) {
         $contact = Contact::create($request->all());
 
-        success_toast_alert(trans('toast.contact_message_sent'));
+        success_toast_alert(__('toast.contact_message_sent'));
 
         $sender = config('company.email');
         Mail::to($sender)->send(new ContactFormMail($contact, $sender));

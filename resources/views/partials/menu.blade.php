@@ -11,27 +11,27 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item {{ active_page('home.index')  }}">
                     <a href="{{ locale_route('home.index') }}" class="nav-link">
-                        {{ trans('page.home') }}
+                        {{ __('page.home') }}
                     </a>
                 </li>
                 <li class="nav-item {{ active_page('products.index') }}">
                     <a href="{{ locale_route('products.index') }}" class="nav-link">
-                        {{ trans('page.products') }}
+                        {{ __('page.products') }}
                     </a>
                 </li>
                 <li class="nav-item {{ active_page('services.index')  }}">
                     <a href="{{ locale_route('services.index') }}" class="nav-link">
-                        {{ trans('page.services') }}
+                        {{ __('page.services') }}
                     </a>
                 </li>
                 <li class="nav-item {{ active_page('articles.index')  }}">
                     <a href="{{ locale_route('articles.index') }}" class="nav-link">
-                        {{ trans('page.blog') }}
+                        {{ __('page.blog') }}
                     </a>
                 </li>
                 <li class="nav-item {{ active_page('contact.index')  }}">
                     <a href="{{ locale_route('contact.index') }}" class="nav-link">
-                        {{ trans('page.contact') }}
+                        {{ __('page.contact') }}
                     </a>
                 </li>
                 <li class="nav-item">

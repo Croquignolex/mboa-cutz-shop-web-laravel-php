@@ -8586,8 +8586,9 @@ textarea.form-control {
       height: 40px;
       line-height: 40px;
       border-radius: 50%;
-      border: 1px solid #785028; }
-    .block-27 ul li.active a, .block-27 ul li.active span {
+      border: 1px solid #742052; }
+    .block-27 ul li.active a, .block-27 ul li.active span,
+    .block-27 ul li a:hover, .block-27 ul li span:hover {
       background: #ec008c;
       color: #fff;
       border: 1px solid transparent; }

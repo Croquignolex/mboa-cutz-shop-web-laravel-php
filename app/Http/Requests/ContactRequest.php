@@ -35,7 +35,7 @@ class ContactRequest extends FormRequest
     public function withValidator(Validator $validator)
     {
         $validator->after(function () {
-            danger_toast_alert(trans('toast.generic_error'));
+            danger_toast_alert(__('toast.generic_error'));
         });
     }
 }
