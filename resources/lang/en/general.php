@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'categories' => "Categories",
+    'tags' => "Tags",
+    'related_articles' => "Related articles",
+
     'click' => "Click",
     'here' => "here",
     'to_connect' => "to connect",

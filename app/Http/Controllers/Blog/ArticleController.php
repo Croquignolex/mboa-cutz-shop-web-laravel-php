@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Blog;
 
 use App\Models\Article;
 use App\Enums\Constants;
+use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\View\View;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
@@ -41,6 +43,10 @@ class ArticleController extends Controller
             ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS)
             ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
 
-        return view('blog.show', compact('article', 'comments'));
+        $tags = Tag::has('articles')->get();
+
+        $categories = Category::has('articles')->get();
+
+        return view('blog.show', compact('article', 'comments', 'categories', 'tags'));
     }
 }

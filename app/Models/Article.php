@@ -6,6 +6,7 @@ use App\Traits\DateTrait;
 use App\Traits\CreatorTrait;
 use App\Traits\SlugRouteTrait;
 use App\Traits\LocaleNameTrait;
+use App\Traits\RelatedItemTrait;
 use App\Traits\LocaleDescriptionTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -26,10 +27,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property mixed category
  * @property mixed image_src
  * @property mixed can_delete
+ * @property mixed id
  */
 class Article extends Model
 {
-    use SoftDeletes, SlugRouteTrait, DateTrait, CreatorTrait, LocaleNameTrait, LocaleDescriptionTrait;
+    use SoftDeletes, SlugRouteTrait, DateTrait, CreatorTrait,
+        LocaleNameTrait, LocaleDescriptionTrait, RelatedItemTrait;
 
     /**
      * The attributes that should be cast.
