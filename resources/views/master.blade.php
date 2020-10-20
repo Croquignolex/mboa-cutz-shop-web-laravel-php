@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ Illuminate\Support\Facades\App::getLocale() }}">
     <head>
+        @if (env('APP_ENV') === 'production')
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVCGCKJ5NG"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-GVCGCKJ5NG');
+            </script>
+        @endif
         <meta charset="utf-8">
         <meta name="author" content="{{ seo_authors() }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
