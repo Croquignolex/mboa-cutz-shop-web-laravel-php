@@ -35,9 +35,20 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ language_url() }}" class="nav-link text-danger">
+                    <a href="{{ language_url() }}" class="nav-link">
                         <i class="icon-flag"></i> {{ language_title() }}
                     </a>
+                </li>
+                <li class="nav-item">
+                    @auth
+                        <a href="{{ locale_route('customer.dashboard.index') }}" class="nav-link btn btn-primary">
+                            <i class="icon-person"></i> {{ auth()->user()->format_first_name }}
+                        </a>
+                    @else
+                        <a href="{{ locale_route('login') }}" class="nav-link btn btn-primary">
+                            Connexion
+                        </a>
+                    @endauth
                 </li>
             </ul>
         </div>

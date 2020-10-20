@@ -48,8 +48,23 @@ Route::group(['namespace' => 'blog'], function() {
     Route::get('/{language}/articles/{article}', 'ArticleController@show')->name('articles.show');
 });
 
-Route::group(['namespace' => 'customer'], function() {
+Route::group(['namespace' => 'auth'], function() {
     // Start non localized routes
+    Route::get('/login', function () { return redirect(locale_route('login')); });
 
     // Start localized routes
+    Route::get('/{language}/login', 'LoginController@showLoginForm')->name('login');
+
+    Route::post('/{language}/login', 'LoginController@login');
+    Route::post('/{language}/logout', 'LoginController@logout')->name('logout');
+});
+
+Route::prefix('customer')->group(function() {
+    Route::group(['namespace' => 'customer'], function() {
+        // Start non localized routes
+        Route::get('/dashboard', function () { return redirect(locale_route('customer.dashboard.index')); });
+
+        // Start localized routes
+        Route::get('/{language}/dashboard', 'DashboardController@index')->name('customer.dashboard.index');
+    });
 });

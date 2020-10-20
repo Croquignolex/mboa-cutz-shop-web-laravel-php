@@ -7325,19 +7325,13 @@ h1, h2, h3, h4, h5,
         color: #fff; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     font-size: 14px;
-    padding-top: .9rem;
-    padding-bottom: .9rem;
-    padding-left: 0;
-    padding-right: 0;
+    padding: .9rem 0;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 400;
     opacity: 1 !important; }
     @media (min-width: 768px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: .5rem 20px;
         color: rgba(255, 255, 255, 0.7); } }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
       color: #ec008c; }
