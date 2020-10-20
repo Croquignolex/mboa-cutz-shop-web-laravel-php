@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
         if (Auth::guard($guard)->check())
         {
             if(Auth::user()->role->type !== UserRole::USER) {
-                return redirect(route('dashboard.index'));
+                return redirect(route('customer.dashboard.index'));
             }
             else return redirect(route('login'));
         }

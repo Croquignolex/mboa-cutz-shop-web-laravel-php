@@ -16,6 +16,20 @@ if(!function_exists('css_asset'))
     }
 }
 
+if(!function_exists('customer_css_asset'))
+{
+    /**
+     * Dynamic css asset file path
+     *
+     * @param $css_file
+     * @return string
+     */
+    function customer_css_asset($css_file)
+    {
+        return file_asset($css_file, 'css', 'customer/css');
+    }
+}
+
 if(!function_exists('js_asset'))
 {
     /**
@@ -27,6 +41,20 @@ if(!function_exists('js_asset'))
     function js_asset($js_file)
     {
         return file_asset($js_file, 'js', 'js');
+    }
+}
+
+if(!function_exists('customer_js_asset'))
+{
+    /**
+     * Dynamic js asset file path
+     *
+     * @param $js_file
+     * @return string
+     */
+    function customer_js_asset($js_file)
+    {
+        return file_asset($js_file, 'js', 'customer/js');
     }
 }
 
