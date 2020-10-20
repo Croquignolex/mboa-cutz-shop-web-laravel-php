@@ -18,13 +18,15 @@ if(!function_exists('page_title'))
 if(!function_exists('active_page'))
 {
     /**lightSpeedOut
-     * @param $route
+     * @param Collection $routes
      * @return string
      */
-    function active_page($route)
+    function active_page(Collection $routes)
     {
-        if(Illuminate\Support\Facades\Route::is($route)) {
-            return 'active';
+        foreach ($routes as $route) {
+            if(Illuminate\Support\Facades\Route::is($route)) {
+                return 'active';
+            }
         }
 
         return '';

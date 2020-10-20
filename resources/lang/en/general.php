@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'click' => "Click",
+    'here' => "here",
+    'to_connect' => "to connect",
+
+    'author' => "Author",
+    'comments' => "Comments",
+
     'sold_out' => "Sold out",
     'add_to_cart' => "Add to cart",
 
@@ -26,6 +33,7 @@ return [
     'send' => "Send",
 
     // ******************************* ERROR MESSAGES ******************************* //
-    'generic_error' => "Some values are incorrect"
+    'generic_error' => "Some values are incorrect",
+    'connect_before_comment' => "You must log in to be able to leave a comment",
 
 ];

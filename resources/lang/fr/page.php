@@ -14,5 +14,6 @@ return [
     'products' => 'Produits',
     'services' => 'Services',
     'cart' => 'Panier',
+    'article' => 'Article',
 
 ];

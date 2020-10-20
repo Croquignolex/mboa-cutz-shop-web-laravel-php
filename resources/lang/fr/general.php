@@ -1,6 +1,13 @@
 <?php
 
 return [
+    'click' => "Cliquez",
+    'here' => "ici",
+    'to_connect' => "pour vous connecter",
+
+    'author' => "Auteur",
+    'comments' => "Commentaires",
+
     'sold_out' => "Epuisé",
     'add_to_cart' => "Ajouter au panier",
 
@@ -24,5 +31,9 @@ return [
     'subject' => "Sujet",
     'message' => "Message",
     'send' => "Envoyer",
+
+    // ******************************* ERROR MESSAGES ******************************* //
+    'generic_error' => "Certaines valeurs sont incorectes",
+    'connect_before_comment' => "Vous devez vous connecter afin de pouvoir laisser un commentaire",
 
 ];
