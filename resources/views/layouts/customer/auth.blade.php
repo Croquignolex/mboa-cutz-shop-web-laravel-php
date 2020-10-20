@@ -7,7 +7,7 @@
 @endsection
 
 @push('master.style')
-
+    <link rel="stylesheet" href="{{ customer_css_asset('style') }}" type="text/css">
 @endpush
 
 @push('master.script')

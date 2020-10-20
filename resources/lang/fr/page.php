@@ -15,5 +15,6 @@ return [
     'services' => 'Services',
     'cart' => 'Panier',
     'article' => 'Article',
+    'login' => 'Connexion',
 
 ];

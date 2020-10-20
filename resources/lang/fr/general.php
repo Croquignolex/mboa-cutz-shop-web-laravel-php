@@ -36,6 +36,10 @@ return [
     'message' => "Message",
     'send' => "Envoyer",
 
+    // ******************************* AUTH ******************************* //
+    'login' => "Connexion",
+    'password' => "Mot de passe",
+
     // ******************************* ERROR MESSAGES ******************************* //
     'generic_error' => "Certaines valeurs sont incorectes",
     'connect_before_comment' => "Vous devez vous connecter afin de pouvoir laisser un commentaire",
