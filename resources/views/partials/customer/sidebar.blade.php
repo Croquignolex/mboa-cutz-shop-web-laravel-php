@@ -5,7 +5,7 @@
     <nav class="vertnav navbar navbar-light">
         {{-- Logo area --}}
         <div class="w-100 mb-4 d-flex">
-            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="{{ locale_route('customer.dashboard.index') }}">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="{{ locale_route('home.index') }}">
                 <img src="{{ img_asset('logo-black') }}" alt="..." width="60">
             </a>
         </div>

@@ -129,7 +129,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        info_toast_alert("Bienvenue {$user->name}");
+        info_toast_alert("Bienvenue {$user->full_name}");
     }
 
     /**
@@ -137,6 +137,6 @@ class LoginController extends Controller
      */
     private function redirectTo()
     {
-        return locale_route('customer.dashboard.index');
+        return locale_route('home.index');
     }
 }

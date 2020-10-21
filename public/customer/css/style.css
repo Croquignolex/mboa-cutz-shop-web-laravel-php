@@ -7529,7 +7529,8 @@ button:focus {
     .vertical .sidebar-left .navbar-nav > .nav-item.active,
     .vertical.hover .sidebar-left .navbar-nav > .nav-item.active,
     .narrow.open .sidebar-left .navbar-nav > .nav-item.active {
-      position: relative; }
+      position: relative;
+    }
       .vertical .sidebar-left .navbar-nav > .nav-item.active:after,
       .vertical.hover .sidebar-left .navbar-nav > .nav-item.active:after,
       .narrow.open .sidebar-left .navbar-nav > .nav-item.active:after {
@@ -7540,6 +7541,11 @@ button:focus {
         bottom: 0;
         width: 2px;
         background-color: #1b68ff; }
+    /*TODO: side bar active */
+    .navbar-light .navbar-nav .active .nav-link {
+       color: #1b68ff;
+      background-color: #f8f9fa;
+    }
 
 .vertical .topnav,
 .vertical.hover .topnav,
