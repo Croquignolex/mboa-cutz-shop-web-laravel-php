@@ -14,10 +14,8 @@
 
     {{-- Author area --}}
     <div class="about-author d-flex p-3 ftco-bg-dark">
-        <div class="bio mr-4">
-            <img src="{{ $article->creator->avatar_src }}" alt="..." width="150">
-        </div>
         <div class="desc">
+            <img src="{{ $article->creator->avatar_src }}" alt="..." width="150" class="float-left mr-4">
             <h3>@lang('general.author')</h3>
             <h6>{{ $article->creator_name }}</h6>
             <p>{{ $article->creator->description }}</p>
