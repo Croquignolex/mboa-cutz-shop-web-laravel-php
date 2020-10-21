@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Blog;
 
+use App\Http\Requests\CommentRequest;
 use App\Models\Article;
 use App\Enums\Constants;
 use App\Models\Category;
 use App\Models\Tag;
+use Illuminate\Http\Client\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
@@ -48,5 +51,24 @@ class ArticleController extends Controller
         $categories = Category::has('articles')->get();
 
         return view('blog.show', compact('article', 'comments', 'categories', 'tags'));
+    }
+
+    /**
+     * Comment on a article
+     *
+     * @param CommentRequest $request
+     * @param String $language
+     * @param Article $article
+     * @return Application|Factory|Response|View
+     */
+    public function comment(CommentRequest $request, String $language, Article $article)
+    {
+        $comment = $article->comments()->create($request->all());
+        $comment->creator()->associate(Auth::user());
+        $comment->save();
+
+        success_toast_alert(__('toast.success_comment'));
+
+        return redirect(locale_route('articles.show', compact('article')));
     }
 }

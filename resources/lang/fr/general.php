@@ -37,6 +37,7 @@ return [
     'subject' => "Sujet",
     'message' => "Message",
     'send' => "Envoyer",
+    'leave_a_comment' => "Laisser un commentaire",
 
     // ******************************* ERROR MESSAGES ******************************* //
     'generic_error' => "Certaines valeurs sont incorectes",

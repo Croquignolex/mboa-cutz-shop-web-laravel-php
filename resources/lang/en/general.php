@@ -37,6 +37,7 @@ return [
     'subject' => "Subject",
     'message' => "Message",
     'send' => "Send",
+    'leave_a_comment' => "Leave a comment",
 
     // ******************************* ERROR MESSAGES ******************************* //
     'generic_error' => "Some values are incorrect",

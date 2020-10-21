@@ -8,4 +8,6 @@ return [
     // ******************************* CONTACT ******************************* //
     'contact_message_sent' => "Message sent successfully",
 
+    // ******************************* ARTICLE ******************************* //
+    'success_comment' => "Comment successfully added",
 ];
