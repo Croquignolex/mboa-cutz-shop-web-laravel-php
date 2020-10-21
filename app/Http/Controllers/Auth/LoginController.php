@@ -137,6 +137,6 @@ class LoginController extends Controller
      */
     private function redirectTo()
     {
-        return route('customer.dashboard.index');
+        return locale_route('customer.dashboard.index');
     }
 }

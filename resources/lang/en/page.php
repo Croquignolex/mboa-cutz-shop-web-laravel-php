@@ -16,5 +16,6 @@ return [
     'cart' => 'Cart',
     'article' => 'Article',
     'login' => 'Login',
+    'dashboard' => 'Dashboard',
 
 ];

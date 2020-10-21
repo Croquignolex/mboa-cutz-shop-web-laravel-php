@@ -67,7 +67,7 @@
         <link rel="stylesheet" href="{{ css_asset('master') }}" type="text/css">
     </head>
 
-    <body>
+    <body class="vertical">
         @yield('master.body')
 
         <script src="{{ js_asset('jquery.min') }}" type="application/javascript"></script>

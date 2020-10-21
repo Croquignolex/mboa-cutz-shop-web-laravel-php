@@ -16,5 +16,6 @@ return [
     'cart' => 'Panier',
     'article' => 'Article',
     'login' => 'Connexion',
+    'dashboard' => 'Tableau de board',
 
 ];

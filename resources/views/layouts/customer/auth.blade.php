@@ -3,7 +3,9 @@
 @section('master.title')@yield('customer.auth.master.title')@endsection
 
 @section('master.body')
-    @yield('customer.auth.master.body')
+    <div class="bg-theme-dark">
+        @yield('customer.auth.master.body')
+    </div>
 @endsection
 
 @push('master.style')
@@ -15,5 +17,4 @@
     <script src="{{ customer_js_asset('jquery.min') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('popper.min') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('bootstrap.min') }}" type="application/javascript"></script>
-    <script src="{{ customer_js_asset('jquery.stickOnScroll') }}" type="application/javascript"></script>
 @endpush
