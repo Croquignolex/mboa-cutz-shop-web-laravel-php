@@ -59,12 +59,10 @@ Route::group(['namespace' => 'auth'], function() {
     Route::post('/{language}/logout', 'LoginController@logout')->name('logout');
 });
 
-Route::prefix('customer')->group(function() {
-    Route::group(['namespace' => 'customer'], function() {
-        // Start non localized routes
-        Route::get('/dashboard', function () { return redirect(locale_route('customer.dashboard.index')); });
+Route::group(['namespace' => 'customer'], function() {
+    // Start non localized routes
+    Route::get('/customer/dashboard', function () { return redirect(locale_route('customer.dashboard.index')); });
 
-        // Start localized routes
-        Route::get('/{language}/dashboard', 'DashboardController@index')->name('customer.dashboard.index');
-    });
+    // Start localized routes
+    Route::get('/{language}/customer/dashboard', 'DashboardController@index')->name('customer.dashboard.index');
 });

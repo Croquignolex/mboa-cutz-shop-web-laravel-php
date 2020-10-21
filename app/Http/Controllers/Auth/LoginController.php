@@ -76,7 +76,7 @@ class LoginController extends Controller
         $user = User::where(['email' => $credentials['email']])->first();
         if($user !== null)
         {
-            if($user->role->type !== UserRole::USER) {
+            if($user->role->type === UserRole::USER) {
                 return $this->guard()->attempt($this->credentials($request));
             }
         }
@@ -91,7 +91,6 @@ class LoginController extends Controller
      */
     public function logout(Request $request)
     {
-        log_activity("Authentification", "Deconnexion de la plateforme");
         $this->guard()->logout();
         $request->session()->invalidate();
 
@@ -131,7 +130,6 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         info_toast_alert("Bienvenue {$user->name}");
-        log_activity("Authentification", "Connexion sur la plateforme");
     }
 
     /**
@@ -139,6 +137,6 @@ class LoginController extends Controller
      */
     private function redirectTo()
     {
-        return route('dashboard.index');
+        return route('customer.dashboard.index');
     }
 }
