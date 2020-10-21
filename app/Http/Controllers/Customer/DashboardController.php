@@ -11,6 +11,14 @@ use Illuminate\Contracts\Foundation\Application;
 class DashboardController extends Controller
 {
     /**
+     * DashboardController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return Application|Factory|Response|View
