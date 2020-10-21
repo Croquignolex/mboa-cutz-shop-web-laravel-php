@@ -1,8 +1,10 @@
 <?php
 
 return [
-    'categories' => "Categories",
+    'my_profile' => "Mon profil",
+
     'tags' => "Etiquettes",
+    'categories' => "Categories",
     'related_articles' => "Articles liés",
 
     'click' => "Cliquez",

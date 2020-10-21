@@ -31,5 +31,6 @@
     <script src="{{ customer_js_asset('bootstrap.min') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('simplebar.min') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('jquery.stickOnScroll') }}" type="application/javascript"></script>
+    <script src="{{ customer_js_asset('main') }}" type="application/javascript"></script>
     @stack('customer.app.master.script')
 @endpush

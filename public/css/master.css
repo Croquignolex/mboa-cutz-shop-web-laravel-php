@@ -12,6 +12,10 @@
     border: 1px solid white;
 }
 
+.bg-theme {
+    background-color: #ec008c;
+}
+
 .bg-theme-dark {
     background-color: #181818;
 }
