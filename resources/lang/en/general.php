@@ -36,10 +36,6 @@ return [
     'message' => "Message",
     'send' => "Send",
 
-    // ******************************* AUTH ******************************* //
-    'login' => "Login",
-    'password' => "Password",
-
     // ******************************* ERROR MESSAGES ******************************* //
     'generic_error' => "Some values are incorrect",
     'connect_before_comment' => "You must log in to be able to leave a comment",

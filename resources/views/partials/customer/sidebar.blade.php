@@ -11,17 +11,17 @@
         </div>
         {{-- Menu area --}}
         <ul class="navbar-nav flex-fill w-100 mb-2">
-            <li class="nav-item active">
-                <a href="#dashboard" class="nav-link">
-                    <i class="fe fe-home fe-16"></i>
-                    <span class="ml-3 item-text">Dashboard</span>
+            <li class="nav-item {{ active_page(collect('customer.dashboard.index')) }}">
+                <a href="{{ locale_route('customer.dashboard.index') }}" class="nav-link">
+                    <i class="fe fe-activity fe-16"></i>
+                    <span class="ml-3 item-text">@lang('page.dashboard')</span>
                 </a>
             </li>
         </ul>
         {{-- Logout area --}}
         <div class="btn-box w-100 mt-4 mb-1">
             <button class="btn mb-2 btn-danger btn-lg btn-block" onclick="document.getElementById('logout-form').submit();">
-                <i class="fe fe-log-out fe-12 mr-2"></i><span class="small">Logout</span>
+                <i class="fe fe-log-out fe-12 mr-2"></i><span class="small">@lang('auth.logout')</span>
             </button>
             <form id="logout-form" action="{{ locale_route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}

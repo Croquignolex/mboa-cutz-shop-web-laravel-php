@@ -45,11 +45,11 @@
                                name="password"
                                value="{{ old('password') }}"
                                class="form-control form-control-lg"
-                               placeholder="@lang('general.password')"
+                               placeholder="@lang('auth.password')"
                         >
                     </div>
                     <button class="btn btn-lg btn-theme btn-block hover-border-white" type="submit">
-                        @lang('general.login')
+                        @lang('page.login')
                     </button>
                     <p class="mt-5 mb-3 text-muted text-center">
                         Copyright &copy; MBOA CUTZ 2020 | Design by
