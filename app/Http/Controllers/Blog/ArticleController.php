@@ -22,16 +22,26 @@ class ArticleController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('ajax')->only('index');
         $this->middleware('auth')->only('comment');
+        $this->middleware('ajax')->only('ajaxArticles');
     }
 
     /**
      * Display a listing of the resource.
      *
-     * @return JsonResponse
+     * @return Application|Factory|JsonResponse|View
      */
     public function index()
+    {
+         return view('blog.index');
+    }
+
+    /**
+     * Get data
+     *
+     * @return JsonResponse
+     */
+    public function ajaxArticles()
     {
         $articles = Article::orderBy('created_at', 'desc')->paginate(6);
         return response()->json($articles);

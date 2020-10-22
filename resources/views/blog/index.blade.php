@@ -6,10 +6,9 @@
 
 @section('shop.mini.master.body')
     <section class="ftco-section">
-        <div class="container">
-            <div class="row d-flex">
-                <artcle-component></artcle-component>
-            </div>
+        <div class="container" id="app">
+
+            <articles-component></articles-component>
 
             {{--<div class="row mb-5">
                 <div class="col">
@@ -38,7 +37,5 @@
 @endsection
 
 @push('shop.mini.master.script')
-    <script type="text/javascript">
-
-    </script>
+    <script src="{{ js_asset('articles-infinite-scroll') }}" type="application/javascript"></script>
 @endpush
