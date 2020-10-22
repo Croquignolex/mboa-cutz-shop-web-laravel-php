@@ -2,33 +2,39 @@
 
 namespace App\Http\Controllers\Blog;
 
-use App\Http\Requests\CommentRequest;
+use App\Models\Tag;
 use App\Models\Article;
 use App\Enums\Constants;
 use App\Models\Category;
-use App\Models\Tag;
-use Illuminate\Http\Client\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\CommentRequest;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\Foundation\Application;
 
 class ArticleController extends Controller
 {
     /**
+     * ArticleController constructor.
+     */
+    public function __construct()
+    {
+        $this->middleware('ajax')->only('index');
+        $this->middleware('auth')->only('comment');
+    }
+
+    /**
      * Display a listing of the resource.
      *
-     * @return Application|Factory|Response|View
+     * @return JsonResponse
      */
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')
-            ->paginate(6)
-            ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
-
-        return view('blog.index', compact('articles'));
+        $articles = Article::orderBy('created_at', 'desc')->paginate(6);
+        return response()->json($articles);
     }
 
     /**

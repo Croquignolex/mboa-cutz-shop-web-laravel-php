@@ -73,6 +73,12 @@
         <script src="{{ js_asset('jquery.min') }}" type="application/javascript"></script>
         <script src="{{ js_asset('toastr.min') }}" type="application/javascript"></script>
 
+        @if (env('APP_ENV') === 'production')
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        @else
+            <script src="{{ js_asset('vue.min') }}" type="application/javascript"></script>
+        @endif
+
         @stack('master.script')
 
         <script src="{{ js_asset('master') }}" type="application/javascript"></script>
