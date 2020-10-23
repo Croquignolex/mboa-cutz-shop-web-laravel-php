@@ -3,46 +3,55 @@
 
 const baseUrl = document.getElementById('articles-infinite-scroll').dataset.url;
 
-Vue.component('articles-component', {
-    template: buildArticleComponent(),
+new Vue({
+    el: '#articles-infinite-scroll',
 
-    data: function() {
-        return {
-            articles: [],
-            page: 1,
-        };
-    },
-
-    methods: {
-        infiniteHandler($state) {
-            let vm = this;
-            let url = `${baseUrl}?page=${this.page}`;
-
-            this.$http.get(url)
-                .then(response => { return response.json(); })
-                .then(data => {
-                    // Manage
-                    if(data.length !== 0) {
-                        // Get data and set into array
-                        $.each(data, function(key, value) {
-                            vm.articles.push(value);
-                        });
-                        this.page += 1;
-                        // Load back
-                        $state.loaded()
-                    } else {
-                        // Stop loading
-                        $state.complete()
-                    }
-                });
-        },
+    components: {
+        'articles-component' : articlesComponent()
     }
 });
 
-new Vue({el: '#articles-infinite-scroll'});
-
 // Build article component
-function buildArticleComponent() {
+function articlesComponent() {
+    return {
+        template: articleComponentTemplate(),
+
+        data: function() {
+            return {
+                articles: [],
+                page: 1,
+            };
+        },
+
+        methods: {
+            infiniteHandler($state) {
+                let vm = this;
+                let url = `${baseUrl}?page=${this.page}`;
+
+                this.$http.get(url)
+                    .then(response => { return response.json(); })
+                    .then(data => {
+                        // Manage
+                        if(data.length !== 0) {
+                            // Get data and set into array
+                            $.each(data, function(key, value) {
+                                vm.articles.push(value);
+                            });
+                            this.page += 1;
+                            // Load back
+                            $state.loaded()
+                        } else {
+                            // Stop loading
+                            $state.complete()
+                        }
+                    });
+            }
+        }
+    }
+}
+
+// Build article component template
+function articleComponentTemplate() {
     return `
         <div class="row d-flex">  
             <!-- Loader -->

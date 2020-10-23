@@ -3032,7 +3032,8 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  /*padding: 0.5rem 1rem; */
+}
   .navbar .container,
   .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
     display: flex;
@@ -7542,6 +7543,11 @@ button:focus {
         bottom: 0;
         width: 2px;
         background-color: #ec008c; }
+/*TODO: side bar active */
+.navbar-light .navbar-nav .active .nav-link {
+  color: #ec008c;
+  /*background-color: #f8f9fa;*/
+}
 
 .vertical .topnav,
 .vertical.hover .topnav,

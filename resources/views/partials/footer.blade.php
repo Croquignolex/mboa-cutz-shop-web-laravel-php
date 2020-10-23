@@ -31,6 +31,9 @@
                             <li><span class="icon icon-phone"></span><span class="text">{{ config('company.phone') }}</span></li>
                             <li><span class="icon icon-envelope"></span><span class="text">{{ config('company.email') }}</span></li>
                         </ul>
+                        <div class="text-center text-lg-left">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.975159429634!2d9.69788616525108!3d4.025480148261639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106112c7426691ff%3A0x310e860af24cda5!2sBonapriso%2C%20Douala!5e0!3m2!1sfr!2scm!4v1597665163772!5m2!1sfr!2scm" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
