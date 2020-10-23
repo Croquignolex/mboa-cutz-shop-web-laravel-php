@@ -5,7 +5,7 @@
 @section('customer.auth.master.body')
     <div class="container d-flex flex-column justify-content-center vh-100">
         <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-6 col-md-10">
+            <div class="col-xl-9 col-lg-9 col-md-10">
                 <div class="text-center app-brand">
                     <a href="{{ locale_route('home.index') }}">
                         <img src="{{ img_asset('logo-white') }}" alt="..." height="100">
@@ -17,13 +17,14 @@
                 <form action="" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="email">
-                            @if ($errors->has('email'))
+                        @if ($errors->has('email'))
+                            <label for="email">
                                 <small class="text-danger">
                                     {{ $errors->first('email') }}
                                 </small>
-                            @endif
-                        </label>
+                            </label>
+                        @endif
+
                         <input type="text"
                                id="email"
                                name="email"
@@ -32,28 +33,47 @@
                                placeholder="@lang('general.email')"
                         >
                     </div>
-                    <div class="form-group">
-                        <label for="password">
-                            @if ($errors->has('password'))
-                                <small class="text-danger">
-                                    {{ $errors->first('password') }}
-                                </small>
-                            @endif
-                        </label>
-                        <input type="password"
-                               id="password"
-                               name="password"
-                               value="{{ old('password') }}"
-                               class="form-control form-control-lg"
-                               placeholder="@lang('auth.password')"
-                        >
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="password">
+                                @if ($errors->has('password'))
+                                    <small class="text-danger">
+                                        {{ $errors->first('password') }}
+                                    </small>
+                                @endif
+                            </label>
+                            <input type="password"
+                                   id="password"
+                                   name="password"
+                                   value="{{ old('password') }}"
+                                   class="form-control form-control-lg"
+                                   placeholder="@lang('auth.password')"
+                            >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="password">
+                                @if ($errors->has('password'))
+                                    <small class="text-danger">
+                                        {{ $errors->first('password') }}
+                                    </small>
+                                @endif
+                            </label>
+                            <input type="password"
+                                   id="password"
+                                   name="password"
+                                   value="{{ old('password') }}"
+                                   class="form-control form-control-lg"
+                                   placeholder="@lang('auth.password')"
+                            >
+                        </div>
                     </div>
+
                     <button class="btn btn-lg btn-theme btn-block hover-border-white" type="submit">
                         @lang('page.login')
                     </button>
                     {{-- Action buttons area --}}
                     <div class="row mt-5 mb-3">
-                        <div class="col">
+                        <div class="col-6 offset-3">
                             <a class="btn btn-secondary btn-block" href="{{ locale_route('login') }}">@lang('page.login')</a>
                         </div>
                     </div>
