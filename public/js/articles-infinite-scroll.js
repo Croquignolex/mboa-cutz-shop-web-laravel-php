@@ -5,10 +5,6 @@ const baseUrl = document.getElementById('app').dataset.url;
 Vue.component('articles-component', {
     template: buildArticleComponent(),
 
-    mounted() {
-        this.fetchData()
-    },
-
     data: function() {
         return {
             articles: [],
@@ -18,9 +14,6 @@ Vue.component('articles-component', {
 
     methods: {
         infiniteHandler($state) {
-            this.fetchData($state)
-        },
-        fetchData(infiniteScrollState) {
             let vm = this;
             let url = `${baseUrl}?page=${this.page}`;
 
@@ -35,13 +28,13 @@ Vue.component('articles-component', {
                         });
                         this.page += 1;
                         // Load back
-                        if(infiniteScrollState) infiniteScrollState.loaded()
+                        $state.loaded()
                     } else {
                         // Stop loading
-                        if(infiniteScrollState) infiniteScrollState.complete()
+                        $state.complete()
                     }
                 });
-        }
+        },
     }
 });
 
@@ -50,7 +43,8 @@ new Vue({el: '#app'});
 // Build article component
 function buildArticleComponent() {
     return `
-        <div class="row d-flex"> 
+        <div class="row d-flex">  
+            <!-- Loader -->
             <div class="col-md-4 d-flex" v-for="article in articles" :key="article.id">
                 <div class="blog-entry align-self-stretch">
                     <a :href="article.show_url" class="block-20">
@@ -73,10 +67,13 @@ function buildArticleComponent() {
                     </div>
                 </div>
             </div>  
-            <infinite-loading @infinite="infiniteHandler" spinner="spiral">
-                <span slot="no-more"></span>
-                <div slot="no-results"></div>
-            </infinite-loading>     
+            <!-- Loader -->
+            <div class="col-md-4 d-flex"> 
+                 <infinite-loading @infinite="infiniteHandler" spinner="spiral">
+                    <div slot="no-more"></div>
+                    <div slot="no-results"></div>
+                 </infinite-loading>    
+            </div> 
         </div>
     `;
 }
