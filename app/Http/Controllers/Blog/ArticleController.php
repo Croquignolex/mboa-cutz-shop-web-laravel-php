@@ -23,7 +23,7 @@ class ArticleController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->only('comment');
-        $this->middleware('ajax')->only('ajaxArticles');
+        $this->middleware('ajax')->only(['ajaxArticles', 'ajaxComments']);
     }
 
     /**
@@ -43,7 +43,7 @@ class ArticleController extends Controller
      */
     public function ajaxArticles()
     {
-        $articles = Article::orderBy('created_at', 'desc')->paginate(3);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS);
         $response = [];
 
         foreach ($articles->items() as $article) {
@@ -71,17 +71,38 @@ class ArticleController extends Controller
      */
     public function show(String $language, Article $article)
     {
-        $comments = $article
-            ->comments()
-            ->orderBy('created_at', 'desc')
-            ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS)
-            ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
-
         $tags = Tag::has('articles')->get();
 
         $categories = Category::has('articles')->get();
 
-        return view('blog.show', compact('article', 'comments', 'categories', 'tags'));
+        return view('blog.show', compact('article', 'categories', 'tags'));
+    }
+
+    /**
+     * Get article comments data
+     *
+     * @param String $language
+     * @param Article $article
+     * @return JsonResponse
+     */
+    public function ajaxComments(String $language, Article $article)
+    {
+        $comments = $article->comments()->orderBy('created_at', 'desc')->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS);
+        $response = [];
+
+        foreach ($comments->items() as $comment) {
+            if($comment->creator !== null) {
+                $response[] = [
+                    'id' => $comment->id,
+                    'description' => $comment->description,
+                    'creator_name' => $comment->creator_name,
+                    'creation_date' => $comment->creation_date,
+                    'creator_image' => $comment->creator->avatar_src,
+                ];
+            }
+        }
+
+        return response()->json($response);
     }
 
     /**

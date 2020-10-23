@@ -1,6 +1,7 @@
 // VueInfiniteLoading loader by vue-infinite-loading.min.js file
+// I can then use the component <infinite-loading></infinite-loading>
 
-const baseUrl = document.getElementById('app').dataset.url;
+const baseUrl = document.getElementById('articles-infinite-scroll').dataset.url;
 
 Vue.component('articles-component', {
     template: buildArticleComponent(),
@@ -38,7 +39,7 @@ Vue.component('articles-component', {
     }
 });
 
-new Vue({el: '#app'});
+new Vue({el: '#articles-infinite-scroll'});
 
 // Build article component
 function buildArticleComponent() {

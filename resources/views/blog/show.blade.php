@@ -14,3 +14,9 @@
         </div>
     </section>
 @endsection
+
+@push('shop.mini.master.script')
+    <script src="{{ js_asset('vue-resource.min') }}" type="application/javascript"></script>
+    <script src="{{ js_asset('vue-infinite-loading.min') }}" type="application/javascript"></script>
+    <script src="{{ js_asset('article-comments-infinite-scroll') }}" type="application/javascript"></script>
+@endpush

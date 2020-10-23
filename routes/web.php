@@ -47,6 +47,7 @@ Route::group(['namespace' => 'blog'], function() {
     Route::get('/{language}/articles', 'ArticleController@index')->name('articles.index');
     Route::get('/{language}/articles/ajax', 'ArticleController@ajaxArticles')->name('articles.ajax');
     Route::get('/{language}/articles/{article}', 'ArticleController@show')->name('articles.show');
+    Route::get('/{language}/articles/{article}/comments/ajax', 'ArticleController@ajaxComments')->name('article.comments.ajax');
 
     Route::post('/{language}/articles/{article}/comment', 'ArticleController@comment')->name('articles.comment');
 });

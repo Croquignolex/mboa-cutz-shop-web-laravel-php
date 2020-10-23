@@ -22,25 +22,10 @@
         </div>
     </div>
 
-    {{-- Comments area --}}
-    <div class="pt-5 mt-5">
+    <div class="pt-5 mt-5" id="article-comments-infinite-scroll" data-url="{{ locale_route('article.comments.ajax', compact('article')) }}">
+        {{-- Comments area --}}
         <h3 class="mb-5">{{ $article->comments->count() }} @lang('general.comments')</h3>
-        <ul class="comment-list">
-            @foreach($article->comments as $comment)
-                @if($comment->creator !== null)
-                    <li class="comment">
-                        <div class="vcard bio">
-                            <img src="{{ $comment->creator->avatar_src }}" alt="Image placeholder">
-                        </div>
-                        <div class="comment-body">
-                            <h3>{{ $comment->creator_name }}</h3>
-                            <div class="meta">{{ $comment->creation_date }}</div>
-                            <p>{{ $comment->description }}</p>
-                        </div>
-                    </li>
-                @endif
-            @endforeach
-        </ul>
+        <article-comments-component></article-comments-component>
 
         {{-- Comment input area --}}
         <div class="comment-form-wrap pt-5">
