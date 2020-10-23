@@ -43,11 +43,18 @@ class ArticleController extends Controller
      */
     public function ajaxArticles()
     {
-        $articles = Article::orderBy('created_at', 'desc')->paginate(6);
+        $articles = Article::orderBy('created_at', 'desc')->paginate(3);
         $response = [];
 
-        foreach ($articles as $article) {
+        foreach ($articles->items() as $article) {
             $response[] = [
+                'id' => $article->id,
+                'image' => $article->image_src,
+                'creator' => $article->creator_name,
+                'comments' => $article->comments->count(),
+                'creation_date' => $article->short_creation_date,
+                'name' => text_format($article->name, 30),
+                'description' => text_format($article->description, 80),
                 'show_url' => locale_route('articles.show', compact('article')),
             ];
         }

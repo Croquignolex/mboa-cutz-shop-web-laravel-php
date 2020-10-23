@@ -6,34 +6,42 @@ Vue.component('articles-component', {
     template: buildArticleComponent(),
 
     mounted() {
-        console.log('Component mounted.')
+        this.fetchData()
     },
 
     data: function() {
         return {
-            articles: [''],
+            articles: [],
             page: 1,
         };
     },
 
     methods: {
         infiniteHandler($state) {
-            let thisComponent = this;
+            this.fetchData($state)
+        },
+        fetchData(infiniteScrollState) {
+            let vm = this;
             let url = `${baseUrl}?page=${this.page}`;
 
             this.$http.get(url)
                 .then(response => { return response.json(); })
                 .then(data => {
-                    console.log({data})
-                    $.each(data, function(key, value) {
-                        thisComponent.articles.push(value);
-                        console.log({value})
-                    });
-                    $state.loaded();
+                    // Manage
+                    if(data.length !== 0) {
+                        // Get data and set into array
+                        $.each(data, function(key, value) {
+                            vm.articles.push(value);
+                        });
+                        this.page += 1;
+                        // Load back
+                        if(infiniteScrollState) infiniteScrollState.loaded()
+                    } else {
+                        // Stop loading
+                        if(infiniteScrollState) infiniteScrollState.complete()
+                    }
                 });
-
-            this.page = this.page + 1;
-        },
+        }
     }
 });
 
@@ -42,30 +50,33 @@ new Vue({el: '#app'});
 // Build article component
 function buildArticleComponent() {
     return `
-        <div class="row d-flex">
-            <div class="col-md-4 d-flex" v-for="article in articles">
+        <div class="row d-flex"> 
+            <div class="col-md-4 d-flex" v-for="article in articles" :key="article.id">
                 <div class="blog-entry align-self-stretch">
-                    <a v-bind:href="article.show_url" class="block-20">
-                        <img src="" alt="...">
+                    <a :href="article.show_url" class="block-20">
+                        <img :src="article.image" alt="...">
                     </a>
                     <div class="text py-4 d-block">
                         <div class="meta">
-                            <div><span class="icon-calendar"></span> {{ article.show_url }}</div>
-                            <div><span class="icon-chat"></span> mmmmmmmmmmmmmm</div>
+                            <div><span class="icon-calendar"></span> {{ article.creation_date }}</div>
+                            <div><span class="icon-chat"></span> {{ article.comments }}</div>
                         </div>
                         <div class="meta">
-                            <div><span class="icon-person"></span> gggggggggggggggggggggggg</div>
+                            <div><span class="icon-person"></span> {{ article.creator }}</div>
                         </div>
                         <h3 class="heading mt-2">
-                            <a href="#">
-                               fffffffffffffffffffffffffffff
+                            <a :href="article.show_url">
+                               {{ article.name }}
                             </a>
                         </h3>
-                        <p>fffffffffffffffffffff</p>
+                        <p>{{ article.description }}</p>
                     </div>
                 </div>
-            </div>
-            <infinite-loading @distance="1" @infinite="infiniteHandler"></infinite-loading>
+            </div>  
+            <infinite-loading @infinite="infiniteHandler" spinner="spiral">
+                <span slot="no-more"></span>
+                <div slot="no-results"></div>
+            </infinite-loading>     
         </div>
     `;
 }
