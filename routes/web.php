@@ -55,11 +55,14 @@ Route::group(['namespace' => 'blog'], function() {
 Route::group(['namespace' => 'auth'], function() {
     // Start non localized routes
     Route::get('/login', function () { return redirect(locale_route('login')); });
+    Route::get('/register', function () { return redirect(locale_route('register')); });
 
     // Start localized routes
     Route::get('/{language}/login', 'LoginController@showLoginForm')->name('login');
+    Route::get('/{language}/register', 'RegisterController@showRegistrationForm')->name('register');
 
     Route::post('/{language}/login', 'LoginController@login');
+    Route::post('/{language}/register', 'RegisterController@register');
     Route::post('/{language}/logout', 'LoginController@logout')->name('logout');
 });
 

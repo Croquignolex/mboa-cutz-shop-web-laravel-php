@@ -1,6 +1,6 @@
 @extends('layouts.customer.auth')
 
-@section('customer.auth.master.title', page_title(__('page.login')))
+@section('customer.auth.master.title', page_title(__('page.register')))
 
 @section('customer.auth.master.body')
     <div class="container d-flex flex-column justify-content-center vh-100">
@@ -54,10 +54,7 @@
                     {{-- Action buttons area --}}
                     <div class="row mt-5 mb-3">
                         <div class="col">
-                            <a class="btn btn-secondary btn-block" href="{{ locale_route('register') }}">@lang('auth.signup')</a>
-                        </div>
-                        <div class="col">
-                            <a class="btn btn-secondary btn-block" href="">@lang('auth.forgotten_password')</a>
+                            <a class="btn btn-secondary btn-block" href="{{ locale_route('login') }}">@lang('page.login')</a>
                         </div>
                     </div>
                     {{-- Copyright area --}}

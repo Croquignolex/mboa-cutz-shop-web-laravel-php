@@ -17,5 +17,6 @@ return [
     'article' => 'Article',
     'login' => 'Login',
     'dashboard' => 'Dashboard',
+    'register' => 'Register',
 
 ];

@@ -40,16 +40,6 @@ class LoginController extends Controller
     }
 
     /**
-     * Show the application's login form.
-     *
-     * @return Application|Factory|Response|View
-     */
-    public function showLoginForm()
-    {
-        return view('auth.login');
-    }
-
-    /**
      * Validate the user login request.
      *
      * @param Request $request

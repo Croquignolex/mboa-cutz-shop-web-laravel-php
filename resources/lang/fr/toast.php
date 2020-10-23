@@ -10,4 +10,8 @@ return [
 
     // ******************************* ARTICLE ******************************* //
     'success_comment' => "Commentaire ajouté avec succès",
+
+    // ******************************* REGISTER ******************************* //
+    'registration_message' => "Votre compte est créer avec succès, un mail de confimation vous est envoyé, veillez le consulter et suivre les indications. (N'oubliez pas de vérifier vos spam si necessaire)",
+
 ];

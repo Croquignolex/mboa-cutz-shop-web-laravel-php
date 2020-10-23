@@ -17,5 +17,6 @@ return [
     'article' => 'Article',
     'login' => 'Connexion',
     'dashboard' => 'Tableau de board',
+    'register' => 'Inscription',
 
 ];
