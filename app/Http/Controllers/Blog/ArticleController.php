@@ -44,7 +44,15 @@ class ArticleController extends Controller
     public function ajaxArticles()
     {
         $articles = Article::orderBy('created_at', 'desc')->paginate(6);
-        return response()->json($articles);
+        $response = [];
+
+        foreach ($articles as $article) {
+            $response[] = [
+                'show_url' => locale_route('articles.show', compact('article')),
+            ];
+        }
+
+        return response()->json($response);
     }
 
     /**
