@@ -16,60 +16,56 @@
                 </div>
                 <form action="" method="POST">
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        @if ($errors->has('email'))
-                            <label for="email">
-                                <small class="text-danger">
-                                    {{ $errors->first('email') }}
-                                </small>
-                            </label>
-                        @endif
-
-                        <input type="text"
-                               id="email"
-                               name="email"
-                               value="{{ old('email') }}"
-                               class="form-control form-control-lg"
-                               placeholder="@lang('general.email')"
-                        >
-                    </div>
+                    @include('partials.form.input', [
+                        'name' => __('general.email'),
+                         'id' => 'email',
+                         'type' => 'text',
+                         'value' => old('email'),
+                    ])
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="password">
-                                @if ($errors->has('password'))
-                                    <small class="text-danger">
-                                        {{ $errors->first('password') }}
-                                    </small>
-                                @endif
-                            </label>
-                            <input type="password"
-                                   id="password"
-                                   name="password"
-                                   value="{{ old('password') }}"
-                                   class="form-control form-control-lg"
-                                   placeholder="@lang('auth.password')"
-                            >
+                        <div class="col-md-6">
+                            @include('partials.form.input', [
+                                'name' => __('general.first_name'),
+                                 'id' => 'first_name',
+                                 'type' => 'text',
+                                 'value' => old('first_name'),
+                            ])
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="password">
-                                @if ($errors->has('password'))
-                                    <small class="text-danger">
-                                        {{ $errors->first('password') }}
-                                    </small>
-                                @endif
-                            </label>
-                            <input type="password"
-                                   id="password"
-                                   name="password"
-                                   value="{{ old('password') }}"
-                                   class="form-control form-control-lg"
-                                   placeholder="@lang('auth.password')"
-                            >
+                        <div class="col-md-6">
+                            @include('partials.form.input', [
+                               'name' => __('general.last_name'),
+                                'id' => 'last_name',
+                                'type' => 'text',
+                                'value' => old('last_name'),
+                           ])
                         </div>
                     </div>
-
+                    <hr class="my-4">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            @include('partials.form.input', [
+                               'name' => __('auth.password'),
+                                'id' => 'password',
+                                'type' => 'password',
+                                'value' => old('password'),
+                           ])
+                            @include('partials.form.input', [
+                              'name' => __('auth.password_confirmation'),
+                               'id' => 'password_confirmation',
+                               'type' => 'password',
+                               'value' => old('password_confirmation'),
+                           ])
+                        </div>
+                        <div class="col-md-6">
+                            <p class="mb-2">@lang('auth.password_requirement')</p>
+                            <p class="small text-muted mb-2">@lang('auth.password_requirement_description')</p>
+                            <ul class="small text-muted pl-4 mb-0">
+                                <li>@lang('auth.password_requirement_characters')</li>
+                            </ul>
+                        </div>
+                    </div>
                     <button class="btn btn-lg btn-theme btn-block hover-border-white" type="submit">
-                        @lang('page.login')
+                        @lang('page.register')
                     </button>
                     {{-- Action buttons area --}}
                     <div class="row mt-5 mb-3">

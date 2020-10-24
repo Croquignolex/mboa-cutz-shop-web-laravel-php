@@ -5,6 +5,6 @@
            name="{{ $id }}"
            type="{{ $type }}"
            value="{{ $value }}"
-           class="form-control border {{ $errors->has($id) ? 'border-danger' : 'border-secondary' }}"
+           class="form-control form-control-lg border {{ $errors->has($id) ? 'border-danger' : 'border-secondary' }}"
     />
 </div>

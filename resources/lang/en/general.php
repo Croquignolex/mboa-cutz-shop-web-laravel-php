@@ -2,6 +2,8 @@
 
 return [
     'my_profile' => "My profile",
+    'first_name' => "First name",
+    'last_name' => "Last name",
 
     'tags' => "Tags",
     'categories' => "Categories",

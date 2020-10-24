@@ -16,45 +16,25 @@
                 </div>
                 <form action="" method="POST">
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        @if ($errors->has('email'))
-                            <label for="email">
-                                <small class="text-danger">
-                                    {{ $errors->first('email') }}
-                                </small>
-                            </label>
-                        @endif
-                        <input type="text"
-                               id="email"
-                               name="email"
-                               value="{{ old('email') }}"
-                               class="form-control form-control-lg"
-                               placeholder="@lang('general.email')"
-                        >
-                    </div>
-                    <div class="form-group">
-                        @if ($errors->has('password'))
-                            <label for="password">
-                                <small class="text-danger">
-                                    {{ $errors->first('password') }}
-                                </small>
-                            </label>
-                        @endif
-                        <input type="password"
-                               id="password"
-                               name="password"
-                               value="{{ old('password') }}"
-                               class="form-control form-control-lg"
-                               placeholder="@lang('auth.password')"
-                        >
-                    </div>
+                    @include('partials.form.input', [
+                        'name' => __('general.email'),
+                         'id' => 'email',
+                         'type' => 'text',
+                         'value' => old('email'),
+                    ])
+                    @include('partials.form.input', [
+                       'name' => __('auth.password'),
+                        'id' => 'password',
+                        'type' => 'text',
+                        'value' => old('password'),
+                   ])
                     <button class="btn btn-lg btn-theme btn-block hover-border-white" type="submit">
                         @lang('page.login')
                     </button>
                     {{-- Action buttons area --}}
                     <div class="row mt-5 mb-3">
                         <div class="col">
-                            <a class="btn btn-secondary btn-block" href="{{ locale_route('register') }}">@lang('auth.signup')</a>
+                            <a class="btn btn-secondary btn-block" href="{{ locale_route('register') }}">@lang('page.register')</a>
                         </div>
                         <div class="col">
                             <a class="btn btn-secondary btn-block" href="">@lang('auth.forgotten_password')</a>
