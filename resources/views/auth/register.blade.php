@@ -13,6 +13,7 @@
                 </div>
                 <div class="mt-4">
                     @include('partials.app-error-message')
+                    @include('partials.app-success-message')
                 </div>
                 <form action="" method="POST">
                     {{ csrf_field() }}

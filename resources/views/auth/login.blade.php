@@ -25,7 +25,7 @@
                     @include('partials.form.input', [
                        'name' => __('auth.password'),
                         'id' => 'password',
-                        'type' => 'text',
+                        'type' => 'password',
                         'value' => old('password'),
                    ])
                     <button class="btn btn-lg btn-theme btn-block hover-border-white" type="submit">

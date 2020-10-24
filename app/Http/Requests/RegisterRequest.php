@@ -21,7 +21,7 @@ class RegisterRequest extends FormRequest
             'last_name' => $this->required_string,
             'first_name' => $this->required_string,
             'email' => "{$this->required_string}|unique:users",
-            'password' => "{$this->required_string}|confirmed",
+            'password' => "{$this->required_string}|min:6|confirmed",
         ];
     }
 

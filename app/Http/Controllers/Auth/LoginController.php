@@ -4,14 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use App\Enums\UserRole;
-use Illuminate\View\View;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response; 
 use Illuminate\Routing\Redirector; 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Contracts\View\Factory;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;

@@ -42,16 +42,13 @@ class RegisterController extends Controller
      */
     public function register(RegisterRequest $request)
     {
-        $user = Role::where('type', UserRole::USER)->first()->create([
-            'first_name' => $request->input('first_name'),
-            'last_name' => $request->input('last_name'),
-            'email' => $request->input('email'),
-            'is_confirmed' => false,
-        ]);
+        $user = Role::where('type', UserRole::USER)->first()->users()->create($request->all());
+        $user->is_confirmed = false;
+        $user->save();
 
         //Mail::to($user->email)->send(new UserRegisterMail($user));
         success_toast_alert(__('toast.registration_message'));
 
-        return redirect(locale_route('login'));
+        return redirect(locale_route('register'));
     }
 }

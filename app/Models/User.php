@@ -61,7 +61,8 @@ class User extends Authenticate
         'first_name', 'last_name', 'phone', 'description',
         'post_code', 'city', 'country', 'profession',
         'address', 'email', 'avatar',
-        'avatar_extension'
+        'avatar_extension',
+        'password'
     ];
 
     /**
