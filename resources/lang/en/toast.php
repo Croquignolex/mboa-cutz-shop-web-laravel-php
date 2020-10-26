@@ -13,5 +13,6 @@ return [
 
     // ******************************* REGISTER ******************************* //
     'registration_message' => "Your account is created successfully, a confirmation e-mail is sent to you, check it and follow the steps. (Don't forget to check your spam if necessary)",
+    'bad_link' => "Bad link or expired",
 
 ];

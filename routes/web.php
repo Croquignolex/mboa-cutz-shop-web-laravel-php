@@ -5,10 +5,6 @@ use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
-Route::get('test', function () {
-
-});
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,7 +68,7 @@ Route::group(['namespace' => 'auth'], function() {
     Route::get('/{language}/register', 'RegisterController@showRegistrationForm')->name('register');
     Route::get('/{language}/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
     Route::get('/{language}/password/request', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');
-    Route::get('/{language}/account/{email}/confirmation/{token}', 'RegisterController@confiramtion')->name('account.confirmation');
+    Route::get('/{language}/account/{email}/confirmation/{token}', 'RegisterController@confirmation')->name('account.confirmation');
 
     Route::post('/{language}/login', 'LoginController@login');
     Route::post('/{language}/register', 'RegisterController@register');

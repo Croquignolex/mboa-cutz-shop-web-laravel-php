@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
 use Exception;
 use App\Models\Role;
 use App\Enums\UserRole;
+use Illuminate\Http\Request;
 use App\Mail\UserRegisterMail;
 use App\Models\EmailConfirmation;
 use Illuminate\Routing\Redirector;
@@ -54,5 +56,24 @@ class RegisterController extends Controller
         success_toast_alert(__('toast.registration_message'));
 
         return redirect(locale_route('register'));
+    }
+
+    public function confirmation(Request $request, String $language, String $email, String $token)
+    {
+        $confirmation = EmailConfirmation::where('email', $email)->where('token', $token)->first();
+
+        if($confirmation === null) {
+            danger_toast_alert('dddddddddd');
+        } else {
+            $user = User::where('email', $email)->first();
+            $user->is_confirmed = true;
+            $user->save();
+
+            $confirmation->delete();
+
+            success_toast_alert('eeeeeeeeeee');
+        }
+
+        return view('auth.confirmation');
     }
 }
