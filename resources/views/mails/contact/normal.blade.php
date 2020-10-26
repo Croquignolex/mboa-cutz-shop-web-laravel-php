@@ -1,4 +1,4 @@
-@extends('layouts.mail')
+@extends('layouts.mail.normal')
 
 @section('head', mb_strtoupper('Formulaire de contact'))
 

@@ -11,5 +11,6 @@ return [
     'password_requirement' => 'Exigences relatives au mot de passe',
     'password_requirement_description' => 'Pour créer un nouveau mot de passe, vous devez remplir toutes les conditions suivantes',
     'password_requirement_characters' => 'Minimum 8 caractères',
+    'account_validation' => 'Validation du compte',
 
 ];

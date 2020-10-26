@@ -2,28 +2,32 @@
 
 namespace App\Mail;
 
-use App\Models\Contact;
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use App\Models\EmailConfirmation;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserRegisterMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
-    public $contact;
+
+    public $user;
     public $sender;
+    public $emailConfirmation;
 
     /**
      * ContactFormMail constructor.
      *
-     * @param Contact $contact
-     * @param String $sender
+     * @param User $user
+     * @param EmailConfirmation $emailConfirmation
      */
-    public function __construct(Contact $contact, String $sender)
+    public function __construct(User $user, EmailConfirmation $emailConfirmation)
     {
-        $this->sender = $sender;
-        $this->contact = $contact;
+        $this->user = $user;
+        $this->sender = config('company.email');
+        $this->emailConfirmation = $emailConfirmation;
     }
 
     /**
@@ -33,8 +37,8 @@ class UserRegisterMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->subject('Formulaire de contact')
-            ->view('mails.contact.normal')
-            ->text('mails.contact.plain');
+        return $this->subject(__('auth.signup'))
+            ->view('mails.user-register.normal')
+            ->text('mails.user-register.plain');
     }
 }

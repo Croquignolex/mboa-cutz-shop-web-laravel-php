@@ -11,6 +11,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class ContactFormMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
+
     public $contact;
     public $sender;
 
@@ -18,12 +19,11 @@ class ContactFormMail extends Mailable implements ShouldQueue
      * ContactFormMail constructor.
      *
      * @param Contact $contact
-     * @param String $sender
      */
-    public function __construct(Contact $contact, String $sender)
+    public function __construct(Contact $contact)
     {
-        $this->sender = $sender;
         $this->contact = $contact;
+        $this->sender = config('company.email');
     }
 
     /**

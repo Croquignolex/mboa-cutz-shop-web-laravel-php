@@ -11,5 +11,6 @@ return [
     'password_requirement' => 'Password requirements',
     'password_requirement_description' => 'To create a new password, you have to meet all of the following requirements',
     'password_requirement_characters' => 'Minimum 6 character',
+    'account_validation' => 'Account validation',
 
 ];

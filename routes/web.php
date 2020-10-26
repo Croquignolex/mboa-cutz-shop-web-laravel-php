@@ -65,12 +65,14 @@ Route::group(['namespace' => 'auth'], function() {
     Route::get('/register', function () { return redirect(locale_route('register')); });
     Route::get('/password/request', function () { return redirect(locale_route('password.request')); });
     Route::get('/password/reset/{token}', function (String $token) { return redirect(locale_route('password.reset', compact('token'))); });
+    Route::get('/account/{email}/confirmation/{token}', function (String $email, String $token) { return redirect(locale_route('account.confirmation', compact('email', 'token'))); });
 
     // Start localized routes
     Route::get('/{language}/login', 'LoginController@showLoginForm')->name('login');
     Route::get('/{language}/register', 'RegisterController@showRegistrationForm')->name('register');
     Route::get('/{language}/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
     Route::get('/{language}/password/request', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    Route::get('/{language}/account/{email}/confirmation/{token}', 'RegisterController@confiramtion')->name('account.confirmation');
 
     Route::post('/{language}/login', 'LoginController@login');
     Route::post('/{language}/register', 'RegisterController@register');

@@ -1,18 +1,16 @@
-{{ mb_strtoupper('Formulaire de contact') }}
+@extends('layouts.mail.plain')
 
-Ce méssage vous à été envoyé dépuis le formulaire de
-contact le {{ $contact->short_creation_date }}.
-Voici les détails de ce méssage:
+@section('mail.plain.content')
+    {{ mb_strtoupper('Formulaire de contact') }}
 
-Nom: {{ $contact->format_name }}
-Email: {{ $contact->email }}
-Tel: {{ $contact->phone }}
-Sujet: {{ $contact->subject }}
+    Ce méssage vous à été envoyé dépuis le formulaire de
+    contact le {{ $contact->short_creation_date }}.
+    Voici les détails de ce méssage:
 
-{{ $contact->message }}
+    Nom: {{ $contact->format_name }}
+    Email: {{ $contact->email }}
+    Tel: {{ $contact->phone }}
+    Sujet: {{ $contact->subject }}
 
-Ce mail à été envoyé à {{ $sender }}.
-Si vous êtes pas le destinataire, vous pouvez ignorer ce mail
-ou nous contacter directement en utilisant ce lien ({{ locale_route('contact.index') }}).
-
-&copy; 2018 {{ config('app.name') }}, @lang('general.right').
+    {{ $contact->message }}
+@endsection

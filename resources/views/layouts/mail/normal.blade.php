@@ -40,10 +40,9 @@
                             <tr>
                                 <td>
                                     <p style="text-align: justify;">
-                                        Ce mail à été envoyé à {{ $sender }}.
-                                        Si vous êtes pas le destinataire, vous pouvez ignorer ce mail
-                                        ou <a href="{{ locale_route('contact.index') }}" target="_blank">nous contacter directement</a>
-                                        en cliquant sur ce lien.
+                                        @lang('mail.footer_normal_top', compact('sender'))
+                                        <a href="{{ locale_route('contact.index') }}" target="_blank">@lang('mail.footer_normal_link')</a>
+                                        @lang('mail.footer_normal_bottom')
                                     </p>
                                 </td>
                             </tr>
