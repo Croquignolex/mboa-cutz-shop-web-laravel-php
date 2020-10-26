@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Auth;
 use Exception;
 use App\Models\Role;
 use App\Enums\UserRole;
-//use App\Mail\UserRegisterMail;
+use App\Mail\UserRegisterMail;
+use App\Models\EmailConfirmation;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\RegisterRequest;
@@ -46,7 +48,9 @@ class RegisterController extends Controller
         $user->is_confirmed = false;
         $user->save();
 
-        //Mail::to($user->email)->send(new UserRegisterMail($user));
+        $confirmation = EmailConfirmation::create(['email' => $user->email]);
+
+        Mail::to($user->email)->send(new UserRegisterMail($user, $confirmation));
         success_toast_alert(__('toast.registration_message'));
 
         return redirect(locale_route('register'));

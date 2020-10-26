@@ -7,7 +7,5 @@
 
     @lang('mail.body_register_msg' , ['date' => $user->creation_date]).
 
-    {{ $contact->message }}
-
     @lang('mail.validate_my_account') ({{ $emailConfirmation->confirmation_link }})
 @endsection
