@@ -3,8 +3,8 @@
 @section('customer.auth.master.title', page_title(__('page.register')))
 
 @section('customer.auth.master.body')
-    <div class="container d-flex flex-column justify-content-center vh-100">
-        <div class="row justify-content-center">
+    <div class="container d-flex flex-column justify-content-center vh-100 mt-5">
+        <div class="row justify-content-center align-items-center h-100">
             <div class="col-xl-9 col-lg-9 col-md-10">
                 <div class="text-center app-brand">
                     <a href="{{ locale_route('home.index') }}">
@@ -57,7 +57,7 @@
                                'value' => old('password_confirmation'),
                            ])
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-4">
                             <p class="mb-2">@lang('auth.password_requirement')</p>
                             <p class="small text-muted mb-2">@lang('auth.password_requirement_description')</p>
                             <ul class="small text-muted pl-4 mb-0">

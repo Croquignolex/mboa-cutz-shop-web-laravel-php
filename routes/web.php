@@ -1,6 +1,13 @@
 <?php
 
+use App\Models\Article;
+use App\Models\Product;
+use App\Models\Service;
 use Illuminate\Support\Facades\Route;
+
+Route::get('test', function () {
+
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +34,8 @@ Route::group(['namespace' => 'shop'], function() {
     Route::get('/products', function () { return redirect(locale_route('products.index')); });
     Route::get('/services', function () { return redirect(locale_route('services.index')); });
 
-    Route::get('/products/{product}', function () { return redirect(locale_route('products.show', compact('product'))); });
-    Route::get('/services/{service}', function () { return redirect(locale_route('services.show', compact('service'))); });
+    Route::get('/products/{product}', function (Product $product) { return redirect(locale_route('products.show', compact('product'))); });
+    Route::get('/services/{service}', function (Service $service) { return redirect(locale_route('services.show', compact('service'))); });
 
     // Start localized routes
     Route::get('/{language}/services', 'ServiceController@index')->name('services.index');
@@ -41,7 +48,7 @@ Route::group(['namespace' => 'shop'], function() {
 Route::group(['namespace' => 'blog'], function() {
     // Start non localized routes
     Route::get('/articles', function () { return redirect(locale_route('articles.index')); });
-    Route::get('/articles/{article}', function () { return redirect(locale_route('articles.show', compact("article"))); });
+    Route::get('/articles/{article}', function (Article $article) { return redirect(locale_route('articles.show', compact("article"))); });
 
     // Start localized routes
     Route::get('/{language}/articles', 'ArticleController@index')->name('articles.index');
@@ -56,14 +63,20 @@ Route::group(['namespace' => 'auth'], function() {
     // Start non localized routes
     Route::get('/login', function () { return redirect(locale_route('login')); });
     Route::get('/register', function () { return redirect(locale_route('register')); });
+    Route::get('/password/request', function () { return redirect(locale_route('password.request')); });
+    Route::get('/password/reset/{token}', function (String $token) { return redirect(locale_route('password.reset', compact('token'))); });
 
     // Start localized routes
     Route::get('/{language}/login', 'LoginController@showLoginForm')->name('login');
     Route::get('/{language}/register', 'RegisterController@showRegistrationForm')->name('register');
+    Route::get('/{language}/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
+    Route::get('/{language}/password/request', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');
 
     Route::post('/{language}/login', 'LoginController@login');
     Route::post('/{language}/register', 'RegisterController@register');
     Route::post('/{language}/logout', 'LoginController@logout')->name('logout');
+    Route::post('/{language}/password/reset/{token}', 'ResetPasswordController@reset');
+    Route::post('/{language}/password/reset', 'ForgotPasswordController@sendResetLinkEmail');
 });
 
 Route::group(['namespace' => 'customer'], function() {
