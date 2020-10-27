@@ -18,5 +18,6 @@ return [
     'login' => 'Connexion',
     'dashboard' => 'Tableau de board',
     'register' => 'Inscription',
+    'confirmation' => 'Confirmation',
 
 ];

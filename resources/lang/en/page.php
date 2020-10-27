@@ -18,5 +18,6 @@ return [
     'login' => 'Login',
     'dashboard' => 'Dashboard',
     'register' => 'Register',
+    'confirmation' => 'Confirmation',
 
 ];

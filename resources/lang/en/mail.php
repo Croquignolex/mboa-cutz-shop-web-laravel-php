@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'footer_plain' => "Ce mail à été envoyé à :sender. Si vous êtes pas le destinataire, vous pouvez ignorer ce mail ou nous contacter directement en utilisant ce lien (:url)",
-    'footer_normal_top' => "Ce mail à été envoyé à :sender. Si vous êtes pas le destinataire, vous pouvez ignorer ce mail ou",
-    'footer_normal_link' => "nous contacter directement",
-    'footer_normal_bottom' => "en cliquant sur ce lien",
+    'footer_plain' => "This email was sent to: sender. If you are not the recipient, you can ignore this email or contact us directly using this link (: url)",
+    'footer_normal_top' => "This email was sent to: sender. If you are not the recipient, you can ignore this email or",
+    'footer_normal_link' => "contact us directly",
+    'footer_normal_bottom' => "by clicking on this link",
 
     // ******************************* REGISTER ******************************* //
     'top_register_msg' => "Welcome :name, here are your account validation instructions",

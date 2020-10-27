@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
 use Exception;
 use App\Models\Role;
+use App\Models\User;
 use App\Enums\UserRole;
-use Illuminate\Http\Request;
+use Illuminate\View\View;
 use App\Mail\UserRegisterMail;
 use App\Models\EmailConfirmation;
 use Illuminate\Routing\Redirector;
@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use App\Http\Requests\RegisterRequest;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Contracts\Foundation\Application;
 
 class RegisterController extends Controller
 {
@@ -40,6 +42,8 @@ class RegisterController extends Controller
     }
 
     /**
+     * improve user self registration
+     *
      * @param RegisterRequest $request
      * @return RedirectResponse|Redirector
      * @throws Exception
@@ -58,20 +62,27 @@ class RegisterController extends Controller
         return redirect(locale_route('register'));
     }
 
-    public function confirmation(Request $request, String $language, String $email, String $token)
+    /**
+     * Improve user account confirmation
+     *
+     * @param String $language
+     * @param String $email
+     * @param String $token
+     * @return Application|Factory|View
+     */
+    public function confirmation(String $language, String $email, String $token)
     {
         $confirmation = EmailConfirmation::where('email', $email)->where('token', $token)->first();
 
-        if($confirmation === null) {
-            danger_toast_alert('dddddddddd');
-        } else {
+        if($confirmation === null) danger_toast_alert(__('toast.bad_link'));
+        else {
             $user = User::where('email', $email)->first();
             $user->is_confirmed = true;
             $user->save();
 
             $confirmation->delete();
 
-            success_toast_alert('eeeeeeeeeee');
+            success_toast_alert(__('toast.well_confirmed'));
         }
 
         return view('auth.confirmation');
