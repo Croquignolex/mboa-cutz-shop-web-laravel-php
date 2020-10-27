@@ -53,6 +53,13 @@ class Article extends Model
     ];
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = ['is_featured' => 'boolean', 'is_new' => 'boolean'];
+
+    /**
      * @return BelongsToMany|HasMany
      */
     public function tags()

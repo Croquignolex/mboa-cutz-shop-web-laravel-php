@@ -6,7 +6,6 @@ use App\Traits\DateTrait;
 use App\Traits\OfferTrait;
 use App\Traits\SlugRouteTrait;
 use App\Traits\LocaleNameTrait;
-use App\Enums\ProductAvailability;
 use App\Traits\LocaleDescriptionTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -53,6 +52,17 @@ class Product extends Model
         'is_featured', 'is_new', 'is_most_sold',
         'price', 'discount', 'stock', 'rate',
         'image', 'extension',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'is_new' => 'boolean',
+        'is_featured' => 'boolean',
+        'is_most_sold' => 'boolean',
     ];
 
     /**

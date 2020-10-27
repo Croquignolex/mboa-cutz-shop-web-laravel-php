@@ -66,6 +66,15 @@ class User extends Authenticate
     ];
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'is_confirmed' => 'boolean',
+    ];
+
+    /**
      * User role
      *
      * @return BelongsTo

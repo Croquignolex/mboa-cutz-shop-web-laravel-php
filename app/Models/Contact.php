@@ -23,4 +23,11 @@ class Contact extends Model
      * @var array
      */
     protected $fillable = ['name', 'email', 'phone', 'subject', 'message'];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = ['is_read' => 'boolean'];
 }
