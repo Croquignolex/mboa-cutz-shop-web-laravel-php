@@ -12,8 +12,7 @@
                     </a>
                 </div>
                 <div class="mt-5">
-                    @include('partials.app-error-message')
-                    @include('partials.app-success-message')
+                    @include('partials.app-toast-message')
                 </div>
                 {{-- Action buttons area --}}
                 <div class="row mt-5 mb-3">

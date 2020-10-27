@@ -94,7 +94,7 @@ class LoginController extends Controller
      */
     protected function sendFailedLoginResponse(Request $request)
     {
-        danger_toast_alert("Combinaison email et mot de passe incorrect ou votre à été bloqué");
+        danger_toast_alert(__('toast.login_error_message'));
         throw ValidationException::withMessages([]);
     }
 
@@ -104,7 +104,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        info_toast_alert("Bienvenue {$user->full_name}");
+        info_toast_alert(__('home.welcome') . ' ' . $user->full_name);
     }
 
     /**

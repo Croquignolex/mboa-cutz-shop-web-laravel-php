@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 ftco-animate">
-                    <div class="mx-lg-5">@include('partials.error-message')</div>
+                    <div class="mx-lg-5">@include('partials.toast-message')</div>
                     <form action="{{ locale_route('contact.send-message') }}" class="contact-form" method="POST">
                         @csrf
                         <div class="row">

@@ -4,6 +4,7 @@ return [
     'my_profile' => "My profile",
     'first_name' => "First name",
     'last_name' => "Last name",
+    'welcome' => "Welcome",
 
     'tags' => "Tags",
     'categories' => "Categories",

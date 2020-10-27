@@ -5,8 +5,8 @@ namespace App\Mail;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use App\Models\PasswordReset;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserPasswordResetMail extends Mailable implements ShouldQueue

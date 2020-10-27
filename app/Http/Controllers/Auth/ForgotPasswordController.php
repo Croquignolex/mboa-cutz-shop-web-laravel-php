@@ -91,7 +91,7 @@ class ForgotPasswordController extends Controller
         try {
             $password_reset = PasswordReset::where(['email' => $user->email])->first();
 
-            if(is_null($password_reset)) $password_reset = PasswordReset::create(['email' => $user->email]);
+            if($password_reset === null) $password_reset = PasswordReset::create(['email' => $user->email]);
             else $password_reset->update(['token' => Str::random(64)]);
 
             try {

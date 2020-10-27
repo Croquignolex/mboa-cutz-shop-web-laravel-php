@@ -16,6 +16,6 @@ trait ResetPasswordUserTrait
     protected function getUser(array $credentials)
     {
         $user = User::where(['email' => $credentials['email']])->first();
-        return ($user->role->name === UserRole::USER) ? $user : null;
+        return ($user !== null && $user->role->type === UserRole::USER) ? $user : null;
     }
 }

@@ -12,7 +12,7 @@
                     </a>
                 </div>
                 <div class="mt-4">
-                    @include('partials.app-error-message')
+                    @include('partials.app-toast-message')
                 </div>
                 <form action="" method="POST">
                     {{ csrf_field() }}

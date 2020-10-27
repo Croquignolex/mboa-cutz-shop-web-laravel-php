@@ -30,7 +30,7 @@
         <div class="comment-form-wrap mb-5 pb-4">
             @auth
                 <h5 class="mb-2">@lang('general.leave_a_comment')</h5>
-                <div class="mx-lg-5 my-2">@include('partials.error-message')</div>
+                <div class="mx-lg-5 my-2">@include('partials.toast-message')</div>
                 <form action="{{ locale_route('articles.comment', compact('article')) }}" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group">
