@@ -13,5 +13,6 @@ return [
     'password_requirement_characters' => "Minimum 6 character",
     'account_validation' => "Account validation",
     'recover_password' => "Recover password",
+    'reset_password' => 'Reset your password',
 
 ];

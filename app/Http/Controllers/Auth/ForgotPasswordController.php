@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\PasswordReset;
 use Illuminate\Http\JsonResponse;
+use App\Mail\UserPasswordResetMail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\RedirectResponse;
@@ -90,11 +91,11 @@ class ForgotPasswordController extends Controller
         try {
             $password_reset = PasswordReset::where(['email' => $user->email])->first();
 
-            if(is_null($password_reset)) PasswordReset::create(['email' => $user->email]);
+            if(is_null($password_reset)) $password_reset = PasswordReset::create(['email' => $user->email]);
             else $password_reset->update(['token' => Str::random(64)]);
 
             try {
-                Mail::to($user->email)->send(new UserPasswordResetMail($user));
+                Mail::to($user->email)->send(new UserPasswordResetMail($user, $password_reset));
                 return true;
             } catch (Exception $exception) {}
 
