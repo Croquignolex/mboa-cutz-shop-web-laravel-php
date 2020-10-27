@@ -4,13 +4,16 @@ namespace App\Http\Controllers\Auth;
 
 use Exception;
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\PasswordReset;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\RedirectResponse;
+use App\Traits\ResetPasswordUserTrait;
 use Illuminate\Support\Facades\Password;
+use App\Http\Requests\ForgotPasswordRequest;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller
@@ -28,8 +31,7 @@ class ForgotPasswordController extends Controller
     |
     */
 
-    use SendsPasswordResetEmails;
-//    use SendsPasswordResetEmails, ResetPasswordUserTrait;
+    use SendsPasswordResetEmails, ResetPasswordUserTrait;
 
     /**
      * ForgotPasswordController constructor.
@@ -48,9 +50,7 @@ class ForgotPasswordController extends Controller
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
         // need to show to the user. Finally, we'll send out a proper response.
-        $response = $this->sendResetLink(
-            $request->only('email')
-        );
+        $response = $this->sendResetLink($request->only('email'));
 
         return $response == Password::RESET_LINK_SENT
             ? $this->sendResetLinkResponse($response)
@@ -78,68 +78,54 @@ class ForgotPasswordController extends Controller
         // user with a link to reset their password. We will then redirect back to
         // the current URI having nothing set in the session to indicate errors.
 
-        return $this->SendResetEmail($user) ? Password::RESET_LINK_SENT :
-            ForgotPasswordController::RESET_LINK_NOT_SENT;
+        return $this->sendResetEmail($user) ? Password::RESET_LINK_SENT : self::RESET_LINK_NOT_SENT;
     }
 
     /**
      * @param User $user
      * @return bool
      */
-    protected function SendResetEmail(User $user)
+    protected function sendResetEmail(User $user)
     {
-        try
-        {
+        try {
             $password_reset = PasswordReset::where(['email' => $user->email])->first();
 
             if(is_null($password_reset)) PasswordReset::create(['email' => $user->email]);
-            else
-            {
-                $password_reset->token = str_random(64);
-                $password_reset->save();
-            }
+            else $password_reset->update(['token' => Str::random(64)]);
 
-            try
-            {
+            try {
                 Mail::to($user->email)->send(new UserPasswordResetMail($user));
                 return true;
-            }
-            catch (Exception $exception)
-            {
-                $this->mailError($exception);
-            }
-        }
-        catch (Exception $exception)
-        {
-            $this->databaseError($exception);
-        }
+            } catch (Exception $exception) {}
+
+        } catch (Exception $exception) {}
+
         return false;
     }
 
     /**
      * Get the response for a successful password reset link.
      *
-     * @param  string  $response
+     * @param String $response
      * @return RedirectResponse|JsonResponse
      */
-    protected function sendResetLinkResponse($response)
+    protected function sendResetLinkResponse(String $response)
     {
-        info_flash_message(trans('auth.info'), trans($response));
-        return back()->with('status', trans($response));
+        info_toast_alert(__($response));
+        return back();
     }
 
     /**
      * @param Request $request
-     * @param $response
+     * @param String $response
      * @return RedirectResponse
      */
-    protected function sendResetLinkFailedResponse(Request $request, $response)
+    protected function sendResetLinkFailedResponse(Request $request, String $response)
     {
-        if($response !== ForgotPasswordController::RESET_LINK_NOT_SENT)
-            danger_flash_message(trans('auth.error'), trans($response));
+        if($response !== self::RESET_LINK_NOT_SENT) danger_toast_alert(__($response));
 
         return back()
             ->withInput($request->only('email'))
-            ->withErrors(['email' => trans($response)]);
+            ->withErrors(['email' => __($response)]);
     }
 }

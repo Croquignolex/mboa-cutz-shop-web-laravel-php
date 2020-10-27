@@ -74,7 +74,7 @@ Route::group(['namespace' => 'auth'], function() {
     Route::post('/{language}/register', 'RegisterController@register');
     Route::post('/{language}/logout', 'LoginController@logout')->name('logout');
     Route::post('/{language}/password/reset/{token}', 'ResetPasswordController@reset');
-    Route::post('/{language}/password/reset', 'ForgotPasswordController@sendResetLinkEmail');
+    Route::post('/{language}/password/request', 'ForgotPasswordController@sendResetLinkEmail');
 });
 
 Route::group(['namespace' => 'customer'], function() {
