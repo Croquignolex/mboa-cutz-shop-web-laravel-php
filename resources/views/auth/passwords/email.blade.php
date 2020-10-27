@@ -1,6 +1,6 @@
 @extends('layouts.customer.auth')
 
-@section('customer.auth.master.title', page_title(__('page.login')))
+@section('customer.auth.master.title', page_title(__('page.pwd_reset')))
 
 @section('customer.auth.master.body')
     <div class="container d-flex flex-column justify-content-center vh-100">
@@ -13,6 +13,7 @@
                 </div>
                 <div class="mt-4">
                     @include('partials.app-error-message')
+                    @include('partials.app-success-message')
                 </div>
                 <form action="" method="POST">
                     {{ csrf_field() }}
@@ -22,27 +23,15 @@
                          'type' => 'text',
                          'value' => old('email'),
                     ])
-                    @include('partials.form.input', [
-                       'name' => __('auth.password'),
-                        'id' => 'password',
-                        'type' => 'password',
-                        'value' => old('password'),
-                   ])
                     <button class="btn btn-lg btn-theme btn-block hover-border-white" type="submit">
-                        @lang('page.login')
+                        @lang('auth.recover_password')
                     </button>
                     {{-- Action buttons area --}}
                     <div class="row mt-5 mb-3">
-                        <div class="col">
-                            <a class="btn btn-secondary btn-block" href="{{ locale_route('register') }}">
+                        <div class="col-6 offset-3">
+                            <a class="btn btn-secondary btn-block" href="{{ locale_route('login') }}">
                                 <i class="fe fe-arrow-left mr-2"></i>
-                                @lang('page.register')
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a class="btn btn-secondary btn-block" href="{{ locale_route('password.request') }}">
-                                <i class="fe fe-arrow-right mr-2"></i>
-                                @lang('auth.forgotten_password')
+                                @lang('page.login')
                             </a>
                         </div>
                     </div>

@@ -19,5 +19,6 @@ return [
     'dashboard' => 'Tableau de board',
     'register' => 'Inscription',
     'confirmation' => 'Confirmation',
+    'pwd_reset' => 'Réinitialisation',
 
 ];

@@ -49,7 +49,7 @@ class Service extends Model
      */
     protected $fillable = [
         'fr_name', 'en_name', 'fr_description', 'en_description',
-        'is_featured', 'is_new', 'is_most_sold',
+        'is_featured', 'is_new', 'is_most_asked',
         'price', 'discount', 'stock', 'rate',
         'image', 'extension',
     ];
@@ -62,7 +62,7 @@ class Service extends Model
     protected $casts = [
         'is_new' => 'boolean',
         'is_featured' => 'boolean',
-        'is_most_sold' => 'boolean',
+        'is_most_asked' => 'boolean',
     ];
 
     /**

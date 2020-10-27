@@ -71,7 +71,10 @@
                     {{-- Action buttons area --}}
                     <div class="row mt-5 mb-3">
                         <div class="col-6 offset-3">
-                            <a class="btn btn-secondary btn-block" href="{{ locale_route('login') }}">@lang('page.login')</a>
+                            <a class="btn btn-secondary btn-block" href="{{ locale_route('login') }}">
+                                <i class="fe fe-arrow-left mr-2"></i>
+                                @lang('page.login')
+                            </a>
                         </div>
                     </div>
                     {{-- Copyright area --}}

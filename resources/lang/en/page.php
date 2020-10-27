@@ -19,5 +19,6 @@ return [
     'dashboard' => 'Dashboard',
     'register' => 'Register',
     'confirmation' => 'Confirmation',
+    'pwd_reset' => 'Password reset',
 
 ];
