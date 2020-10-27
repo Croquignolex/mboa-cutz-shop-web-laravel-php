@@ -20,5 +20,6 @@ return [
     'register' => 'Register',
     'confirmation' => 'Confirmation',
     'pwd_reset' => 'Password reset',
+    'new_password' => 'New password',
 
 ];

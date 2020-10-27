@@ -14,5 +14,6 @@ return [
     'account_validation' => "Account validation",
     'recover_password' => "Recover password",
     'reset_password' => 'Reset your password',
+    'reset' => 'Reset',
 
 ];

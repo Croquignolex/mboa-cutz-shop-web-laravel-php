@@ -14,5 +14,6 @@ return [
     'account_validation' => "Validation du compte",
     'recover_password' => "Récupérer le mot de passe",
     'reset_your_pwd' => 'Réinitialiser votre mot de passe',
+    'reset' => 'Réinitialiser',
 
 ];
