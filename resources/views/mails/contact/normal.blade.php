@@ -8,7 +8,7 @@
             <p style="text-align: justify;">
                 <strong>
                     Ce méssage vous à été envoyé dépuis le formulaire de
-                    contact le {{ $contact->short_creation_date }}.
+                    contact le {{ $contact->creation_date }}.
                     Voici les détails de ce méssage:
                 </strong>
             </p>

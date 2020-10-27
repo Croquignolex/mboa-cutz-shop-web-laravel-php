@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\DateTrait;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -10,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class EmailConfirmation extends Model
 {
+    use DateTrait;
+
     /**
      * The attributes that should be cast.
      *

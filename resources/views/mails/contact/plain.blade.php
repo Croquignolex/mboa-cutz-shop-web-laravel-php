@@ -4,7 +4,7 @@
     {{ mb_strtoupper('Formulaire de contact') }}
 
     Ce méssage vous à été envoyé dépuis le formulaire de
-    contact le {{ $contact->short_creation_date }}.
+    contact le {{ $contact->creation_date }}.
     Voici les détails de ce méssage:
 
     Nom: {{ $contact->format_name }}
