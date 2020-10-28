@@ -20,8 +20,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::orderBy('created_at', 'desc')
-            ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS)
-            ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
+            ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS);
 
         return view('shop.products.index', compact('products'));
     }
@@ -38,8 +37,7 @@ class ProductController extends Controller
         $reviews = $product
             ->reviews()
             ->orderBy('created_at', 'desc')
-            ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS)
-            ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
+            ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS);
 
         return view('shop.products.show', compact('product', 'reviews'));
     }
