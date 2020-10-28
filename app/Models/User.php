@@ -70,9 +70,7 @@ class User extends Authenticate
      *
      * @var array
      */
-    protected $casts = [
-        'is_confirmed' => 'boolean',
-    ];
+    protected $casts = ['is_confirmed' => 'boolean'];
 
     /**
      * User role

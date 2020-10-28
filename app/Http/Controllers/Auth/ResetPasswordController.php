@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Exception;
 use App\Models\User;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use App\Models\PasswordReset;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
 use App\Traits\ResetPasswordUserTrait;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\Facades\Password;
+use App\Http\Requests\ResetPasswordRequest;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller
@@ -56,8 +55,9 @@ class ResetPasswordController extends Controller
         // If the password was successfully reset, we will redirect the user back to
         // the application's home authenticated view. If there is an error we can
         // redirect them back to where they came from with their error message.
-        if($response == Password::PASSWORD_RESET) return $this->sendResetResponse($response);
-        else return $this->sendResetFailedResponse($request, $response);
+        return $response == Password::PASSWORD_RESET
+            ? $this->sendResetResponse($response)
+            : $this->sendResetFailedResponse($request, $response);
     }
 
     /**
@@ -95,20 +95,14 @@ class ResetPasswordController extends Controller
      */
     protected function getTokenUser(array $credentials, $token)
     {
-        try
+        $password_reset = PasswordReset::where('email', $credentials['email'])->where('token', $token)->first();
+
+        if($password_reset !== null)
         {
-            $password_reset = PasswordReset::where(['email' => $credentials['email'], 'token' => $token])->first();
-            if(is_null($password_reset)) return null;
-            else
-            {
-                $password_reset->delete();
-                return $this->getUser($credentials);
-            }
+            $password_reset->delete();
+            return $this->getUser($credentials);
         }
-        catch(Exception $exception)
-        {
-            $this->databaseError($exception);
-        }
+
         return null;
     }
 
@@ -118,42 +112,34 @@ class ResetPasswordController extends Controller
      */
     protected function resetPassword(User $user, $password)
     {
-        try
-        {
-            $user->password = Hash::make($password);
-            $user->save();
-        }
-        catch (Exception $exception)
-        {
-            $this->databaseError($exception);
-        }
+        $user->update(compact('password'));
     }
 
     /**
      * Get the response for a successful password reset.
      *
-     * @param  string  $response
+     * @param String $response
      * @return RedirectResponse|JsonResponse
      */
-    protected function sendResetResponse($response)
+    protected function sendResetResponse(String $response)
     {
-        success_flash_message(trans('auth.success'), trans($response));
-        return redirect(locale_route('login'))->with('status', trans($response));
+        success_toast_alert(__($response));
+        return redirect(locale_route('login'));
     }
 
     /**
      * Get the response for a failed password reset.
      *
      * @param Request $request
-     * @param  string  $response
+     * @param String $response
      * @return RedirectResponse|JsonResponse
      */
-    protected function sendResetFailedResponse(Request $request, $response)
+    protected function sendResetFailedResponse(Request $request, String $response)
     {
-        danger_flash_message(trans('auth.error'), trans($response));
+        danger_toast_alert(__($response));
 
-        return redirect()->back()
+        return back()
             ->withInput($request->only('email'))
-            ->withErrors(['email' => trans($response)]);
+            ->withErrors(['email' => __($response)]);
     }
 }

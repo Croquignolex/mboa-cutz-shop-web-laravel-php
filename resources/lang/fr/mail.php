@@ -12,7 +12,7 @@ return [
     'validate_my_account' => "Valider mon compte",
 
     // ******************************* PASSWORD ******************************* //
-    'top_password_reset_msg' => "Salut :name, voici les instructions pour réinitialiser vote mot de passe",
+    'top_password_reset_msg' => "Salut :name, voici les instructions pour réinitialiser votre mot de passe",
     'body_password_reset_msg' => "Le :date, vous avez démandé à ce que votre mot de passe soit réinitialisé. Si vous n'avez pas éffectués cette action, ignorez simplement cet email. Si vous avez éffectués cette action, s'il vous plais validez votre email en cliquant sur le bouton ci-dessous",
     'reset_my_password' => "Réinitialiser mon mot de passe",
 
