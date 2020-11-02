@@ -25,7 +25,7 @@ Route::get('/{language?}', 'HomeController@index')->name('home.index');
 Route::get('/{language}/contact', 'ContactController@index')->name('contact.index');
 Route::post('/{language}/contact', 'ContactController@sendMessage')->name('contact.send-message');
 
-Route::group(['namespace' => 'shop'], function() {
+Route::group(['namespace' => 'Shop'], function() {
     // Start non localized routes
     Route::get('/products', function () { return redirect(locale_route('products.index')); });
     Route::get('/services', function () { return redirect(locale_route('services.index')); });
@@ -41,7 +41,7 @@ Route::group(['namespace' => 'shop'], function() {
     Route::get('/{language}/services/{service}', 'ServiceController@show')->name('services.show');
 });
 
-Route::group(['namespace' => 'blog'], function() {
+Route::group(['namespace' => 'Blog'], function() {
     // Start non localized routes
     Route::get('/articles', function () { return redirect(locale_route('articles.index')); });
     Route::get('/articles/{article}', function (Article $article) { return redirect(locale_route('articles.show', compact("article"))); });
@@ -55,7 +55,7 @@ Route::group(['namespace' => 'blog'], function() {
     Route::post('/{language}/articles/{article}/comment', 'ArticleController@comment')->name('articles.comment');
 });
 
-Route::group(['namespace' => 'auth'], function() {
+Route::group(['namespace' => 'Auth'], function() {
     // Start non localized routes
     Route::get('/login', function () { return redirect(locale_route('login')); });
     Route::get('/register', function () { return redirect(locale_route('register')); });
@@ -77,7 +77,7 @@ Route::group(['namespace' => 'auth'], function() {
     Route::post('/{language}/password/request', 'ForgotPasswordController@sendResetLinkEmail');
 });
 
-Route::group(['namespace' => 'customer'], function() {
+Route::group(['namespace' => 'Customer'], function() {
     // Start non localized routes
     Route::get('/customer/dashboard', function () { return redirect(locale_route('customer.dashboard.index')); });
 
