@@ -13,3 +13,8 @@ yarn-error.log
 
 # phpStrom ide
 /.idea
+
+# Server dependancy
+.htaccess
+.user.ini
+php.ini

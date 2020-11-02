@@ -1,0 +1,29 @@
+.btn-theme {
+    background-color: #ec008c;
+    color: white;
+}
+
+.btn-theme:hover {
+    background-color: #181818;
+    color: white;
+}
+
+.hover-border-white:hover {
+    border: 1px solid white;
+}
+
+.bg-theme {
+    background-color: #ec008c;
+}
+
+.bg-theme-dark {
+    background-color: #181818;
+}
+
+.hand-cursor {
+    cursor: progress !important;
+}
+
+.busy-cursor {
+    cursor: not-allowed !important;
+}

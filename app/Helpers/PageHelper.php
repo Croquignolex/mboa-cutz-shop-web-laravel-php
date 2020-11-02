@@ -28,6 +28,7 @@ if(!function_exists('active_page'))
                 return 'active';
             }
         }
+
         return '';
     }
 }

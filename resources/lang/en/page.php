@@ -14,5 +14,12 @@ return [
     'products' => 'Products',
     'services' => 'Services',
     'cart' => 'Cart',
+    'article' => 'Article',
+    'login' => 'Login',
+    'dashboard' => 'Dashboard',
+    'register' => 'Register',
+    'confirmation' => 'Confirmation',
+    'pwd_reset' => 'Password reset',
+    'new_password' => 'New password',
 
 ];
