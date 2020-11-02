@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ Illuminate\Support\Facades\App::getLocale() }}">
     <head>
+        @if (env('APP_ENV') === 'production')
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVCGCKJ5NG"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-GVCGCKJ5NG');
+            </script>
+        @endif
         <meta charset="utf-8">
         <meta name="author" content="{{ seo_authors() }}">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,13 +57,41 @@
         <meta property="og:image" content="{{ img_asset('logo', 'jpg') }}" />
         <meta property="twitter:image" content="{{ img_asset('logo', 'jpg') }}" />
 
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{ css_asset('toastr.min') }}" type="text/css">
+
         @stack('master.style')
+
         <link rel="stylesheet" href="{{ css_asset('master') }}" type="text/css">
     </head>
 
-    <body>
+    <body class="vertical">
         @yield('master.body')
+
+        <script src="{{ js_asset('jquery.min') }}" type="application/javascript"></script>
+        <script src="{{ js_asset('toastr.min') }}" type="application/javascript"></script>
+
+        @if (env('APP_ENV') === 'production')
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+        @else
+            <script src="{{ js_asset('vue.min') }}" type="application/javascript"></script>
+        @endif
+
         @stack('master.script')
+
         <script src="{{ js_asset('master') }}" type="application/javascript"></script>
+
+        @if(session()->has('toast.alert'))
+            <script>
+                callToaster(
+                    "{{ session('toast.title') }}",
+                    "{{ session('toast.message') }}",
+                    "{{ session('toast.type') }}",
+                    "{{ session('toast.delay') }}"
+                );
+            </script>
+        @endif
     </body>
 </html>

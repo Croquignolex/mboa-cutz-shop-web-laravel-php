@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\App;
 
 if(!function_exists('locale_route'))
 {
@@ -35,76 +36,17 @@ if(!function_exists('text_format'))
     }
 }
 
-if(!function_exists('info_toast_alert'))
+if(!function_exists('amount_format'))
 {
     /**
-     * @param $message
-     * @param string $title
-     * @param int $delay
-     * @param string $type
+     * @param $amount
+     * @return string
      */
-    function info_toast_alert($message, $title = "Information", $delay = 8000, $type = "info")
+    function amount_format($amount)
     {
-        toast_alert($title, $message, 'info', $delay);
+        $amount = number_format($amount, 0, ',', '.');
+        if(App::getLocale() === config('app.secondary_locale')) return "XAF $amount";
+        return "$amount XAF";
     }
 }
 
-if(!function_exists('success_toast_alert'))
-{
-    /**
-     * @param $message
-     * @param string $title
-     * @param int $delay
-     * @param string $type
-     */
-    function success_toast_alert($message, $title = "Succès", $delay = 5000, $type = "success")
-    {
-        toast_alert($title, $message, $type, $delay);
-    }
-}
-
-if(!function_exists('warning_toast_alert'))
-{
-    /**
-     * @param $message
-     * @param string $title
-     * @param int $delay
-     * @param string $type
-     */
-    function warning_toast_alert($message, $title = "Avertissement", $delay = 8000, $type = "warning")
-    {
-        toast_alert($title, $message, $type, $delay);
-    }
-}
-
-if(!function_exists('danger_toast_alert'))
-{
-    /**
-     * @param $message
-     * @param string $title
-     * @param int $delay
-     * @param string $type
-     */
-    function danger_toast_alert($message, $title = "Danger", $delay = 10000, $type = "danger")
-    {
-        toast_alert($title, $message, $type, $delay);
-    }
-}
-
-if(!function_exists('toast_alert'))
-{
-    /**
-     * @param $title
-     * @param $message
-     * @param $type
-     * @param $delay
-     */
-    function toast_alert($title, $message, $type, $delay)
-    {
-        session()->flash('toast.alert', true);
-        session()->flash('toast.type', $type);
-        session()->flash('toast.title', $title);
-        session()->flash('toast.delay', $delay);
-        session()->flash('toast.message', $message);
-    }
-}
