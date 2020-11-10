@@ -40,7 +40,7 @@
                             <tr>
                                 <td>
                                     <p style="text-align: justify;">
-                                        @lang('mail.footer_normal_top', compact('sender'))
+                                        @lang('mail.footer_normal_top', compact('receiver'))
                                         <a href="{{ locale_route('contact.index') }}" target="_blank">@lang('mail.footer_normal_link')</a>
                                         @lang('mail.footer_normal_bottom')
                                     </p>

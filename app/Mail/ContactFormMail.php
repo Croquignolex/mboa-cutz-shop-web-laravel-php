@@ -13,7 +13,7 @@ class ContactFormMail extends Mailable implements ShouldQueue
     use Queueable, SerializesModels;
 
     public $contact;
-    public $sender;
+    public $receiver;
 
     /**
      * ContactFormMail constructor.
@@ -23,7 +23,7 @@ class ContactFormMail extends Mailable implements ShouldQueue
     public function __construct(Contact $contact)
     {
         $this->contact = $contact;
-        $this->sender = config('company.email');
+        $this->receiver = config('company.email');
     }
 
     /**
