@@ -14,7 +14,7 @@ class UserPasswordResetMail extends Mailable implements ShouldQueue
     use Queueable, SerializesModels;
 
     public $user;
-    public $sender;
+    public $receiver;
     public $passwordReset;
 
     /**
@@ -26,7 +26,7 @@ class UserPasswordResetMail extends Mailable implements ShouldQueue
     public function __construct(User $user, PasswordReset $passwordReset)
     {
         $this->user = $user;
-        $this->sender = config('company.email');
+        $this->receiver = $user->email;
         $this->passwordReset = $passwordReset;
     }
 

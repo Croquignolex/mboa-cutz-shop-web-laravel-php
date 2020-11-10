@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'footer_plain' => "This email was sent to: sender. If you are not the recipient, you can ignore this email or contact us directly using this link (: url)",
-    'footer_normal_top' => "This email was sent to: sender. If you are not the recipient, you can ignore this email or",
+    'footer_plain' => "This email was sent to :receiver. If you are not the recipient, you can ignore this email or contact us directly using this link (: url)",
+    'footer_normal_top' => "This email was sent to :receiver. If you are not the recipient, you can ignore this email or",
     'footer_normal_link' => "contact us directly",
     'footer_normal_bottom' => "by clicking on this link",
 

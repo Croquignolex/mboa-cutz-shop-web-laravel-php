@@ -14,7 +14,7 @@ class UserRegisterMail extends Mailable implements ShouldQueue
     use Queueable, SerializesModels;
 
     public $user;
-    public $sender;
+    public $receiver;
     public $emailConfirmation;
 
     /**
@@ -26,7 +26,7 @@ class UserRegisterMail extends Mailable implements ShouldQueue
     public function __construct(User $user, EmailConfirmation $emailConfirmation)
     {
         $this->user = $user;
-        $this->sender = config('company.email');
+        $this->receiver = $user->email;
         $this->emailConfirmation = $emailConfirmation;
     }
 

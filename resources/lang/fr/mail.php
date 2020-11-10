@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'footer_plain' => "Ce mail à été envoyé à :sender. Si vous êtes pas le destinataire, vous pouvez ignorer ce mail ou nous contacter directement en utilisant ce lien (:url).",
-    'footer_normal_top' => "Ce mail à été envoyé à :sender. Si vous êtes pas le destinataire, vous pouvez ignorer ce mail ou",
+    'footer_plain' => "Ce mail à été envoyé à :receiver. Si vous êtes pas le destinataire, vous pouvez ignorer ce mail ou nous contacter directement en utilisant ce lien (:url).",
+    'footer_normal_top' => "Ce mail à été envoyé à :receiver. Si vous êtes pas le destinataire, vous pouvez ignorer ce mail ou",
     'footer_normal_link' => "nous contacter directement",
     'footer_normal_bottom' => "en cliquant sur ce lien",
 
