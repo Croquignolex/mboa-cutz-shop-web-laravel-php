@@ -29,8 +29,8 @@
                             <p>@lang('general.limited_responsibility_description_2', ['company' => config('app.name')]).</p>
                         </li>
                         <li>
-                            <h3>@lang('general.access_info')</h3>
-                            <p>@lang('general.access_info_description', ['company' => config('app.name'), 'mail' => config('company.email')]).</p>
+                            <h3>@lang('general.indemnity')</h3>
+                            <p>@lang('general.indemnity_description', ['company' => config('app.name')]).</p>
                         </li>
                     </ul>
                 </div>
