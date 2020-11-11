@@ -14,16 +14,19 @@
                         <li>
                             <h3>@lang('general.accepted_terms_and_conditions')</h3>
                             <p>@lang('general.accepted_terms_and_conditions_description_1', ['company' => config('app.name')]).</p>
-                            <p>@lang('general.accepted_terms_and_conditions_description_2').</p>
+                            <p>@lang('general.accepted_terms_and_conditions_description_2', ['company' => config('app.name')]).</p>
                             <p>@lang('general.accepted_terms_and_conditions_description_3', ['company' => config('app.name')]).</p>
                         </li>
                         <li>
-                            <h3>@lang('general.collected_info')</h3>
-                            <p>@lang('general.collected_info_description', ['company' => config('app.name')]).</p>
+                            <h3>@lang('general.web_site_usage')</h3>
+                            <p>@lang('general.web_site_usage_description_1', ['company' => config('app.name')]).</p>
+                            <p>@lang('general.web_site_usage_description_2', ['company' => config('app.name')]).</p>
+                            <p>@lang('general.web_site_usage_description_3', ['company' => config('app.name')]).</p>
                         </li>
                         <li>
-                            <h3>@lang('general.security')</h3>
-                            <p>@lang('general.security_description', ['company' => config('app.name')]).</p>
+                            <h3>@lang('general.limited_responsibility')</h3>
+                            <p>@lang('general.limited_responsibility_description_1', ['company' => config('app.name')]).</p>
+                            <p>@lang('general.limited_responsibility_description_2', ['company' => config('app.name')]).</p>
                         </li>
                         <li>
                             <h3>@lang('general.access_info')</h3>

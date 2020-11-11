@@ -14,6 +14,7 @@ return [
     'calendar_three_title' => "Monday",
     'calendar_three_range' => "Close",
 
+    'welcome' => "Welcome",
     'welcome_start' => "Welcome on",
     'welcome_end' => "your ultra modern men aesthetic babershop",
     'welcome_description' => "We are :name, an ultra modern CAMEROONIAN babershop specialized for Afro, Asian and European men. We are a concept, a philosophy, another way of seeing the haircut",
