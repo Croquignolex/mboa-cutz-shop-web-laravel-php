@@ -2,7 +2,7 @@
 
 return [
     // ******************************* BANNER ******************************* //
-    'banner_top_title' => "A unique way to take care of yourself",
+    'banner_top_title' => "Another way to see the haircut",
     'banner_title' => "Exclusive offers",
 
     'booking' => "To make a reservation",

@@ -17,12 +17,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Start non localized routes
-Route::post('/timezone', 'HomeController@timezoneAjax');
 Route::get('/contact', function () { return redirect(locale_route('contact.index')); });
+Route::get('/privacy-policy', function () { return redirect(locale_route('home.privacy-policy')); });
+Route::get('/terms-and-conditions', function () { return redirect(locale_route('home.terms-and-conditions')); });
+
+Route::post('/timezone', 'HomeController@timezoneAjax');
 
 // Start localized routes
 Route::get('/{language?}', 'HomeController@index')->name('home.index');
 Route::get('/{language}/contact', 'ContactController@index')->name('contact.index');
+Route::get('/{language}/privacy-policy', 'HomeController@privacyPolicy')->name('home.privacy-policy');
+Route::get('/{language}/terms-and-conditions', 'HomeController@termsAndConditions')->name('home.terms-and-conditions');
+
 Route::post('/{language}/contact', 'ContactController@sendMessage')->name('contact.send-message');
 
 Route::group(['namespace' => 'Shop'], function() {
