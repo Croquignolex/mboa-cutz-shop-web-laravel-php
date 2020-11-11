@@ -57,6 +57,12 @@ return [
     'access_info_description' => "Pour conserver vos données personnelles exactes, à jour et complet, s'il vous plaît nous contacter comme indiqué ci-dessous. Nous prendrons des mesures raisonnables pour mettre à jour ou de corriger les données personnelles en notre possession que vous avez déjà soumis via le Site. S'il vous plaît aussi se sentir libre de nous contacter si vous avez des questions concernant cette politique de confidentialité de :company ou les pratiques d'information de ce site. Vous pouvez nous contacter via l’adresse :mail",
 
     // ******************************* TERMS AND CONDITIONS ******************************* //
-
-
+    'accepted_terms_and_conditions' => "Acceptation des termes et conditions",
+    'accepted_terms_and_conditions_description_1' => ":company (avec ses sociétés affiliées) fournit et rend disposition de site (le « Site »). Toute utilisation du Site est soumise aux termes et conditions contenues dans les présentes Conditions d'Utilisation (la « Convention »). S'il vous plaît lire attentivement cet accord. En accédant ou en utilisant le site, vous reconnaissez que vous avez lu, compris et acceptez d'être lié par le présent accord. Si vous n'acceptez pas les termes et conditions du présent accord, vous ne devez pas accéder, consulter ou utiliser le site",
+    'accepted_terms_and_conditions_description_2' => "Vous comprenez et acceptez que nous puissions modifier cet accord à tout moment et sans préavis. Vous pouvez lire une copie à jour, à compter du présent Accord à tout moment en sélectionnant le lien 'Conditions d'utilisation' sur le Site. Les termes et conditions révisées entreront en vigueur au moment de l'affichage. Toute utilisation du site après cette date constitue votre acceptation de ces termes et conditions révisées. Si une modification au présent Accord n'est pas acceptable pour vous, votre seul recours est de cesser d'accéder, de navigation et d'éviter toute autre utilisation du site",
+    'accepted_terms_and_conditions_description_3' => "Votre accès et l'utilisation du Site est également soumise à la politique de confidentialité de :company, dont les modalités et les conditions sont incorporés ici par référence",
+    'accepted_terms_and_conditions' => "Acceptation des termes et conditions",
+    'accepted_terms_and_conditions' => "Acceptation des termes et conditions",
+    'accepted_terms_and_conditions' => "Acceptation des termes et conditions",
+    'accepted_terms_and_conditions' => "Acceptation des termes et conditions",
 ];
