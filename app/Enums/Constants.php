@@ -10,4 +10,5 @@ class Constants
     const DEFAULT_VIDEO_EXTENSION = 'mp4';
 
     const DEFAULT_PAGE_PAGINATION_ITEMS = 3;
+    const DEFAULT_PAGE_PAGINATION_EACH_SIDE = 0;
 }

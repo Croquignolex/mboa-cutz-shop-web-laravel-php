@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Article;
+use App\Models\Picture;
 use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,7 @@ Route::group(['namespace' => 'Shop'], function() {
     // Start non localized routes
     Route::get('/products', function () { return redirect(locale_route('products.index')); });
     Route::get('/services', function () { return redirect(locale_route('services.index')); });
+    Route::get('/pictures', function () { return redirect(locale_route('pictures.index')); });
 
     Route::get('/products/{product}', function (Product $product) { return redirect(locale_route('products.show', compact('product'))); });
     Route::get('/services/{service}', function (Service $service) { return redirect(locale_route('services.show', compact('service'))); });
@@ -42,6 +44,7 @@ Route::group(['namespace' => 'Shop'], function() {
     // Start localized routes
     Route::get('/{language}/services', 'ServiceController@index')->name('services.index');
     Route::get('/{language}/products', 'ProductController@index')->name('products.index');
+    Route::get('/{language}/pictures', 'GalleryController@index')->name('pictures.index');
 
     Route::get('/{language}/products/{product}', 'ProductController@show')->name('products.show');
     Route::get('/{language}/services/{service}', 'ServiceController@show')->name('services.show');
