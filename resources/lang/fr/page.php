@@ -24,5 +24,6 @@ return [
     'privacy_policy' => 'Politique de confidentialité',
     'terms_and_conditions' => 'Termes et conditions',
     'gallery' => 'Gallery',
+    'events' => 'Evènements',
 
 ];
