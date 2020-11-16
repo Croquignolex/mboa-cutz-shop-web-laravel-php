@@ -9,6 +9,7 @@ use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\Foundation\Application;
 
 class HomeController extends Controller
 {
@@ -34,6 +35,26 @@ class HomeController extends Controller
         $featured_articles = Article::where('is_featured', true)->get()->sortByDesc('updated_at')->take(3);
 
         return view('home', compact('testimonials', 'featured_articles', 'featured_products'));
+    }
+
+    /**
+     * Privacy policy
+     *
+     * @return Application|Factory|View
+     */
+    public function privacyPolicy()
+    {
+        return view('privacy-policy');
+    }
+
+    /**
+     * Terms & conditions
+     *
+     * @return Application|Factory|View
+     */
+    public function termsAndConditions()
+    {
+        return view('terms-and-conditions');
     }
 
     /**

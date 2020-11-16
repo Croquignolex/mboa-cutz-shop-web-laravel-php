@@ -63,6 +63,36 @@ if(!function_exists('testimonial_img_asset'))
     }
 }
 
+if(!function_exists('picture_img_asset'))
+{
+    /**
+     * Dynamic remote picture image asset file path
+     *
+     * @param $img_file
+     * @param $extension
+     * @return string
+     */
+    function picture_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
+    {
+        return remote_file_asset($img_file, $extension, ImagePath::PICTURE_DEFAULT_IMAGE_PATH);
+    }
+}
+
+if(!function_exists('event_img_asset'))
+{
+    /**
+     * Dynamic remote event image asset file path
+     *
+     * @param $img_file
+     * @param $extension
+     * @return string
+     */
+    function event_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
+    {
+        return remote_file_asset($img_file, $extension, ImagePath::EVENT_DEFAULT_IMAGE_PATH);
+    }
+}
+
 if(!function_exists('remote_file_asset'))
 {
     /**

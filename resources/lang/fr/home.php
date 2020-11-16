@@ -2,7 +2,7 @@
 
 return [
     // ******************************* BANNER ******************************* //
-    'banner_top_title' => "Une façon unique de prendre soin de vous",
+    'banner_top_title' => "Une autre façon de voire la coupe de cheveux",
     'banner_title' => "Des offres exclusives",
     'booking' => "Faire une reservation",
 
@@ -13,9 +13,10 @@ return [
     'calendar_three_title' => "Lundi",
     'calendar_three_range' => "Fermé",
 
+    'welcome' => "Bienvenue",
     'welcome_start' => "Bienvenue sur",
     'welcome_end' => "votre salon esthétique pour homme ultra moderne",
-    'welcome_description' => "Nous somme :name, un babershop CAMEROUNAIS ultra moderne spécialisé pour hommes Afro, Asiatique et Européen. Nous sommes un concept, une philosphie, une autre façon de voire la coupe de cheveux",
+    'welcome_description' => "Nous sommes :name, un babershop CAMEROUNAIS ultra moderne spécialisé pour hommes Afro, Asiatique et Européen. Nous sommes un concept, une philosphie, une autre façon de voire la coupe de cheveux",
 
     // ******************************* FEATURED PRODUCTS ******************************* //
     'featured_products' => "Produits en vedette",

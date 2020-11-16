@@ -39,7 +39,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-6 text-left">
+                <p>
+                    <a href="{{ locale_route('home.privacy-policy') }}">@lang('page.privacy_policy')</a> |
+                    <a href="{{ locale_route('home.terms-and-conditions') }}">@lang('page.terms_and_conditions')</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-right">
                 <p>
                     Copyright &copy; MBOA CUTZ 2020 | Design by
                     <a href="https://croquignolex-tikiton.dmsemergence.com/" target="_blank">Croquignolex Tikiton</a>

@@ -16,8 +16,8 @@ trait DateTrait
         $date =  $this->created_at;
         $date->setTimezone(session('timezone'));
 
-        if(App::getLocale() === config('app.secondary_locale')) return $date->format('m/d/Y H:i A');
-        return $date->format('d/m/Y H:i');
+        if(App::getLocale() === config('app.secondary_locale')) return $date->format('M d, Y \a\t H:i A');
+        return $date->format('d M, Y à H:i');
     }
 
     /**
@@ -30,8 +30,8 @@ trait DateTrait
         $date =  $this->updated_at;
         $date->setTimezone(session('timezone'));
 
-        if(App::getLocale() === config('app.secondary_locale')) return $date->format('m/d/Y H:i A');
-        return $date->format('d/m/Y H:i');
+        if(App::getLocale() === config('app.secondary_locale')) return $date->format('M d, Y \a\t H:i A');
+        return $date->format('d M, Y à H:i');
     }
 
     /**
