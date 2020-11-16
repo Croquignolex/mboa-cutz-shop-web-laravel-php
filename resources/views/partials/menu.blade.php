@@ -29,6 +29,16 @@
                         {{ __('page.blog') }}
                     </a>
                 </li>
+                <li class="nav-item {{ active_page(collect('events.index'))  }}">
+                    <a href="{{ locale_route('events.index') }}" class="nav-link">
+                        {{ __('page.events') }}
+                    </a>
+                </li>
+                <li class="nav-item {{ active_page(collect('pictures.index'))  }}">
+                    <a href="{{ locale_route('pictures.index') }}" class="nav-link">
+                        {{ __('page.gallery') }}
+                    </a>
+                </li>
                 <li class="nav-item {{ active_page(collect('contact.index'))  }}">
                     <a href="{{ locale_route('contact.index') }}" class="nav-link">
                         {{ __('page.contact') }}

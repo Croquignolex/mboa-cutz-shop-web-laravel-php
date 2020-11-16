@@ -23,5 +23,7 @@ return [
     'new_password' => 'Nouveau mot de passe',
     'privacy_policy' => 'Politique de confidentialité',
     'terms_and_conditions' => 'Termes et conditions',
+    'gallery' => 'Gallery',
+    'events' => 'Evènements',
 
 ];

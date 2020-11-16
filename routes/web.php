@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Article;
+use App\Models\Picture;
 use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
@@ -33,15 +34,21 @@ Route::post('/{language}/contact', 'ContactController@sendMessage')->name('conta
 
 Route::group(['namespace' => 'Shop'], function() {
     // Start non localized routes
+    Route::get('/events', function () { return redirect(locale_route('events.index')); });
     Route::get('/products', function () { return redirect(locale_route('products.index')); });
     Route::get('/services', function () { return redirect(locale_route('services.index')); });
+    Route::get('/pictures', function () { return redirect(locale_route('pictures.index')); });
+
 
     Route::get('/products/{product}', function (Product $product) { return redirect(locale_route('products.show', compact('product'))); });
     Route::get('/services/{service}', function (Service $service) { return redirect(locale_route('services.show', compact('service'))); });
 
     // Start localized routes
+    Route::get('/{language}/events', 'EventController@index')->name('events.index');
     Route::get('/{language}/services', 'ServiceController@index')->name('services.index');
     Route::get('/{language}/products', 'ProductController@index')->name('products.index');
+    Route::get('/{language}/pictures', 'GalleryController@index')->name('pictures.index');
+    Route::get('/{language}/events/ajax', 'EventController@ajaxEvents')->name('events.ajax');
 
     Route::get('/{language}/products/{product}', 'ProductController@show')->name('products.show');
     Route::get('/{language}/services/{service}', 'ServiceController@show')->name('services.show');

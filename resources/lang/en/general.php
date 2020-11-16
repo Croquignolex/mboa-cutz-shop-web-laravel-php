@@ -71,5 +71,12 @@ return [
     'indemnity' => "Indemnification",
     'indemnity_description' => "You agree to defend, indemnify, and hold harmless the :company Parties from and against any claims, actions or demands, including, without limitation, reasonable legal and accounting fees, arising or resulting from your breach of this Agreement or your access to, use or misuse of the Content or website. :company shall provide notice to you of any such claim, suit, or proceeding. :company reserves the right to assume the exclusive defense and control of any matter which are subject to indemnification under this section. In such case, you agree to cooperate with any reasonable requests assisting :company’s defense of such matter",
 
+    // ******************************* GALLERY ******************************* //
+    'our_gallery' => "Our gallery",
+    'our_gallery_description' => "Get an idea through our various photos",
+
+    // ******************************* EVENT ******************************* //
+    'our_events' => "Our events",
+    'our_events_description' => "Do not miss our appointments",
 
 ];

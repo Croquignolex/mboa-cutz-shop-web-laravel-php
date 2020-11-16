@@ -23,5 +23,7 @@ return [
     'new_password' => 'New password',
     'privacy_policy' => 'Privacy policy',
     'terms_and_conditions' => 'Terms and conditions',
+    'gallery' => 'Gallery',
+    'events' => 'Events',
 
 ];
