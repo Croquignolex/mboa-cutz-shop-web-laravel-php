@@ -53,7 +53,7 @@ function eventsComponent() {
 // Build event component template
 function eventComponentTemplate() {
     return `
-        <div class="row d-flex">  
+       <div>
             <!-- Loader --> 
             <div class="row d-flex" v-for="event in events" :key="event.id">  
                 <div class="col-md-6 d-flex mt-5">
@@ -67,13 +67,15 @@ function eventComponentTemplate() {
                     <iframe :src="event.map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div> 
             </div>    
-            <!-- Loader -->
-            <div class="col-md-4 d-flex"> 
-                 <infinite-loading @infinite="infiniteHandler" spinner="spiral">
-                    <div slot="no-more"></div>
-                    <div slot="no-results"></div>
-                 </infinite-loading>    
-            </div> 
-        </div>
+            <div class="row d-flex">  
+                <!-- Loader -->
+                <div class="col-md-4 d-flex"> 
+                     <infinite-loading @infinite="infiniteHandler" spinner="spiral">
+                        <div slot="no-more"></div>
+                        <div slot="no-results"></div>
+                     </infinite-loading>    
+                </div> 
+            </div>
+       </div>
     `;
 }

@@ -85,7 +85,7 @@ class Event extends Model
         $date =  $this->started_at;
         $date->setTimezone(session('timezone'));
 
-        if(App::getLocale() === config('app.secondary_locale')) return $date->format('M d, Y at H:i A');
+        if(App::getLocale() === config('app.secondary_locale')) return $date->format('M d, Y \a\t H:i A');
         return $date->format('d M, Y à H:i');
     }
 
@@ -99,7 +99,7 @@ class Event extends Model
         $date =  $this->ended_at;
         $date->setTimezone(session('timezone'));
 
-        if(App::getLocale() === config('app.secondary_locale')) return $date->format('M d, Y at H:i A');
+        if(App::getLocale() === config('app.secondary_locale')) return $date->format('M d, Y \a\t H:i A');
         return $date->format('d M, Y à H:i');
     }
 }

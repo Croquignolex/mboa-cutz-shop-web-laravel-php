@@ -74,4 +74,9 @@ return [
     // ******************************* GALLERY ******************************* //
     'our_gallery' => "Notre gallery",
     'our_gallery_description' => "Faites vous une idée à travers nos diverses photos",
+
+    // ******************************* EVENT ******************************* //
+    'our_events' => "Nos évènements",
+    'our_events_description' => "Ne manquez surtout pas nos rendez-vous",
+
 ];
