@@ -37,7 +37,7 @@ class EventController extends Controller
      */
     public function ajaxEvents()
     {
-        $events = Event::orderBy('start_date', 'desc')->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS);
+        $events = Event::orderBy('started_at', 'desc')->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS);
         $response = [];
 
         foreach ($events->items() as $event) {

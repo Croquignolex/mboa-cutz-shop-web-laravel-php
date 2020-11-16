@@ -1,24 +1,24 @@
 // VueInfiniteLoading loader by vue-infinite-loading.min.js file
 // I can then use the component <infinite-loading></infinite-loading>
 
-const baseUrl = document.getElementById('articles-infinite-scroll').dataset.url;
+const baseUrl = document.getElementById('events-infinite-scroll').dataset.url;
 
 new Vue({
-    el: '#articles-infinite-scroll',
+    el: '#events-infinite-scroll',
 
     components: {
-        'articles-component' : articlesComponent()
+        'events-component' : eventsComponent()
     }
 });
 
-// Build article component
-function articlesComponent() {
+// Build events component
+function eventsComponent() {
     return {
-        template: articleComponentTemplate(),
+        template: eventComponentTemplate(),
 
         data: function() {
             return {
-                articles: [],
+                events: [],
                 page: 1,
             };
         },
@@ -35,7 +35,7 @@ function articlesComponent() {
                         if(data.length !== 0) {
                             // Get data and set into array
                             $.each(data, function(key, value) {
-                                vm.articles.push(value);
+                                vm.events.push(value);
                             });
                             this.page += 1;
                             // Load back
@@ -50,33 +50,23 @@ function articlesComponent() {
     }
 }
 
-// Build article component template
-function articleComponentTemplate() {
+// Build event component template
+function eventComponentTemplate() {
     return `
         <div class="row d-flex">  
-            <!-- Loader -->
-            <div class="col-md-4 d-flex" v-for="article in articles" :key="article.id">
-                <div class="blog-entry align-self-stretch">
-                    <a :href="article.show_url" class="block-20">
-                        <img :src="article.image" alt="...">
-                    </a>
-                    <div class="text py-4 d-block">
-                        <div class="meta">
-                            <div><span class="icon-calendar"></span> {{ article.creation_date }}</div>
-                            <div><span class="icon-chat"></span> {{ article.comments }}</div>
-                        </div>
-                        <div class="meta">
-                            <div><span class="icon-person"></span> {{ article.creator }}</div>
-                        </div>
-                        <h3 class="heading mt-2">
-                            <a :href="article.show_url">
-                               {{ article.name }}
-                            </a>
-                        </h3>
-                        <p>{{ article.description }}</p>
-                    </div>
+            <!-- Loader --> 
+            <div class="row d-flex" v-for="event in events" :key="event.id">  
+                <div class="col-md-6 d-flex mt-5">
+                    <div class="img img-about" v-bind:style="{'background-image': 'url(' + event.image + ')'}"></div>
                 </div>
-            </div>  
+                <div class="col-md-6 px-5 mt-5 border-bottom border-secondary">
+                    <h2 class="mb-4">{{ event.name }}</h2> 
+                    <div><span class="icon-calendar"></span> <strong class="text-white">{{ event.start_date }}</strong> - {{ event.end_date }}</div>
+                    <div><span class="icon-map-marker"></span> {{ event.localisation }}</div>  
+                    <p class="my-2">{{ event.description }}</p>
+                    <iframe :src="event.map" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div> 
+            </div>    
             <!-- Loader -->
             <div class="col-md-4 d-flex"> 
                  <infinite-loading @infinite="infiniteHandler" spinner="spiral">

@@ -11,7 +11,7 @@ new Vue({
     }
 });
 
-// Build article component
+// Build articles component
 function articlesComponent() {
     return {
         template: articleComponentTemplate(),

@@ -8396,10 +8396,19 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-position: center center; }
 
+.img-about {
+  height: 360px;
+  width: 100%;
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
 @media (max-width: 767.98px) {
-  .img-about {
-    height: 400px;
-    margin-bottom: 30px; } }
+  .img-about {height: 400px;}
+}
 
 .image-popup {
   cursor: -webkit-zoom-in;
