@@ -39,7 +39,7 @@ class Picture extends Model
     ];
 
     /**
-     * Testimonial image src
+     * Picture image src
      *
      * @return string
      */
