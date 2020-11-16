@@ -19,7 +19,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $pictures = Picture::orderBy('created_at', 'desc')
+        $pictures = Picture::orderBy('updated_at', 'desc')
             ->paginate(Constants::DEFAULT_PAGE_PAGINATION_ITEMS)
             ->onEachSide(Constants::DEFAULT_PAGE_PAGINATION_EACH_SIDE);
 

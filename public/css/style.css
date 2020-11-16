@@ -7838,12 +7838,15 @@ h1, h2, h3, h4, h5,
       display: inline-block; }
 
 .ftco-gallery {
-  padding-top: 7em; }
+  padding-top: 4em; }
 
 .gallery {
+  position: relative;
   display: block;
-  height: 300px;
-  position: relative; }
+  height: 360px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
   .gallery .icon {
     width: 50px;
     height: 50px;

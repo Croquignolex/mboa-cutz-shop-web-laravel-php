@@ -71,4 +71,7 @@ return [
     'indemnity' => "Indemnité",
     'indemnity_description' => "Vous acceptez de défendre, d'indemniser et de dégager de toute responsabilité les Parties :company de et contre toute réclamation, action ou demande, y compris, sans s'y limiter, les frais juridiques et comptables raisonnables, découlant ou résultant de votre violation de cet accord ou votre accès à, utiliser ou une mauvaise utilisation du contenu ou du site. :company doit vous aviser de toute réclamation, poursuite ou procédure. :company se réserve le droit d'assumer la défense et le contrôle exclusif de toute question qui fait l'objet d'une indemnisation en vertu du présent article. Dans ce cas, vous acceptez de coopérer avec toute demande raisonnable aider la défense de :company de ces matières",
 
+    // ******************************* GALLERY ******************************* //
+    'our_gallery' => "Notre gallery",
+    'our_gallery_description' => "Faites vous une idée à travers nos diverses photos",
 ];
