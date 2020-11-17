@@ -1,8 +1,8 @@
 <div class="col-md-8 ftco-animate">
     {{-- Details area --}}
     <h2 class="mb-3">{{ $article->name }}</h2>
-    <p>{{ $article->description }}</p>
     <p><img src="{{ $article->image_src }}" alt="..." class="img-fluid"></p>
+    <p>{{ $article->description }}</p>
 
     <div class="tag-widget post-tag-container mb-5 mt-5">
         <div class="tagcloud">
@@ -13,9 +13,9 @@
     </div>
 
     {{-- Author area --}}
-    <div class="about-author d-flex p-3 ftco-bg-dark">
+    <div class="about-author d-flex p-3 pb-0 ftco-bg-dark">
         <div class="desc">
-            <img src="{{ $article->creator->avatar_src }}" alt="..." width="150" class="float-left mr-4">
+            <img src="{{ $article->creator->avatar_src }}" alt="..." width="80" class="float-left mr-4">
             <h3>@lang('general.author')</h3>
             <h6>{{ $article->creator_name }}</h6>
             <p>{{ $article->creator->description }}</p>
