@@ -17,5 +17,4 @@
     <script src="{{ customer_js_asset('jquery.min') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('popper.min') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('bootstrap.min') }}" type="application/javascript"></script>
-    <script src="{{ js_asset('timezone-detect') }}" type="application/javascript"></script>
 @endpush
