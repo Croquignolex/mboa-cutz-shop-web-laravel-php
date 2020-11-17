@@ -32,6 +32,5 @@
     <script src="{{ customer_js_asset('simplebar.min') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('jquery.stickOnScroll') }}" type="application/javascript"></script>
     <script src="{{ customer_js_asset('main') }}" type="application/javascript"></script>
-    <script src="{{ js_asset('timezone-detect') }}" type="application/javascript"></script>
     @stack('customer.app.master.script')
 @endpush

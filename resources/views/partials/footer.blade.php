@@ -1,4 +1,4 @@
-@inject('articleService', 'App\Services\ArticleService')
+@inject('eventService', 'App\Services\EventService')
 <footer class="ftco-footer ftco-section img">
     <div class="overlay"></div>
     <div class="container">
@@ -17,8 +17,8 @@
             <div class="col-md-4">
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">@lang('general.recently')</h2>
-                    @foreach($articleService->latestArticles() as $article)
-                        @include('partials.articles.article-card-mini', compact('article'))
+                    @foreach($eventService->latestEvents() as $event)
+                        @include('partials.event-card-mini', compact('event'))
                     @endforeach
                 </div>
             </div>
