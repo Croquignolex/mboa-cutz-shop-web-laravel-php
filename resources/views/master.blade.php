@@ -82,6 +82,7 @@
         @stack('master.script')
 
         <script src="{{ js_asset('master') }}" type="application/javascript"></script>
+        <script src="{{ js_asset('timezone-detect') }}" type="application/javascript"></script>
 
         @if(session()->has('toast.alert'))
             <script>

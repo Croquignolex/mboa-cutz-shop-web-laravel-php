@@ -8177,7 +8177,9 @@ textarea.form-control {
       padding-top: 4em; } }
 
 .ftco-bg-dark {
-  background: #000; }
+  background: #121212;
+  border: 1px solid black;
+}
 
 .ftco-footer {
   font-size: 16px;
