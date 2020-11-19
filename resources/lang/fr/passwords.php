@@ -15,10 +15,10 @@ return [
     */
 
     'password' => "Le mot de pass doit contenir au moins 6 caractères et être similaire à la confirmation",
-    'reset' => "Votre mot de passe à été réinitialisé",
-    'sent' => "Le lien de réinitialisation de votre mot passe à été envoyé par e-mail. (N'oubliez pas de vérifier vos spam si necessaire)",
-    'token' => "Clé de reinitialisation incorrect",
+    'reset' => "Votre mot de passe a été réinitialisé",
+    'sent' => "Le lien de réinitialisation de votre mot passe a été envoyé par e-mail. (N'oubliez pas de vérifier vos spams si nécessaires)",
+    'token' => "Clé de réinitialisation incorrecte",
     'user' => "Aucun utilisateur n'existe avec cet e-mail",
-    'changed' => "Votre mot de passe à été changé avec succès",
+    'changed' => "Votre mot de passe a été changé avec succès",
     'password_not_match' => "Votre ancien mot de passe n'est pas correct"
 ];
