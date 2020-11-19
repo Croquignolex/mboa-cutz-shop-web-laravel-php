@@ -11,10 +11,10 @@ return [
     */
 
     '404_title' => "Page introuvable",
-    '404_message' => "Désolé, la page demandé est inaccéssible",
+    '404_message' => "Désolée, la page demandée est inaccessible",
 
     '419_title' => "Page expirée",
-    '419_message' => "La page a expirée du faite de l'inactivité",
+    '419_message' => "La page a expiré du fait de l'inactivité",
 
     '429_title' => "Erreur",
     '429_message' => 'Trop de requêtes',

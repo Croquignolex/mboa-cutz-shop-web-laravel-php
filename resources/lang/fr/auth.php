@@ -3,7 +3,7 @@
 return [
     'password' => "Mot de passe",
     'password_confirmation' => "Confirmation du mot de passe",
-    'logout' => "Deconnexion",
+    'logout' => "Déconnexion",
     'signup' => "Inscription",
     'forgotten_password' => "Mot de passe oublié",
     'user_existed' => "Un utilisateur est déjà enregistré avec cette adresse e-mail",
