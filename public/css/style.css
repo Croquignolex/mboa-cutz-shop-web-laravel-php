@@ -7807,7 +7807,12 @@ h1, h2, h3, h4, h5,
   .services-wrap .img, .services-wrap .text {
     width: 50%; }
   .services-wrap .img {
-    display: block; }
+    position: relative;
+    display: block;
+    min-height: 220px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
   .services-wrap .text {
     background: #000;
     position: relative; }

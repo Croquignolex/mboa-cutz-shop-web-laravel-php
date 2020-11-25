@@ -33,6 +33,21 @@ if(!function_exists('product_img_asset'))
     }
 }
 
+if(!function_exists('service_img_asset'))
+{
+    /**
+     * Dynamic remote service image asset file path
+     *
+     * @param $img_file
+     * @param $extension
+     * @return string
+     */
+    function service_img_asset($img_file, $extension = Constants::DEFAULT_IMAGE_EXTENSION)
+    {
+        return remote_file_asset($img_file, $extension, ImagePath::SERVICE_DEFAULT_IMAGE_PATH);
+    }
+}
+
 if(!function_exists('article_img_asset'))
 {
     /**
