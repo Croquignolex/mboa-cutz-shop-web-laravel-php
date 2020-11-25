@@ -1,6 +1,6 @@
 <div class="col-md-4 d-flex ftco-animate">
     <div class="services-wrap d-flex">
-        <a href="javascript:void(0);" class="{{ $style_class }}" style="background-image: url({{ $service->image_src }});"></a>
+        <a href="{{ $service->image_src }}" class="{{ $style_class }} image-popup" style="background-image: url({{ $service->image_src }});"></a>
         <div class="text p-4">
             <h3>{{ $service->name }}</h3>
             <p>{{ text_format($service->description, 80) }}</p>
