@@ -79,4 +79,8 @@ return [
     'our_events' => "Nos évènements",
     'our_events_description' => "Ne manquez surtout pas nos rendez-vous",
 
+    // ******************************* GALLERY ******************************* //
+    'our_services' => "Nos services",
+    'our_services_description' => "Toute une panoplie de services à votre disposition",
+
 ];

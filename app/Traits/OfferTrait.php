@@ -23,4 +23,15 @@ trait OfferTrait
     {
         return $this->discount !== 0;
     }
+
+    /**
+     * @return float|int
+     */
+    public function getAmountAttribute()
+    {
+        if($this->is_a_discount) {
+            return $this->price * (1 - ($this->discount / 100));
+        }
+        return $this->price;
+    }
 }

@@ -27,3 +27,7 @@
 .busy-cursor {
     cursor: not-allowed !important;
 }
+
+.text-theme {
+    color: #ec008c;
+}
