@@ -95,25 +95,6 @@ class Service extends Model
      * @return string
      */
     public function getImageSrcAttribute() {
-        return product_img_asset($this->image, $this->image_extension);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getInStockAttribute()
-    {
-        return $this->stock > 0;
-    }
-
-    /**
-     * @return float|int
-     */
-    public function getAmountAttribute()
-    {
-        if($this->is_a_discount) {
-            return $this->price * (1 - ($this->discount / 100));
-        }
-        return $this->price;
+        return service_img_asset($this->image, $this->image_extension);
     }
 }
