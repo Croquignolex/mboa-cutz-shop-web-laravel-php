@@ -2,7 +2,7 @@
     {{-- Details area --}}
     <h2 class="mb-3">{{ $article->name }}</h2>
     <p><img src="{{ $article->image_src }}" alt="..." class="img-fluid"></p>
-    <p>{{ $article->description }}</p>
+    <p>{!! $article->description !!}</p>
 
     <div class="tag-widget post-tag-container mb-5 mt-5">
         <div class="tagcloud">
