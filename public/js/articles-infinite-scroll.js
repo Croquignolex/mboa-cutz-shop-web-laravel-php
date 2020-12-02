@@ -69,11 +69,8 @@ function articleComponentTemplate() {
                             <div><span class="icon-person"></span> {{ article.creator }}</div>
                         </div>
                         <h3 class="heading mt-2">
-                            <a :href="article.show_url">
-                               {{ article.name }}
-                            </a>
-                        </h3>
-                        <p>{{ article.description }}</p>
+                            <a :href="article.show_url">{{ article.name }}</a>
+                        </h3> 
                     </div>
                 </div>
             </div>  
