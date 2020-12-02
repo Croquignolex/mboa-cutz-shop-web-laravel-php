@@ -15,6 +15,6 @@
                 {{ text_format($article->name, 30) }}
             </a>
         </h3>
-        <p>{{ text_format($article->description, 80) }}</p>
+{{--        <p>{{ text_format($article->description, 80) }}</p>--}}
     </div>
 </div>
