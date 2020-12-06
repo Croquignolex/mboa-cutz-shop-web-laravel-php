@@ -10,7 +10,7 @@ return [
     'calendar_one_title' => "Sunday",
     'calendar_one_range' => "10:00 AM - 08:00 PM",
     'calendar_two_title' => "Tuesday - Saturday",
-    'calendar_two_range' => "09:00 AM - 07:30 PM",
+    'calendar_two_range' => "09:30 AM - 07:30 PM",
     'calendar_three_title' => "Monday",
     'calendar_three_range' => "Close",
 
