@@ -23,7 +23,7 @@
                             <p><span>@lang('general.email'):</span> {{ config('company.email') }}</p>
                         </div>
                         <div class="col-md-12 mb-5 text-center text-lg-left">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.975159429634!2d9.69788616525108!3d4.025480148261639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106112c7426691ff%3A0x310e860af24cda5!2sBonapriso%2C%20Douala!5e0!3m2!1sfr!2scm!4v1597665163772!5m2!1sfr!2scm" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15919.516614436056!2d9.68547922680806!3d4.045072002935148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106113224854d4df%3A0xa59117b08ca9c5dd!2sMboa%20Cutz!5e0!3m2!1sfr!2scm!4v1607225013521!5m2!1sfr!2scm" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                     </div>
                 </div>
